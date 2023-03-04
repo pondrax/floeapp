@@ -1,0 +1,250 @@
+generator client {
+  provider      = "prisma-client-js"
+  previewFeatures = ["clientExtensions"]
+}
+generator zod {
+  provider       = "zod-prisma-types"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String       @id @default(uuid())
+  email     String       @unique /// @zod.string.email()
+  name      String?
+  position  String?
+  avatar    String?
+  phone     String?
+  createdAt DateTime     @default(now())
+  updatedAt DateTime?    @updatedAt
+  role      Role?        @relation(fields: [roleId], references: [id])
+  roleId    String?
+  unit      Unit?        @relation(fields: [unitId], references: [id])
+  unitId    String?
+  Asesi     IndeksKami[] @relation("asesi")
+  Asesor    IndeksKami[] @relation("asesor")
+  Devices   Devices?     @relation(fields: [devicesId], references: [id])
+  devicesId String?
+  CsirtPost CsirtPost[]
+}
+
+model Role {
+  id          String    @id @default(uuid())
+  name        String    @unique
+  description String?
+  permissions Json  @default("[\"dashboard/load\"]")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime? @updatedAt
+  User        User[]
+}
+
+model Unit {
+  id          String        @id @default(uuid())
+  name        String        @unique
+  email       String?
+  description String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime?     @updatedAt
+  User        User[]
+  Site        Site[]
+  Certificate Certificate[]
+  Asesi       IndeksKami[]
+  Helpdesk    Helpdesk[]
+}
+
+model Devices {
+  id          String    @id @default(uuid())
+  name        String    @unique
+  description String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime? @updatedAt
+  User        User[]
+}
+
+model Site {
+  id          String      @id @default(uuid())
+  url         String?     @unique
+  ip          String?
+  localIp     String?
+  description String?
+  status      String?     @default("active")
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  scanAt      DateTime?
+  siteAudit   SiteAudit[]
+  unit        Unit?       @relation(fields: [unitId], references: [id])
+  unitId      String?
+}
+
+model SiteAudit {
+  id         String   @id @default(uuid())
+  screenshot String?
+  loadedTime Int      @default(0)
+  loadedSize Int      @default(0)
+  status     String   @default("error")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  site       Site     @relation(fields: [siteId], references: [id])
+  siteId     String
+}
+
+model Certificate {
+  id                String    @id @default(uuid())
+  name              String    @unique
+  phone             String?
+  nip               String?
+  nik               String?
+  email             String?
+  jabatan           String?
+  organisasiUnit    String?
+  status            String
+  certificateStatus String
+  notBeforeDate     DateTime?
+  notAfterDate      DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  unit              Unit?     @relation(fields: [unitId], references: [id])
+  unitId            String?
+}
+
+model Fortigate {
+  id          String   @id @default(uuid())
+  name        String
+  tag         String
+  path        String   @unique
+  description String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model CsirtPost {
+  id         String         @id @default(uuid())
+  title      String
+  slug       String         @unique
+  content    String         @db.Text
+  thumbnail  String?
+  type       String         @default("post")
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+  category   CsirtCategory? @relation(fields: [categoryId], references: [id])
+  categoryId String?
+  author     User?          @relation(fields: [userId], references: [id])
+  userId     String?
+}
+
+model CsirtCategory {
+  id        String      @id @default(uuid())
+  name      String
+  slug      String
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  csirt     CsirtPost[]
+}
+
+model Helpdesk {
+  id         String            @id @default(uuid())
+  subject    String
+  content    String
+  email      String
+  phone      String?
+  slug       String?
+  metadata   Json?
+  status     String            @default("new")
+  createdAt  DateTime          @default(now())
+  updatedAt  DateTime          @updatedAt
+  category   HelpdeskCategory? @relation(fields: [categoryId], references: [id])
+  categoryId String?
+  unit       Unit              @relation(fields: [unitId], references: [id])
+  unitId     String
+}
+
+model HelpdeskCategory {
+  id          String     @id @default(uuid())
+  name        String
+  description String
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  helpdesk    Helpdesk[]
+}
+
+model IndeksKami {
+  id            String              @id @default(uuid())
+  version       String              @default("4.2")
+  scope         String
+  summaryAsesi  Json?
+  summaryAsesor Json?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  category      IndeksKamiCategory? @relation(fields: [categoryId], references: [id])
+  categoryId    String?
+  unit          Unit?               @relation(fields: [unitId], references: [id])
+  unitId        String?
+  asesi         User?               @relation("asesi", fields: [asesiId], references: [id])
+  asesiId       String
+  asesor        User?               @relation("asesor", fields: [asesorId], references: [id])
+  asesorId      String?
+  result        IndeksKamiData[]
+}
+
+model IndeksKamiCategory {
+  id          String       @id @default(uuid())
+  version     String       @default("4.2")
+  code        Float
+  type        String
+  part        String
+  title       String?
+  description String?      @db.Text
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  IndeksKami  IndeksKami[]
+}
+
+model IndeksKamiCriteria {
+  id        String   @id @default(uuid())
+  version   String   @default("4.2")
+  code      Float
+  tag       String?
+  category  Float?
+  require   Json?
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model IndeksKamiTemplate {
+  id        String           @id @default(uuid())
+  version   String           @default("4.2")
+  header    String?
+  category  Float
+  code      String
+  part      String?
+  step      Int?
+  question  String           @db.Text
+  example  String?           @db.Text
+  options   Json?
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+  result    IndeksKamiData[]
+}
+
+model IndeksKamiData {
+  id          String              @id @default(uuid())
+  type        String              @default("asesi")
+  value       Int?
+  file        String?
+  filename    String?
+  description String?             @db.Text
+  category    Float
+  code        String
+  part        String?
+  step        Int?
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  IndeksKami  IndeksKami?         @relation(fields: [indeksId], references: [id])
+  indeksId    String?
+  template    IndeksKamiTemplate? @relation(fields: [templateId], references: [id])
+  templateId  String?
+}
