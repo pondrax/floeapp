@@ -1,5 +1,5 @@
 import type { Actions, PageServerLoad } from "./$types";
-import { UserCreateInputSchema, UserCreateManyRoleInputEnvelopeSchema } from "$prisma/generated/zod";
+import { UserCreateInputSchema } from "$prisma/generated/zod";
 import { fail } from "@sveltejs/kit";
 import { db, getQuery } from "$lib/db";
 import { parseFormData } from "$lib/utils";
@@ -25,7 +25,7 @@ export const load: PageServerLoad = async ({ url }) => {
         // schema,
       }
     }
-  } catch (e) {
+  } catch (error) {
     return {
       table: [],
       meta: query
@@ -50,9 +50,11 @@ export const actions: Actions = {
       return {
         data: result
       }
-    } catch (error) {
+    } catch (error: any) {
+      console.log(error)
+      const message = error.issues ? JSON.parse(error.message) : error.message
       return fail(400, {
-        error: JSON.parse(JSON.stringify(error))
+        error: message
       })
     }
   },
@@ -60,7 +62,7 @@ export const actions: Actions = {
     const form = await request.formData();
     const id = form.getAll('id[]').map(x => String(x));
 
-    await db.user.deleteMany({
+    const result = await db.user.deleteMany({
       where: {
         id: {
           in: id
@@ -69,8 +71,7 @@ export const actions: Actions = {
     })
 
     return {
-      success: true,
-      id
+      id: result
     }
   }
 }

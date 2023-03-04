@@ -1,18 +1,23 @@
 <script lang="ts">
   import type { ActionData, PageData } from "./$types";
   import { enhance } from "$app/forms";
-  import { fnModal } from "$lib/utils";
-  import { t, loading, autofocus } from "$lib/common";
+  import { fnBreadcrumb, fnModal, fnAutofocus } from "$lib/utils";
+  import { t, loading, toast } from "$lib/common";
 
   export let data: PageData;
   export let form: ActionData;
+  
+  $: if (form) {
+    $toast = [...$toast, form];
+    form = null;
+  }
 
   $: page = data.page;
   $: options = data.options;
   $: table = data.table;
   $: meta = data.meta;
 
-  let column = ["uri", "head", "actions"];
+  let column = ["name", "head", "actions"];
   let modal: any = false;
   let modalDel: any = false;
   let selections: any[] = [];
@@ -21,24 +26,7 @@
 <div flex flex-col gap-3>
   <!-- Header -->
   <div flex flex-wrap items-center gap-3>
-    <!-- {@html breadcrumb(page.uri)} -->
-    <div breadcrumb>
-      {#each page.uri
-        .split("/")
-        .filter((u) => !["[lang]", ""].includes(u)) as uri, i}
-        <a
-          href={"/" +
-            page.uri
-              .replace("[lang]", data.lang.id)
-              .split("/")
-              .slice(1, i + 3)
-              .join("/")}
-          capitalize
-        >
-          {uri}
-        </a>
-      {/each}
-    </div>
+    <div breadcrumb use:fnBreadcrumb={[page.uri, data.lang.id]} />
     <button btn="~ outline" border-transparent p-1>
       <i i-bx-cog />
     </button>
@@ -95,7 +83,10 @@
         pl-8
         value={meta.filter}
         name="filter"
-        placeholder={$t(`form.filter`, { field: column[0], value: "app" })}
+        placeholder={$t(`form.filter`, {
+          field: Object.keys(table[0] || {})[1],
+          value: "app",
+        })}
         autocomplete="off"
         autofocus
       />
@@ -105,8 +96,7 @@
   <!-- Selections -->
   {#if selections.length}
     <div alert="~ base">
-      {$t`form.selected`}
-      {selections.length}
+      {$t(`form.selected`, { length: selections.length })}
       <button btn="~ sm outline" on:click={() => (selections = [])}>
         {$t`form.reset.button`}
       </button>
@@ -260,6 +250,7 @@
         method="post"
         action="?/save"
         use:enhance
+        on:submit={() => ($loading = true)}
         on:reset={() => (modal = false)}
       >
         <!-- {JSON.stringify(modal)} -->
@@ -271,7 +262,7 @@
               name="name"
               placeholder={$t`field.name`}
               bind:value={modal.name}
-              use:autofocus
+              use:fnAutofocus
             />
           </div>
           <div form-control>
@@ -294,7 +285,7 @@
           </div>
         </div>
         <div>
-          <button btn="~ primary" mt-3>
+          <button btn="~ primary" mt-3 disabled={$loading}>
             <i i-bx-save />
             {$t`form.save.button`}
           </button>

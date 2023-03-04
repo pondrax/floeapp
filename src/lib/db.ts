@@ -67,7 +67,7 @@ export function getQuery(url: URL) {
   const query = {
     limit: Number(url.searchParams.get('limit') || 10),
     page: Number(url.searchParams.get('page') || 1),
-    sort: url.searchParams.get('sort') || '',
+    sort: url.searchParams.get('sort') || '-createdAt',
     filter: url.searchParams.get('filter') || '',
     expand: url.searchParams.get('expand') || '',
   }

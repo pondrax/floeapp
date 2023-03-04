@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { ActionData, PageData } from "./$types";
   import { enhance } from "$app/forms";
-  import { fnModal } from "$lib/utils";
-  import { t, loading, autofocus } from "$lib/common";
+  import { fnModal, fnAutofocus } from "$lib/utils";
+  import { t, loading } from "$lib/common";
 
   export let data: PageData;
   export let form: ActionData;
@@ -262,7 +262,7 @@
               name="uri"
               placeholder={$t`field.uri`}
               bind:value={modal.uri}
-              use:autofocus
+              use:fnAutofocus
             />
           </div>
           <div form-control>
@@ -292,7 +292,7 @@
                   name="actions[]"
                   placeholder="Action"
                   bind:value={action}
-                  use:autofocus
+                  use:fnAutofocus
                 />
                 <div>
                   <button

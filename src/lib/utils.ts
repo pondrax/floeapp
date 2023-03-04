@@ -42,7 +42,7 @@ export const getValue = (obj: any = {}, path: string) => {
 };
 
 
-export const parseFormData = (formData: FormData) =>{
+export const parseFormData = (formData: FormData) => {
   let form: any = {}
   Array.from(formData).map(([key, value]) => {
     setValue(form, key, value)
@@ -50,6 +50,10 @@ export const parseFormData = (formData: FormData) =>{
   return form;
 }
 // @unocss-include
+
+export function fnAutofocus(el: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) {
+  setTimeout(() => el.focus(), 100);
+}
 export const fnModal = (node: HTMLElement, active: boolean) => {
   const toggleActive = (active = false) => {
     if (active) {
@@ -83,3 +87,25 @@ export const fnModal = (node: HTMLElement, active: boolean) => {
     },
   };
 };
+
+export const fnBreadcrumb = (node: HTMLElement, [path, lang]: string[]) => {
+  path
+    .split("/")
+    .filter((u) => !["[lang]", ""].includes(u))
+    .forEach((uri, i) => {
+      const href = '/' + path.replace("[lang]", lang)
+        .split("/")
+        .slice(1, i + 3)
+        .join("/")
+        
+      const a = document.createElement('a');
+      a.className = 'capitalize'
+      a.href = href
+      a.innerHTML = uri
+      node.appendChild(a);
+    })
+  return {
+    destroy() {
+    },
+  };
+}

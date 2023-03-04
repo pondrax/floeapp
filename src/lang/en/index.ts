@@ -24,7 +24,7 @@ export default {
 			success: 'Data saved successfully'
 		},
 		selected: {
-			default: 'Selected'
+			default: 'Selected {length}'
 		},
 		page: {
 			empty: 'No record found',
