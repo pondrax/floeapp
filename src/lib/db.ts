@@ -127,14 +127,15 @@ async function paginate<T, A, O>(
   const pageCount = !opt.limit ? 1 : Math.ceil(count / opt.limit);
   const prevPage = opt.page > 1 ? opt.page - 1 : null;
   const nextPage = opt.page < pageCount ? opt.page + 1 : null;
-
+  const total = count;
   return [
     result,
     {
       ...opt,
       nextPage,
       prevPage,
-      pageCount
+      pageCount,
+      total
     }
   ]
 }

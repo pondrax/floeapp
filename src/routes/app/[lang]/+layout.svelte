@@ -3,7 +3,7 @@
   import { afterNavigate, beforeNavigate } from "$app/navigation";
   import { groupBy } from "$lib/utils";
   import { config } from "$lib/config";
-  import { loading, toast } from "$lib/store";
+  import { t, loading, toast } from "$lib/common";
 
   export let data: LayoutData;
 
@@ -30,7 +30,7 @@
     $loading = true;
   });
   afterNavigate(() => {
-    setTimeout(() => ($loading = false), 500);
+    setTimeout(() => ($loading = false), 100);
   });
 </script>
 
@@ -168,7 +168,7 @@
             </div>
           {:else}
             <i i-bx-info-circle text-info text-xl flex-shrink-0 />
-            <div w-50 overflow-auto>Data Saved</div>
+            <div w-50 overflow-auto>{$t(`form.${alert.action}.success`)}</div>
           {/if}
         </div>
       {/each}

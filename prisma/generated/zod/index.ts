@@ -979,7 +979,7 @@ export const UserWhereInputSchema: z.ZodType<Prisma.UserWhereInput> = z.object({
   Asesi: z.lazy(() => IndeksKamiListRelationFilterSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiListRelationFilterSchema).optional(),
   Devices: z.union([ z.lazy(() => DevicesRelationFilterSchema),z.lazy(() => DevicesWhereInputSchema) ]).optional().nullable(),
-  CsirtPost: z.lazy(() => CsirtPostListRelationFilterSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostListRelationFilterSchema).optional()
 }).strict();
 
 export const UserOrderByWithRelationInputSchema: z.ZodType<Prisma.UserOrderByWithRelationInput> = z.object({
@@ -999,12 +999,12 @@ export const UserOrderByWithRelationInputSchema: z.ZodType<Prisma.UserOrderByWit
   Asesi: z.lazy(() => IndeksKamiOrderByRelationAggregateInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiOrderByRelationAggregateInputSchema).optional(),
   Devices: z.lazy(() => DevicesOrderByWithRelationInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostOrderByRelationAggregateInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const UserWhereUniqueInputSchema: z.ZodType<Prisma.UserWhereUniqueInput> = z.object({
   id: z.string().uuid().optional(),
-  email: z.string().email().optional(),
+  email: z.string().email().optional()
 }).strict();
 
 export const UserOrderByWithAggregationInputSchema: z.ZodType<Prisma.UserOrderByWithAggregationInput> = z.object({
@@ -1021,7 +1021,7 @@ export const UserOrderByWithAggregationInputSchema: z.ZodType<Prisma.UserOrderBy
   devicesId: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => UserCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => UserMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => UserMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => UserMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const UserScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.UserScalarWhereWithAggregatesInput> = z.object({
@@ -1051,7 +1051,7 @@ export const RoleWhereInputSchema: z.ZodType<Prisma.RoleWhereInput> = z.object({
   permissions: z.lazy(() => JsonFilterSchema).optional(),
   createdAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   updatedAt: z.union([ z.lazy(() => DateTimeNullableFilterSchema),z.coerce.date() ]).optional().nullable(),
-  User: z.lazy(() => UserListRelationFilterSchema).optional(),
+  User: z.lazy(() => UserListRelationFilterSchema).optional()
 }).strict();
 
 export const RoleOrderByWithRelationInputSchema: z.ZodType<Prisma.RoleOrderByWithRelationInput> = z.object({
@@ -1061,12 +1061,12 @@ export const RoleOrderByWithRelationInputSchema: z.ZodType<Prisma.RoleOrderByWit
   permissions: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  User: z.lazy(() => UserOrderByRelationAggregateInputSchema).optional(),
+  User: z.lazy(() => UserOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const RoleWhereUniqueInputSchema: z.ZodType<Prisma.RoleWhereUniqueInput> = z.object({
   id: z.string().uuid().optional(),
-  name: z.string().optional(),
+  name: z.string().optional()
 }).strict();
 
 export const RoleOrderByWithAggregationInputSchema: z.ZodType<Prisma.RoleOrderByWithAggregationInput> = z.object({
@@ -1078,7 +1078,7 @@ export const RoleOrderByWithAggregationInputSchema: z.ZodType<Prisma.RoleOrderBy
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => RoleCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => RoleMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => RoleMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => RoleMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const RoleScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.RoleScalarWhereWithAggregatesInput> = z.object({
@@ -1107,7 +1107,7 @@ export const UnitWhereInputSchema: z.ZodType<Prisma.UnitWhereInput> = z.object({
   Site: z.lazy(() => SiteListRelationFilterSchema).optional(),
   Certificate: z.lazy(() => CertificateListRelationFilterSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiListRelationFilterSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskListRelationFilterSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskListRelationFilterSchema).optional()
 }).strict();
 
 export const UnitOrderByWithRelationInputSchema: z.ZodType<Prisma.UnitOrderByWithRelationInput> = z.object({
@@ -1121,12 +1121,12 @@ export const UnitOrderByWithRelationInputSchema: z.ZodType<Prisma.UnitOrderByWit
   Site: z.lazy(() => SiteOrderByRelationAggregateInputSchema).optional(),
   Certificate: z.lazy(() => CertificateOrderByRelationAggregateInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiOrderByRelationAggregateInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskOrderByRelationAggregateInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const UnitWhereUniqueInputSchema: z.ZodType<Prisma.UnitWhereUniqueInput> = z.object({
   id: z.string().uuid().optional(),
-  name: z.string().optional(),
+  name: z.string().optional()
 }).strict();
 
 export const UnitOrderByWithAggregationInputSchema: z.ZodType<Prisma.UnitOrderByWithAggregationInput> = z.object({
@@ -1138,7 +1138,7 @@ export const UnitOrderByWithAggregationInputSchema: z.ZodType<Prisma.UnitOrderBy
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => UnitCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => UnitMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => UnitMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => UnitMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const UnitScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.UnitScalarWhereWithAggregatesInput> = z.object({
@@ -1162,7 +1162,7 @@ export const DevicesWhereInputSchema: z.ZodType<Prisma.DevicesWhereInput> = z.ob
   description: z.union([ z.lazy(() => StringNullableFilterSchema),z.string() ]).optional().nullable(),
   createdAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   updatedAt: z.union([ z.lazy(() => DateTimeNullableFilterSchema),z.coerce.date() ]).optional().nullable(),
-  User: z.lazy(() => UserListRelationFilterSchema).optional(),
+  User: z.lazy(() => UserListRelationFilterSchema).optional()
 }).strict();
 
 export const DevicesOrderByWithRelationInputSchema: z.ZodType<Prisma.DevicesOrderByWithRelationInput> = z.object({
@@ -1171,12 +1171,12 @@ export const DevicesOrderByWithRelationInputSchema: z.ZodType<Prisma.DevicesOrde
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  User: z.lazy(() => UserOrderByRelationAggregateInputSchema).optional(),
+  User: z.lazy(() => UserOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const DevicesWhereUniqueInputSchema: z.ZodType<Prisma.DevicesWhereUniqueInput> = z.object({
   id: z.string().uuid().optional(),
-  name: z.string().optional(),
+  name: z.string().optional()
 }).strict();
 
 export const DevicesOrderByWithAggregationInputSchema: z.ZodType<Prisma.DevicesOrderByWithAggregationInput> = z.object({
@@ -1187,7 +1187,7 @@ export const DevicesOrderByWithAggregationInputSchema: z.ZodType<Prisma.DevicesO
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => DevicesCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => DevicesMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => DevicesMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => DevicesMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const DevicesScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.DevicesScalarWhereWithAggregatesInput> = z.object({
@@ -1231,12 +1231,12 @@ export const SiteOrderByWithRelationInputSchema: z.ZodType<Prisma.SiteOrderByWit
   scanAt: z.lazy(() => SortOrderSchema).optional(),
   unitId: z.lazy(() => SortOrderSchema).optional(),
   siteAudit: z.lazy(() => SiteAuditOrderByRelationAggregateInputSchema).optional(),
-  unit: z.lazy(() => UnitOrderByWithRelationInputSchema).optional(),
+  unit: z.lazy(() => UnitOrderByWithRelationInputSchema).optional()
 }).strict();
 
 export const SiteWhereUniqueInputSchema: z.ZodType<Prisma.SiteWhereUniqueInput> = z.object({
   id: z.string().uuid().optional(),
-  url: z.string().optional(),
+  url: z.string().optional()
 }).strict();
 
 export const SiteOrderByWithAggregationInputSchema: z.ZodType<Prisma.SiteOrderByWithAggregationInput> = z.object({
@@ -1252,7 +1252,7 @@ export const SiteOrderByWithAggregationInputSchema: z.ZodType<Prisma.SiteOrderBy
   unitId: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => SiteCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => SiteMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => SiteMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => SiteMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const SiteScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.SiteScalarWhereWithAggregatesInput> = z.object({
@@ -1295,11 +1295,11 @@ export const SiteAuditOrderByWithRelationInputSchema: z.ZodType<Prisma.SiteAudit
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   siteId: z.lazy(() => SortOrderSchema).optional(),
-  site: z.lazy(() => SiteOrderByWithRelationInputSchema).optional(),
+  site: z.lazy(() => SiteOrderByWithRelationInputSchema).optional()
 }).strict();
 
 export const SiteAuditWhereUniqueInputSchema: z.ZodType<Prisma.SiteAuditWhereUniqueInput> = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().uuid().optional()
 }).strict();
 
 export const SiteAuditOrderByWithAggregationInputSchema: z.ZodType<Prisma.SiteAuditOrderByWithAggregationInput> = z.object({
@@ -1315,7 +1315,7 @@ export const SiteAuditOrderByWithAggregationInputSchema: z.ZodType<Prisma.SiteAu
   _avg: z.lazy(() => SiteAuditAvgOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => SiteAuditMaxOrderByAggregateInputSchema).optional(),
   _min: z.lazy(() => SiteAuditMinOrderByAggregateInputSchema).optional(),
-  _sum: z.lazy(() => SiteAuditSumOrderByAggregateInputSchema).optional(),
+  _sum: z.lazy(() => SiteAuditSumOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const SiteAuditScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.SiteAuditScalarWhereWithAggregatesInput> = z.object({
@@ -1370,12 +1370,12 @@ export const CertificateOrderByWithRelationInputSchema: z.ZodType<Prisma.Certifi
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   unitId: z.lazy(() => SortOrderSchema).optional(),
-  unit: z.lazy(() => UnitOrderByWithRelationInputSchema).optional(),
+  unit: z.lazy(() => UnitOrderByWithRelationInputSchema).optional()
 }).strict();
 
 export const CertificateWhereUniqueInputSchema: z.ZodType<Prisma.CertificateWhereUniqueInput> = z.object({
   id: z.string().uuid().optional(),
-  name: z.string().optional(),
+  name: z.string().optional()
 }).strict();
 
 export const CertificateOrderByWithAggregationInputSchema: z.ZodType<Prisma.CertificateOrderByWithAggregationInput> = z.object({
@@ -1396,7 +1396,7 @@ export const CertificateOrderByWithAggregationInputSchema: z.ZodType<Prisma.Cert
   unitId: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => CertificateCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => CertificateMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => CertificateMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => CertificateMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const CertificateScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.CertificateScalarWhereWithAggregatesInput> = z.object({
@@ -1440,12 +1440,12 @@ export const FortigateOrderByWithRelationInputSchema: z.ZodType<Prisma.Fortigate
   path: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const FortigateWhereUniqueInputSchema: z.ZodType<Prisma.FortigateWhereUniqueInput> = z.object({
   id: z.string().uuid().optional(),
-  path: z.string().optional(),
+  path: z.string().optional()
 }).strict();
 
 export const FortigateOrderByWithAggregationInputSchema: z.ZodType<Prisma.FortigateOrderByWithAggregationInput> = z.object({
@@ -1458,7 +1458,7 @@ export const FortigateOrderByWithAggregationInputSchema: z.ZodType<Prisma.Fortig
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => FortigateCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => FortigateMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => FortigateMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => FortigateMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const FortigateScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.FortigateScalarWhereWithAggregatesInput> = z.object({
@@ -1504,12 +1504,12 @@ export const CsirtPostOrderByWithRelationInputSchema: z.ZodType<Prisma.CsirtPost
   categoryId: z.lazy(() => SortOrderSchema).optional(),
   userId: z.lazy(() => SortOrderSchema).optional(),
   category: z.lazy(() => CsirtCategoryOrderByWithRelationInputSchema).optional(),
-  author: z.lazy(() => UserOrderByWithRelationInputSchema).optional(),
+  author: z.lazy(() => UserOrderByWithRelationInputSchema).optional()
 }).strict();
 
 export const CsirtPostWhereUniqueInputSchema: z.ZodType<Prisma.CsirtPostWhereUniqueInput> = z.object({
   id: z.string().uuid().optional(),
-  slug: z.string().optional(),
+  slug: z.string().optional()
 }).strict();
 
 export const CsirtPostOrderByWithAggregationInputSchema: z.ZodType<Prisma.CsirtPostOrderByWithAggregationInput> = z.object({
@@ -1525,7 +1525,7 @@ export const CsirtPostOrderByWithAggregationInputSchema: z.ZodType<Prisma.CsirtP
   userId: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => CsirtPostCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => CsirtPostMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => CsirtPostMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => CsirtPostMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const CsirtPostScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.CsirtPostScalarWhereWithAggregatesInput> = z.object({
@@ -1553,7 +1553,7 @@ export const CsirtCategoryWhereInputSchema: z.ZodType<Prisma.CsirtCategoryWhereI
   slug: z.union([ z.lazy(() => StringFilterSchema),z.string() ]).optional(),
   createdAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   updatedAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
-  csirt: z.lazy(() => CsirtPostListRelationFilterSchema).optional(),
+  csirt: z.lazy(() => CsirtPostListRelationFilterSchema).optional()
 }).strict();
 
 export const CsirtCategoryOrderByWithRelationInputSchema: z.ZodType<Prisma.CsirtCategoryOrderByWithRelationInput> = z.object({
@@ -1562,11 +1562,11 @@ export const CsirtCategoryOrderByWithRelationInputSchema: z.ZodType<Prisma.Csirt
   slug: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  csirt: z.lazy(() => CsirtPostOrderByRelationAggregateInputSchema).optional(),
+  csirt: z.lazy(() => CsirtPostOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const CsirtCategoryWhereUniqueInputSchema: z.ZodType<Prisma.CsirtCategoryWhereUniqueInput> = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().uuid().optional()
 }).strict();
 
 export const CsirtCategoryOrderByWithAggregationInputSchema: z.ZodType<Prisma.CsirtCategoryOrderByWithAggregationInput> = z.object({
@@ -1577,7 +1577,7 @@ export const CsirtCategoryOrderByWithAggregationInputSchema: z.ZodType<Prisma.Cs
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => CsirtCategoryCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => CsirtCategoryMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => CsirtCategoryMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => CsirtCategoryMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const CsirtCategoryScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.CsirtCategoryScalarWhereWithAggregatesInput> = z.object({
@@ -1625,11 +1625,11 @@ export const HelpdeskOrderByWithRelationInputSchema: z.ZodType<Prisma.HelpdeskOr
   categoryId: z.lazy(() => SortOrderSchema).optional(),
   unitId: z.lazy(() => SortOrderSchema).optional(),
   category: z.lazy(() => HelpdeskCategoryOrderByWithRelationInputSchema).optional(),
-  unit: z.lazy(() => UnitOrderByWithRelationInputSchema).optional(),
+  unit: z.lazy(() => UnitOrderByWithRelationInputSchema).optional()
 }).strict();
 
 export const HelpdeskWhereUniqueInputSchema: z.ZodType<Prisma.HelpdeskWhereUniqueInput> = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().uuid().optional()
 }).strict();
 
 export const HelpdeskOrderByWithAggregationInputSchema: z.ZodType<Prisma.HelpdeskOrderByWithAggregationInput> = z.object({
@@ -1647,7 +1647,7 @@ export const HelpdeskOrderByWithAggregationInputSchema: z.ZodType<Prisma.Helpdes
   unitId: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => HelpdeskCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => HelpdeskMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => HelpdeskMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => HelpdeskMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const HelpdeskScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.HelpdeskScalarWhereWithAggregatesInput> = z.object({
@@ -1677,7 +1677,7 @@ export const HelpdeskCategoryWhereInputSchema: z.ZodType<Prisma.HelpdeskCategory
   description: z.union([ z.lazy(() => StringFilterSchema),z.string() ]).optional(),
   createdAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   updatedAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
-  helpdesk: z.lazy(() => HelpdeskListRelationFilterSchema).optional(),
+  helpdesk: z.lazy(() => HelpdeskListRelationFilterSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryOrderByWithRelationInputSchema: z.ZodType<Prisma.HelpdeskCategoryOrderByWithRelationInput> = z.object({
@@ -1686,11 +1686,11 @@ export const HelpdeskCategoryOrderByWithRelationInputSchema: z.ZodType<Prisma.He
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  helpdesk: z.lazy(() => HelpdeskOrderByRelationAggregateInputSchema).optional(),
+  helpdesk: z.lazy(() => HelpdeskOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryWhereUniqueInputSchema: z.ZodType<Prisma.HelpdeskCategoryWhereUniqueInput> = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().uuid().optional()
 }).strict();
 
 export const HelpdeskCategoryOrderByWithAggregationInputSchema: z.ZodType<Prisma.HelpdeskCategoryOrderByWithAggregationInput> = z.object({
@@ -1701,7 +1701,7 @@ export const HelpdeskCategoryOrderByWithAggregationInputSchema: z.ZodType<Prisma
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => HelpdeskCategoryCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => HelpdeskCategoryMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => HelpdeskCategoryMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => HelpdeskCategoryMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.HelpdeskCategoryScalarWhereWithAggregatesInput> = z.object({
@@ -1734,7 +1734,7 @@ export const IndeksKamiWhereInputSchema: z.ZodType<Prisma.IndeksKamiWhereInput> 
   unit: z.union([ z.lazy(() => UnitRelationFilterSchema),z.lazy(() => UnitWhereInputSchema) ]).optional().nullable(),
   asesi: z.union([ z.lazy(() => UserRelationFilterSchema),z.lazy(() => UserWhereInputSchema) ]).optional().nullable(),
   asesor: z.union([ z.lazy(() => UserRelationFilterSchema),z.lazy(() => UserWhereInputSchema) ]).optional().nullable(),
-  result: z.lazy(() => IndeksKamiDataListRelationFilterSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataListRelationFilterSchema).optional()
 }).strict();
 
 export const IndeksKamiOrderByWithRelationInputSchema: z.ZodType<Prisma.IndeksKamiOrderByWithRelationInput> = z.object({
@@ -1753,11 +1753,11 @@ export const IndeksKamiOrderByWithRelationInputSchema: z.ZodType<Prisma.IndeksKa
   unit: z.lazy(() => UnitOrderByWithRelationInputSchema).optional(),
   asesi: z.lazy(() => UserOrderByWithRelationInputSchema).optional(),
   asesor: z.lazy(() => UserOrderByWithRelationInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataOrderByRelationAggregateInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiWhereUniqueInputSchema: z.ZodType<Prisma.IndeksKamiWhereUniqueInput> = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().uuid().optional()
 }).strict();
 
 export const IndeksKamiOrderByWithAggregationInputSchema: z.ZodType<Prisma.IndeksKamiOrderByWithAggregationInput> = z.object({
@@ -1774,7 +1774,7 @@ export const IndeksKamiOrderByWithAggregationInputSchema: z.ZodType<Prisma.Indek
   asesorId: z.lazy(() => SortOrderSchema).optional(),
   _count: z.lazy(() => IndeksKamiCountOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => IndeksKamiMaxOrderByAggregateInputSchema).optional(),
-  _min: z.lazy(() => IndeksKamiMinOrderByAggregateInputSchema).optional(),
+  _min: z.lazy(() => IndeksKamiMinOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.IndeksKamiScalarWhereWithAggregatesInput> = z.object({
@@ -1807,7 +1807,7 @@ export const IndeksKamiCategoryWhereInputSchema: z.ZodType<Prisma.IndeksKamiCate
   description: z.union([ z.lazy(() => StringNullableFilterSchema),z.string() ]).optional().nullable(),
   createdAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   updatedAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
-  IndeksKami: z.lazy(() => IndeksKamiListRelationFilterSchema).optional(),
+  IndeksKami: z.lazy(() => IndeksKamiListRelationFilterSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryOrderByWithRelationInputSchema: z.ZodType<Prisma.IndeksKamiCategoryOrderByWithRelationInput> = z.object({
@@ -1820,11 +1820,11 @@ export const IndeksKamiCategoryOrderByWithRelationInputSchema: z.ZodType<Prisma.
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  IndeksKami: z.lazy(() => IndeksKamiOrderByRelationAggregateInputSchema).optional(),
+  IndeksKami: z.lazy(() => IndeksKamiOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryWhereUniqueInputSchema: z.ZodType<Prisma.IndeksKamiCategoryWhereUniqueInput> = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().uuid().optional()
 }).strict();
 
 export const IndeksKamiCategoryOrderByWithAggregationInputSchema: z.ZodType<Prisma.IndeksKamiCategoryOrderByWithAggregationInput> = z.object({
@@ -1841,7 +1841,7 @@ export const IndeksKamiCategoryOrderByWithAggregationInputSchema: z.ZodType<Pris
   _avg: z.lazy(() => IndeksKamiCategoryAvgOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => IndeksKamiCategoryMaxOrderByAggregateInputSchema).optional(),
   _min: z.lazy(() => IndeksKamiCategoryMinOrderByAggregateInputSchema).optional(),
-  _sum: z.lazy(() => IndeksKamiCategorySumOrderByAggregateInputSchema).optional(),
+  _sum: z.lazy(() => IndeksKamiCategorySumOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.IndeksKamiCategoryScalarWhereWithAggregatesInput> = z.object({
@@ -1883,11 +1883,11 @@ export const IndeksKamiCriteriaOrderByWithRelationInputSchema: z.ZodType<Prisma.
   require: z.lazy(() => SortOrderSchema).optional(),
   name: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCriteriaWhereUniqueInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaWhereUniqueInput> = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().uuid().optional()
 }).strict();
 
 export const IndeksKamiCriteriaOrderByWithAggregationInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaOrderByWithAggregationInput> = z.object({
@@ -1904,7 +1904,7 @@ export const IndeksKamiCriteriaOrderByWithAggregationInputSchema: z.ZodType<Pris
   _avg: z.lazy(() => IndeksKamiCriteriaAvgOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => IndeksKamiCriteriaMaxOrderByAggregateInputSchema).optional(),
   _min: z.lazy(() => IndeksKamiCriteriaMinOrderByAggregateInputSchema).optional(),
-  _sum: z.lazy(() => IndeksKamiCriteriaSumOrderByAggregateInputSchema).optional(),
+  _sum: z.lazy(() => IndeksKamiCriteriaSumOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCriteriaScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaScalarWhereWithAggregatesInput> = z.object({
@@ -1938,7 +1938,7 @@ export const IndeksKamiTemplateWhereInputSchema: z.ZodType<Prisma.IndeksKamiTemp
   options: z.lazy(() => JsonNullableFilterSchema).optional(),
   createdAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   updatedAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
-  result: z.lazy(() => IndeksKamiDataListRelationFilterSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataListRelationFilterSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateOrderByWithRelationInputSchema: z.ZodType<Prisma.IndeksKamiTemplateOrderByWithRelationInput> = z.object({
@@ -1954,11 +1954,11 @@ export const IndeksKamiTemplateOrderByWithRelationInputSchema: z.ZodType<Prisma.
   options: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataOrderByRelationAggregateInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateWhereUniqueInputSchema: z.ZodType<Prisma.IndeksKamiTemplateWhereUniqueInput> = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().uuid().optional()
 }).strict();
 
 export const IndeksKamiTemplateOrderByWithAggregationInputSchema: z.ZodType<Prisma.IndeksKamiTemplateOrderByWithAggregationInput> = z.object({
@@ -1978,7 +1978,7 @@ export const IndeksKamiTemplateOrderByWithAggregationInputSchema: z.ZodType<Pris
   _avg: z.lazy(() => IndeksKamiTemplateAvgOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => IndeksKamiTemplateMaxOrderByAggregateInputSchema).optional(),
   _min: z.lazy(() => IndeksKamiTemplateMinOrderByAggregateInputSchema).optional(),
-  _sum: z.lazy(() => IndeksKamiTemplateSumOrderByAggregateInputSchema).optional(),
+  _sum: z.lazy(() => IndeksKamiTemplateSumOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.IndeksKamiTemplateScalarWhereWithAggregatesInput> = z.object({
@@ -2037,11 +2037,11 @@ export const IndeksKamiDataOrderByWithRelationInputSchema: z.ZodType<Prisma.Inde
   indeksId: z.lazy(() => SortOrderSchema).optional(),
   templateId: z.lazy(() => SortOrderSchema).optional(),
   IndeksKami: z.lazy(() => IndeksKamiOrderByWithRelationInputSchema).optional(),
-  template: z.lazy(() => IndeksKamiTemplateOrderByWithRelationInputSchema).optional(),
+  template: z.lazy(() => IndeksKamiTemplateOrderByWithRelationInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataWhereUniqueInputSchema: z.ZodType<Prisma.IndeksKamiDataWhereUniqueInput> = z.object({
-  id: z.string().uuid().optional(),
+  id: z.string().uuid().optional()
 }).strict();
 
 export const IndeksKamiDataOrderByWithAggregationInputSchema: z.ZodType<Prisma.IndeksKamiDataOrderByWithAggregationInput> = z.object({
@@ -2063,7 +2063,7 @@ export const IndeksKamiDataOrderByWithAggregationInputSchema: z.ZodType<Prisma.I
   _avg: z.lazy(() => IndeksKamiDataAvgOrderByAggregateInputSchema).optional(),
   _max: z.lazy(() => IndeksKamiDataMaxOrderByAggregateInputSchema).optional(),
   _min: z.lazy(() => IndeksKamiDataMinOrderByAggregateInputSchema).optional(),
-  _sum: z.lazy(() => IndeksKamiDataSumOrderByAggregateInputSchema).optional(),
+  _sum: z.lazy(() => IndeksKamiDataSumOrderByAggregateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataScalarWhereWithAggregatesInputSchema: z.ZodType<Prisma.IndeksKamiDataScalarWhereWithAggregatesInput> = z.object({
@@ -2100,7 +2100,7 @@ export const UserCreateInputSchema: z.ZodType<Prisma.UserCreateInput> = z.object
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesiInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesorInputSchema).optional(),
   Devices: z.lazy(() => DevicesCreateNestedOneWithoutUserInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserUncheckedCreateInputSchema: z.ZodType<Prisma.UserUncheckedCreateInput> = z.object({
@@ -2117,7 +2117,7 @@ export const UserUncheckedCreateInputSchema: z.ZodType<Prisma.UserUncheckedCreat
   devicesId: z.string().optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesiInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesorInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserUpdateInputSchema: z.ZodType<Prisma.UserUpdateInput> = z.object({
@@ -2134,7 +2134,7 @@ export const UserUpdateInputSchema: z.ZodType<Prisma.UserUpdateInput> = z.object
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUpdateManyWithoutAsesorNestedInputSchema).optional(),
   Devices: z.lazy(() => DevicesUpdateOneWithoutUserNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateInputSchema: z.ZodType<Prisma.UserUncheckedUpdateInput> = z.object({
@@ -2151,7 +2151,7 @@ export const UserUncheckedUpdateInputSchema: z.ZodType<Prisma.UserUncheckedUpdat
   devicesId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesorNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const UserCreateManyInputSchema: z.ZodType<Prisma.UserCreateManyInput> = z.object({
@@ -2165,7 +2165,7 @@ export const UserCreateManyInputSchema: z.ZodType<Prisma.UserCreateManyInput> = 
   updatedAt: z.coerce.date().optional().nullable(),
   roleId: z.string().optional().nullable(),
   unitId: z.string().optional().nullable(),
-  devicesId: z.string().optional().nullable(),
+  devicesId: z.string().optional().nullable()
 }).strict();
 
 export const UserUpdateManyMutationInputSchema: z.ZodType<Prisma.UserUpdateManyMutationInput> = z.object({
@@ -2200,7 +2200,7 @@ export const RoleCreateInputSchema: z.ZodType<Prisma.RoleCreateInput> = z.object
   permissions: z.union([ z.lazy(() => JsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional().nullable(),
-  User: z.lazy(() => UserCreateNestedManyWithoutRoleInputSchema).optional(),
+  User: z.lazy(() => UserCreateNestedManyWithoutRoleInputSchema).optional()
 }).strict();
 
 export const RoleUncheckedCreateInputSchema: z.ZodType<Prisma.RoleUncheckedCreateInput> = z.object({
@@ -2210,7 +2210,7 @@ export const RoleUncheckedCreateInputSchema: z.ZodType<Prisma.RoleUncheckedCreat
   permissions: z.union([ z.lazy(() => JsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional().nullable(),
-  User: z.lazy(() => UserUncheckedCreateNestedManyWithoutRoleInputSchema).optional(),
+  User: z.lazy(() => UserUncheckedCreateNestedManyWithoutRoleInputSchema).optional()
 }).strict();
 
 export const RoleUpdateInputSchema: z.ZodType<Prisma.RoleUpdateInput> = z.object({
@@ -2220,7 +2220,7 @@ export const RoleUpdateInputSchema: z.ZodType<Prisma.RoleUpdateInput> = z.object
   permissions: z.union([ z.lazy(() => JsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  User: z.lazy(() => UserUpdateManyWithoutRoleNestedInputSchema).optional(),
+  User: z.lazy(() => UserUpdateManyWithoutRoleNestedInputSchema).optional()
 }).strict();
 
 export const RoleUncheckedUpdateInputSchema: z.ZodType<Prisma.RoleUncheckedUpdateInput> = z.object({
@@ -2230,7 +2230,7 @@ export const RoleUncheckedUpdateInputSchema: z.ZodType<Prisma.RoleUncheckedUpdat
   permissions: z.union([ z.lazy(() => JsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  User: z.lazy(() => UserUncheckedUpdateManyWithoutRoleNestedInputSchema).optional(),
+  User: z.lazy(() => UserUncheckedUpdateManyWithoutRoleNestedInputSchema).optional()
 }).strict();
 
 export const RoleCreateManyInputSchema: z.ZodType<Prisma.RoleCreateManyInput> = z.object({
@@ -2239,7 +2239,7 @@ export const RoleCreateManyInputSchema: z.ZodType<Prisma.RoleCreateManyInput> = 
   description: z.string().optional().nullable(),
   permissions: z.union([ z.lazy(() => JsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional().nullable(),
+  updatedAt: z.coerce.date().optional().nullable()
 }).strict();
 
 export const RoleUpdateManyMutationInputSchema: z.ZodType<Prisma.RoleUpdateManyMutationInput> = z.object({
@@ -2271,7 +2271,7 @@ export const UnitCreateInputSchema: z.ZodType<Prisma.UnitCreateInput> = z.object
   Site: z.lazy(() => SiteCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateCreateNestedManyWithoutUnitInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedCreateInputSchema: z.ZodType<Prisma.UnitUncheckedCreateInput> = z.object({
@@ -2285,7 +2285,7 @@ export const UnitUncheckedCreateInputSchema: z.ZodType<Prisma.UnitUncheckedCreat
   Site: z.lazy(() => SiteUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitUpdateInputSchema: z.ZodType<Prisma.UnitUpdateInput> = z.object({
@@ -2299,7 +2299,7 @@ export const UnitUpdateInputSchema: z.ZodType<Prisma.UnitUpdateInput> = z.object
   Site: z.lazy(() => SiteUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUpdateManyWithoutUnitNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedUpdateInputSchema: z.ZodType<Prisma.UnitUncheckedUpdateInput> = z.object({
@@ -2313,7 +2313,7 @@ export const UnitUncheckedUpdateInputSchema: z.ZodType<Prisma.UnitUncheckedUpdat
   Site: z.lazy(() => SiteUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const UnitCreateManyInputSchema: z.ZodType<Prisma.UnitCreateManyInput> = z.object({
@@ -2322,7 +2322,7 @@ export const UnitCreateManyInputSchema: z.ZodType<Prisma.UnitCreateManyInput> = 
   email: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional().nullable(),
+  updatedAt: z.coerce.date().optional().nullable()
 }).strict();
 
 export const UnitUpdateManyMutationInputSchema: z.ZodType<Prisma.UnitUpdateManyMutationInput> = z.object({
@@ -2349,7 +2349,7 @@ export const DevicesCreateInputSchema: z.ZodType<Prisma.DevicesCreateInput> = z.
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional().nullable(),
-  User: z.lazy(() => UserCreateNestedManyWithoutDevicesInputSchema).optional(),
+  User: z.lazy(() => UserCreateNestedManyWithoutDevicesInputSchema).optional()
 }).strict();
 
 export const DevicesUncheckedCreateInputSchema: z.ZodType<Prisma.DevicesUncheckedCreateInput> = z.object({
@@ -2358,7 +2358,7 @@ export const DevicesUncheckedCreateInputSchema: z.ZodType<Prisma.DevicesUnchecke
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional().nullable(),
-  User: z.lazy(() => UserUncheckedCreateNestedManyWithoutDevicesInputSchema).optional(),
+  User: z.lazy(() => UserUncheckedCreateNestedManyWithoutDevicesInputSchema).optional()
 }).strict();
 
 export const DevicesUpdateInputSchema: z.ZodType<Prisma.DevicesUpdateInput> = z.object({
@@ -2367,7 +2367,7 @@ export const DevicesUpdateInputSchema: z.ZodType<Prisma.DevicesUpdateInput> = z.
   description: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  User: z.lazy(() => UserUpdateManyWithoutDevicesNestedInputSchema).optional(),
+  User: z.lazy(() => UserUpdateManyWithoutDevicesNestedInputSchema).optional()
 }).strict();
 
 export const DevicesUncheckedUpdateInputSchema: z.ZodType<Prisma.DevicesUncheckedUpdateInput> = z.object({
@@ -2376,7 +2376,7 @@ export const DevicesUncheckedUpdateInputSchema: z.ZodType<Prisma.DevicesUnchecke
   description: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  User: z.lazy(() => UserUncheckedUpdateManyWithoutDevicesNestedInputSchema).optional(),
+  User: z.lazy(() => UserUncheckedUpdateManyWithoutDevicesNestedInputSchema).optional()
 }).strict();
 
 export const DevicesCreateManyInputSchema: z.ZodType<Prisma.DevicesCreateManyInput> = z.object({
@@ -2384,7 +2384,7 @@ export const DevicesCreateManyInputSchema: z.ZodType<Prisma.DevicesCreateManyInp
   name: z.string(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional().nullable(),
+  updatedAt: z.coerce.date().optional().nullable()
 }).strict();
 
 export const DevicesUpdateManyMutationInputSchema: z.ZodType<Prisma.DevicesUpdateManyMutationInput> = z.object({
@@ -2414,7 +2414,7 @@ export const SiteCreateInputSchema: z.ZodType<Prisma.SiteCreateInput> = z.object
   updatedAt: z.coerce.date().optional(),
   scanAt: z.coerce.date().optional().nullable(),
   siteAudit: z.lazy(() => SiteAuditCreateNestedManyWithoutSiteInputSchema).optional(),
-  unit: z.lazy(() => UnitCreateNestedOneWithoutSiteInputSchema).optional(),
+  unit: z.lazy(() => UnitCreateNestedOneWithoutSiteInputSchema).optional()
 }).strict();
 
 export const SiteUncheckedCreateInputSchema: z.ZodType<Prisma.SiteUncheckedCreateInput> = z.object({
@@ -2428,7 +2428,7 @@ export const SiteUncheckedCreateInputSchema: z.ZodType<Prisma.SiteUncheckedCreat
   updatedAt: z.coerce.date().optional(),
   scanAt: z.coerce.date().optional().nullable(),
   unitId: z.string().optional().nullable(),
-  siteAudit: z.lazy(() => SiteAuditUncheckedCreateNestedManyWithoutSiteInputSchema).optional(),
+  siteAudit: z.lazy(() => SiteAuditUncheckedCreateNestedManyWithoutSiteInputSchema).optional()
 }).strict();
 
 export const SiteUpdateInputSchema: z.ZodType<Prisma.SiteUpdateInput> = z.object({
@@ -2442,7 +2442,7 @@ export const SiteUpdateInputSchema: z.ZodType<Prisma.SiteUpdateInput> = z.object
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   scanAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   siteAudit: z.lazy(() => SiteAuditUpdateManyWithoutSiteNestedInputSchema).optional(),
-  unit: z.lazy(() => UnitUpdateOneWithoutSiteNestedInputSchema).optional(),
+  unit: z.lazy(() => UnitUpdateOneWithoutSiteNestedInputSchema).optional()
 }).strict();
 
 export const SiteUncheckedUpdateInputSchema: z.ZodType<Prisma.SiteUncheckedUpdateInput> = z.object({
@@ -2456,7 +2456,7 @@ export const SiteUncheckedUpdateInputSchema: z.ZodType<Prisma.SiteUncheckedUpdat
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   scanAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   unitId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  siteAudit: z.lazy(() => SiteAuditUncheckedUpdateManyWithoutSiteNestedInputSchema).optional(),
+  siteAudit: z.lazy(() => SiteAuditUncheckedUpdateManyWithoutSiteNestedInputSchema).optional()
 }).strict();
 
 export const SiteCreateManyInputSchema: z.ZodType<Prisma.SiteCreateManyInput> = z.object({
@@ -2469,7 +2469,7 @@ export const SiteCreateManyInputSchema: z.ZodType<Prisma.SiteCreateManyInput> = 
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   scanAt: z.coerce.date().optional().nullable(),
-  unitId: z.string().optional().nullable(),
+  unitId: z.string().optional().nullable()
 }).strict();
 
 export const SiteUpdateManyMutationInputSchema: z.ZodType<Prisma.SiteUpdateManyMutationInput> = z.object({
@@ -2500,41 +2500,41 @@ export const SiteUncheckedUpdateManyInputSchema: z.ZodType<Prisma.SiteUncheckedU
 export const SiteAuditCreateInputSchema: z.ZodType<Prisma.SiteAuditCreateInput> = z.object({
   id: z.string().uuid().optional(),
   screenshot: z.string().optional().nullable(),
-  loadedTime: z.number().optional(),
-  loadedSize: z.number().optional(),
+  loadedTime: z.number().int().optional(),
+  loadedSize: z.number().int().optional(),
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  site: z.lazy(() => SiteCreateNestedOneWithoutSiteAuditInputSchema),
+  site: z.lazy(() => SiteCreateNestedOneWithoutSiteAuditInputSchema)
 }).strict();
 
 export const SiteAuditUncheckedCreateInputSchema: z.ZodType<Prisma.SiteAuditUncheckedCreateInput> = z.object({
   id: z.string().uuid().optional(),
   screenshot: z.string().optional().nullable(),
-  loadedTime: z.number().optional(),
-  loadedSize: z.number().optional(),
+  loadedTime: z.number().int().optional(),
+  loadedSize: z.number().int().optional(),
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  siteId: z.string(),
+  siteId: z.string()
 }).strict();
 
 export const SiteAuditUpdateInputSchema: z.ZodType<Prisma.SiteAuditUpdateInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   screenshot: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  loadedTime: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
-  loadedSize: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedTime: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedSize: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
   status: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  site: z.lazy(() => SiteUpdateOneRequiredWithoutSiteAuditNestedInputSchema).optional(),
+  site: z.lazy(() => SiteUpdateOneRequiredWithoutSiteAuditNestedInputSchema).optional()
 }).strict();
 
 export const SiteAuditUncheckedUpdateInputSchema: z.ZodType<Prisma.SiteAuditUncheckedUpdateInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   screenshot: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  loadedTime: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
-  loadedSize: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedTime: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedSize: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
   status: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
@@ -2544,19 +2544,19 @@ export const SiteAuditUncheckedUpdateInputSchema: z.ZodType<Prisma.SiteAuditUnch
 export const SiteAuditCreateManyInputSchema: z.ZodType<Prisma.SiteAuditCreateManyInput> = z.object({
   id: z.string().uuid().optional(),
   screenshot: z.string().optional().nullable(),
-  loadedTime: z.number().optional(),
-  loadedSize: z.number().optional(),
+  loadedTime: z.number().int().optional(),
+  loadedSize: z.number().int().optional(),
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  siteId: z.string(),
+  siteId: z.string()
 }).strict();
 
 export const SiteAuditUpdateManyMutationInputSchema: z.ZodType<Prisma.SiteAuditUpdateManyMutationInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   screenshot: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  loadedTime: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
-  loadedSize: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedTime: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedSize: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
   status: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
@@ -2565,8 +2565,8 @@ export const SiteAuditUpdateManyMutationInputSchema: z.ZodType<Prisma.SiteAuditU
 export const SiteAuditUncheckedUpdateManyInputSchema: z.ZodType<Prisma.SiteAuditUncheckedUpdateManyInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   screenshot: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  loadedTime: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
-  loadedSize: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedTime: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedSize: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
   status: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
@@ -2588,7 +2588,7 @@ export const CertificateCreateInputSchema: z.ZodType<Prisma.CertificateCreateInp
   notAfterDate: z.coerce.date().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  unit: z.lazy(() => UnitCreateNestedOneWithoutCertificateInputSchema).optional(),
+  unit: z.lazy(() => UnitCreateNestedOneWithoutCertificateInputSchema).optional()
 }).strict();
 
 export const CertificateUncheckedCreateInputSchema: z.ZodType<Prisma.CertificateUncheckedCreateInput> = z.object({
@@ -2606,7 +2606,7 @@ export const CertificateUncheckedCreateInputSchema: z.ZodType<Prisma.Certificate
   notAfterDate: z.coerce.date().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  unitId: z.string().optional().nullable(),
+  unitId: z.string().optional().nullable()
 }).strict();
 
 export const CertificateUpdateInputSchema: z.ZodType<Prisma.CertificateUpdateInput> = z.object({
@@ -2624,7 +2624,7 @@ export const CertificateUpdateInputSchema: z.ZodType<Prisma.CertificateUpdateInp
   notAfterDate: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  unit: z.lazy(() => UnitUpdateOneWithoutCertificateNestedInputSchema).optional(),
+  unit: z.lazy(() => UnitUpdateOneWithoutCertificateNestedInputSchema).optional()
 }).strict();
 
 export const CertificateUncheckedUpdateInputSchema: z.ZodType<Prisma.CertificateUncheckedUpdateInput> = z.object({
@@ -2660,7 +2660,7 @@ export const CertificateCreateManyInputSchema: z.ZodType<Prisma.CertificateCreat
   notAfterDate: z.coerce.date().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  unitId: z.string().optional().nullable(),
+  unitId: z.string().optional().nullable()
 }).strict();
 
 export const CertificateUpdateManyMutationInputSchema: z.ZodType<Prisma.CertificateUpdateManyMutationInput> = z.object({
@@ -2705,7 +2705,7 @@ export const FortigateCreateInputSchema: z.ZodType<Prisma.FortigateCreateInput> 
   path: z.string(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const FortigateUncheckedCreateInputSchema: z.ZodType<Prisma.FortigateUncheckedCreateInput> = z.object({
@@ -2715,7 +2715,7 @@ export const FortigateUncheckedCreateInputSchema: z.ZodType<Prisma.FortigateUnch
   path: z.string(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const FortigateUpdateInputSchema: z.ZodType<Prisma.FortigateUpdateInput> = z.object({
@@ -2745,7 +2745,7 @@ export const FortigateCreateManyInputSchema: z.ZodType<Prisma.FortigateCreateMan
   path: z.string(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const FortigateUpdateManyMutationInputSchema: z.ZodType<Prisma.FortigateUpdateManyMutationInput> = z.object({
@@ -2778,7 +2778,7 @@ export const CsirtPostCreateInputSchema: z.ZodType<Prisma.CsirtPostCreateInput> 
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   category: z.lazy(() => CsirtCategoryCreateNestedOneWithoutCsirtInputSchema).optional(),
-  author: z.lazy(() => UserCreateNestedOneWithoutCsirtPostInputSchema).optional(),
+  author: z.lazy(() => UserCreateNestedOneWithoutCsirtPostInputSchema).optional()
 }).strict();
 
 export const CsirtPostUncheckedCreateInputSchema: z.ZodType<Prisma.CsirtPostUncheckedCreateInput> = z.object({
@@ -2791,7 +2791,7 @@ export const CsirtPostUncheckedCreateInputSchema: z.ZodType<Prisma.CsirtPostUnch
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   categoryId: z.string().optional().nullable(),
-  userId: z.string().optional().nullable(),
+  userId: z.string().optional().nullable()
 }).strict();
 
 export const CsirtPostUpdateInputSchema: z.ZodType<Prisma.CsirtPostUpdateInput> = z.object({
@@ -2804,7 +2804,7 @@ export const CsirtPostUpdateInputSchema: z.ZodType<Prisma.CsirtPostUpdateInput> 
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   category: z.lazy(() => CsirtCategoryUpdateOneWithoutCsirtNestedInputSchema).optional(),
-  author: z.lazy(() => UserUpdateOneWithoutCsirtPostNestedInputSchema).optional(),
+  author: z.lazy(() => UserUpdateOneWithoutCsirtPostNestedInputSchema).optional()
 }).strict();
 
 export const CsirtPostUncheckedUpdateInputSchema: z.ZodType<Prisma.CsirtPostUncheckedUpdateInput> = z.object({
@@ -2830,7 +2830,7 @@ export const CsirtPostCreateManyInputSchema: z.ZodType<Prisma.CsirtPostCreateMan
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   categoryId: z.string().optional().nullable(),
-  userId: z.string().optional().nullable(),
+  userId: z.string().optional().nullable()
 }).strict();
 
 export const CsirtPostUpdateManyMutationInputSchema: z.ZodType<Prisma.CsirtPostUpdateManyMutationInput> = z.object({
@@ -2863,7 +2863,7 @@ export const CsirtCategoryCreateInputSchema: z.ZodType<Prisma.CsirtCategoryCreat
   slug: z.string(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  csirt: z.lazy(() => CsirtPostCreateNestedManyWithoutCategoryInputSchema).optional(),
+  csirt: z.lazy(() => CsirtPostCreateNestedManyWithoutCategoryInputSchema).optional()
 }).strict();
 
 export const CsirtCategoryUncheckedCreateInputSchema: z.ZodType<Prisma.CsirtCategoryUncheckedCreateInput> = z.object({
@@ -2872,7 +2872,7 @@ export const CsirtCategoryUncheckedCreateInputSchema: z.ZodType<Prisma.CsirtCate
   slug: z.string(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  csirt: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutCategoryInputSchema).optional(),
+  csirt: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutCategoryInputSchema).optional()
 }).strict();
 
 export const CsirtCategoryUpdateInputSchema: z.ZodType<Prisma.CsirtCategoryUpdateInput> = z.object({
@@ -2881,7 +2881,7 @@ export const CsirtCategoryUpdateInputSchema: z.ZodType<Prisma.CsirtCategoryUpdat
   slug: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  csirt: z.lazy(() => CsirtPostUpdateManyWithoutCategoryNestedInputSchema).optional(),
+  csirt: z.lazy(() => CsirtPostUpdateManyWithoutCategoryNestedInputSchema).optional()
 }).strict();
 
 export const CsirtCategoryUncheckedUpdateInputSchema: z.ZodType<Prisma.CsirtCategoryUncheckedUpdateInput> = z.object({
@@ -2890,7 +2890,7 @@ export const CsirtCategoryUncheckedUpdateInputSchema: z.ZodType<Prisma.CsirtCate
   slug: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  csirt: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutCategoryNestedInputSchema).optional(),
+  csirt: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutCategoryNestedInputSchema).optional()
 }).strict();
 
 export const CsirtCategoryCreateManyInputSchema: z.ZodType<Prisma.CsirtCategoryCreateManyInput> = z.object({
@@ -2898,7 +2898,7 @@ export const CsirtCategoryCreateManyInputSchema: z.ZodType<Prisma.CsirtCategoryC
   name: z.string(),
   slug: z.string(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const CsirtCategoryUpdateManyMutationInputSchema: z.ZodType<Prisma.CsirtCategoryUpdateManyMutationInput> = z.object({
@@ -2929,7 +2929,7 @@ export const HelpdeskCreateInputSchema: z.ZodType<Prisma.HelpdeskCreateInput> = 
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   category: z.lazy(() => HelpdeskCategoryCreateNestedOneWithoutHelpdeskInputSchema).optional(),
-  unit: z.lazy(() => UnitCreateNestedOneWithoutHelpdeskInputSchema),
+  unit: z.lazy(() => UnitCreateNestedOneWithoutHelpdeskInputSchema)
 }).strict();
 
 export const HelpdeskUncheckedCreateInputSchema: z.ZodType<Prisma.HelpdeskUncheckedCreateInput> = z.object({
@@ -2944,7 +2944,7 @@ export const HelpdeskUncheckedCreateInputSchema: z.ZodType<Prisma.HelpdeskUnchec
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   categoryId: z.string().optional().nullable(),
-  unitId: z.string(),
+  unitId: z.string()
 }).strict();
 
 export const HelpdeskUpdateInputSchema: z.ZodType<Prisma.HelpdeskUpdateInput> = z.object({
@@ -2959,7 +2959,7 @@ export const HelpdeskUpdateInputSchema: z.ZodType<Prisma.HelpdeskUpdateInput> = 
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   category: z.lazy(() => HelpdeskCategoryUpdateOneWithoutHelpdeskNestedInputSchema).optional(),
-  unit: z.lazy(() => UnitUpdateOneRequiredWithoutHelpdeskNestedInputSchema).optional(),
+  unit: z.lazy(() => UnitUpdateOneRequiredWithoutHelpdeskNestedInputSchema).optional()
 }).strict();
 
 export const HelpdeskUncheckedUpdateInputSchema: z.ZodType<Prisma.HelpdeskUncheckedUpdateInput> = z.object({
@@ -2989,7 +2989,7 @@ export const HelpdeskCreateManyInputSchema: z.ZodType<Prisma.HelpdeskCreateManyI
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   categoryId: z.string().optional().nullable(),
-  unitId: z.string(),
+  unitId: z.string()
 }).strict();
 
 export const HelpdeskUpdateManyMutationInputSchema: z.ZodType<Prisma.HelpdeskUpdateManyMutationInput> = z.object({
@@ -3026,7 +3026,7 @@ export const HelpdeskCategoryCreateInputSchema: z.ZodType<Prisma.HelpdeskCategor
   description: z.string(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutCategoryInputSchema).optional(),
+  helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutCategoryInputSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryUncheckedCreateInputSchema: z.ZodType<Prisma.HelpdeskCategoryUncheckedCreateInput> = z.object({
@@ -3035,7 +3035,7 @@ export const HelpdeskCategoryUncheckedCreateInputSchema: z.ZodType<Prisma.Helpde
   description: z.string(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutCategoryInputSchema).optional(),
+  helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutCategoryInputSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryUpdateInputSchema: z.ZodType<Prisma.HelpdeskCategoryUpdateInput> = z.object({
@@ -3044,7 +3044,7 @@ export const HelpdeskCategoryUpdateInputSchema: z.ZodType<Prisma.HelpdeskCategor
   description: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutCategoryNestedInputSchema).optional(),
+  helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutCategoryNestedInputSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryUncheckedUpdateInputSchema: z.ZodType<Prisma.HelpdeskCategoryUncheckedUpdateInput> = z.object({
@@ -3053,7 +3053,7 @@ export const HelpdeskCategoryUncheckedUpdateInputSchema: z.ZodType<Prisma.Helpde
   description: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutCategoryNestedInputSchema).optional(),
+  helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutCategoryNestedInputSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryCreateManyInputSchema: z.ZodType<Prisma.HelpdeskCategoryCreateManyInput> = z.object({
@@ -3061,7 +3061,7 @@ export const HelpdeskCategoryCreateManyInputSchema: z.ZodType<Prisma.HelpdeskCat
   name: z.string(),
   description: z.string(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const HelpdeskCategoryUpdateManyMutationInputSchema: z.ZodType<Prisma.HelpdeskCategoryUpdateManyMutationInput> = z.object({
@@ -3092,7 +3092,7 @@ export const IndeksKamiCreateInputSchema: z.ZodType<Prisma.IndeksKamiCreateInput
   unit: z.lazy(() => UnitCreateNestedOneWithoutAsesiInputSchema).optional(),
   asesi: z.lazy(() => UserCreateNestedOneWithoutAsesiInputSchema).optional(),
   asesor: z.lazy(() => UserCreateNestedOneWithoutAsesorInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedCreateInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedCreateInput> = z.object({
@@ -3107,7 +3107,7 @@ export const IndeksKamiUncheckedCreateInputSchema: z.ZodType<Prisma.IndeksKamiUn
   unitId: z.string().optional().nullable(),
   asesiId: z.string(),
   asesorId: z.string().optional().nullable(),
-  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUpdateInputSchema: z.ZodType<Prisma.IndeksKamiUpdateInput> = z.object({
@@ -3122,7 +3122,7 @@ export const IndeksKamiUpdateInputSchema: z.ZodType<Prisma.IndeksKamiUpdateInput
   unit: z.lazy(() => UnitUpdateOneWithoutAsesiNestedInputSchema).optional(),
   asesi: z.lazy(() => UserUpdateOneWithoutAsesiNestedInputSchema).optional(),
   asesor: z.lazy(() => UserUpdateOneWithoutAsesorNestedInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedUpdateInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedUpdateInput> = z.object({
@@ -3137,7 +3137,7 @@ export const IndeksKamiUncheckedUpdateInputSchema: z.ZodType<Prisma.IndeksKamiUn
   unitId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   asesiId: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   asesorId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCreateManyInputSchema: z.ZodType<Prisma.IndeksKamiCreateManyInput> = z.object({
@@ -3151,7 +3151,7 @@ export const IndeksKamiCreateManyInputSchema: z.ZodType<Prisma.IndeksKamiCreateM
   categoryId: z.string().optional().nullable(),
   unitId: z.string().optional().nullable(),
   asesiId: z.string(),
-  asesorId: z.string().optional().nullable(),
+  asesorId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiUpdateManyMutationInputSchema: z.ZodType<Prisma.IndeksKamiUpdateManyMutationInput> = z.object({
@@ -3188,7 +3188,7 @@ export const IndeksKamiCategoryCreateInputSchema: z.ZodType<Prisma.IndeksKamiCat
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  IndeksKami: z.lazy(() => IndeksKamiCreateNestedManyWithoutCategoryInputSchema).optional(),
+  IndeksKami: z.lazy(() => IndeksKamiCreateNestedManyWithoutCategoryInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryUncheckedCreateInputSchema: z.ZodType<Prisma.IndeksKamiCategoryUncheckedCreateInput> = z.object({
@@ -3201,7 +3201,7 @@ export const IndeksKamiCategoryUncheckedCreateInputSchema: z.ZodType<Prisma.Inde
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  IndeksKami: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutCategoryInputSchema).optional(),
+  IndeksKami: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutCategoryInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryUpdateInputSchema: z.ZodType<Prisma.IndeksKamiCategoryUpdateInput> = z.object({
@@ -3214,7 +3214,7 @@ export const IndeksKamiCategoryUpdateInputSchema: z.ZodType<Prisma.IndeksKamiCat
   description: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  IndeksKami: z.lazy(() => IndeksKamiUpdateManyWithoutCategoryNestedInputSchema).optional(),
+  IndeksKami: z.lazy(() => IndeksKamiUpdateManyWithoutCategoryNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryUncheckedUpdateInputSchema: z.ZodType<Prisma.IndeksKamiCategoryUncheckedUpdateInput> = z.object({
@@ -3227,7 +3227,7 @@ export const IndeksKamiCategoryUncheckedUpdateInputSchema: z.ZodType<Prisma.Inde
   description: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  IndeksKami: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutCategoryNestedInputSchema).optional(),
+  IndeksKami: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutCategoryNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryCreateManyInputSchema: z.ZodType<Prisma.IndeksKamiCategoryCreateManyInput> = z.object({
@@ -3239,7 +3239,7 @@ export const IndeksKamiCategoryCreateManyInputSchema: z.ZodType<Prisma.IndeksKam
   title: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiCategoryUpdateManyMutationInputSchema: z.ZodType<Prisma.IndeksKamiCategoryUpdateManyMutationInput> = z.object({
@@ -3275,7 +3275,7 @@ export const IndeksKamiCriteriaCreateInputSchema: z.ZodType<Prisma.IndeksKamiCri
   require: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   name: z.string(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiCriteriaUncheckedCreateInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaUncheckedCreateInput> = z.object({
@@ -3287,7 +3287,7 @@ export const IndeksKamiCriteriaUncheckedCreateInputSchema: z.ZodType<Prisma.Inde
   require: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   name: z.string(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiCriteriaUpdateInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaUpdateInput> = z.object({
@@ -3323,7 +3323,7 @@ export const IndeksKamiCriteriaCreateManyInputSchema: z.ZodType<Prisma.IndeksKam
   require: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   name: z.string(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiCriteriaUpdateManyMutationInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaUpdateManyMutationInput> = z.object({
@@ -3357,13 +3357,13 @@ export const IndeksKamiTemplateCreateInputSchema: z.ZodType<Prisma.IndeksKamiTem
   category: z.number(),
   code: z.string(),
   part: z.string().optional().nullable(),
-  step: z.number().optional().nullable(),
+  step: z.number().int().optional().nullable(),
   question: z.string(),
   example: z.string().optional().nullable(),
   options: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutTemplateInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutTemplateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateUncheckedCreateInputSchema: z.ZodType<Prisma.IndeksKamiTemplateUncheckedCreateInput> = z.object({
@@ -3373,13 +3373,13 @@ export const IndeksKamiTemplateUncheckedCreateInputSchema: z.ZodType<Prisma.Inde
   category: z.number(),
   code: z.string(),
   part: z.string().optional().nullable(),
-  step: z.number().optional().nullable(),
+  step: z.number().int().optional().nullable(),
   question: z.string(),
   example: z.string().optional().nullable(),
   options: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutTemplateInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutTemplateInputSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateUpdateInputSchema: z.ZodType<Prisma.IndeksKamiTemplateUpdateInput> = z.object({
@@ -3389,13 +3389,13 @@ export const IndeksKamiTemplateUpdateInputSchema: z.ZodType<Prisma.IndeksKamiTem
   category: z.union([ z.number(),z.lazy(() => FloatFieldUpdateOperationsInputSchema) ]).optional(),
   code: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   part: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  step: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   question: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   example: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   options: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutTemplateNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutTemplateNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateUncheckedUpdateInputSchema: z.ZodType<Prisma.IndeksKamiTemplateUncheckedUpdateInput> = z.object({
@@ -3405,13 +3405,13 @@ export const IndeksKamiTemplateUncheckedUpdateInputSchema: z.ZodType<Prisma.Inde
   category: z.union([ z.number(),z.lazy(() => FloatFieldUpdateOperationsInputSchema) ]).optional(),
   code: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   part: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  step: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   question: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   example: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   options: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutTemplateNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutTemplateNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateCreateManyInputSchema: z.ZodType<Prisma.IndeksKamiTemplateCreateManyInput> = z.object({
@@ -3421,12 +3421,12 @@ export const IndeksKamiTemplateCreateManyInputSchema: z.ZodType<Prisma.IndeksKam
   category: z.number(),
   code: z.string(),
   part: z.string().optional().nullable(),
-  step: z.number().optional().nullable(),
+  step: z.number().int().optional().nullable(),
   question: z.string(),
   example: z.string().optional().nullable(),
   options: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiTemplateUpdateManyMutationInputSchema: z.ZodType<Prisma.IndeksKamiTemplateUpdateManyMutationInput> = z.object({
@@ -3436,7 +3436,7 @@ export const IndeksKamiTemplateUpdateManyMutationInputSchema: z.ZodType<Prisma.I
   category: z.union([ z.number(),z.lazy(() => FloatFieldUpdateOperationsInputSchema) ]).optional(),
   code: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   part: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  step: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   question: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   example: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   options: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
@@ -3451,7 +3451,7 @@ export const IndeksKamiTemplateUncheckedUpdateManyInputSchema: z.ZodType<Prisma.
   category: z.union([ z.number(),z.lazy(() => FloatFieldUpdateOperationsInputSchema) ]).optional(),
   code: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   part: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  step: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   question: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   example: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   options: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
@@ -3462,65 +3462,65 @@ export const IndeksKamiTemplateUncheckedUpdateManyInputSchema: z.ZodType<Prisma.
 export const IndeksKamiDataCreateInputSchema: z.ZodType<Prisma.IndeksKamiDataCreateInput> = z.object({
   id: z.string().uuid().optional(),
   type: z.string().optional(),
-  value: z.number().optional().nullable(),
+  value: z.number().int().optional().nullable(),
   file: z.string().optional().nullable(),
   filename: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   category: z.number(),
   code: z.string(),
   part: z.string().optional().nullable(),
-  step: z.number().optional().nullable(),
+  step: z.number().int().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   IndeksKami: z.lazy(() => IndeksKamiCreateNestedOneWithoutResultInputSchema).optional(),
-  template: z.lazy(() => IndeksKamiTemplateCreateNestedOneWithoutResultInputSchema).optional(),
+  template: z.lazy(() => IndeksKamiTemplateCreateNestedOneWithoutResultInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataUncheckedCreateInputSchema: z.ZodType<Prisma.IndeksKamiDataUncheckedCreateInput> = z.object({
   id: z.string().uuid().optional(),
   type: z.string().optional(),
-  value: z.number().optional().nullable(),
+  value: z.number().int().optional().nullable(),
   file: z.string().optional().nullable(),
   filename: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   category: z.number(),
   code: z.string(),
   part: z.string().optional().nullable(),
-  step: z.number().optional().nullable(),
+  step: z.number().int().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   indeksId: z.string().optional().nullable(),
-  templateId: z.string().optional().nullable(),
+  templateId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiDataUpdateInputSchema: z.ZodType<Prisma.IndeksKamiDataUpdateInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   type: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
-  value: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  value: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   file: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   filename: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   description: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   category: z.union([ z.number(),z.lazy(() => FloatFieldUpdateOperationsInputSchema) ]).optional(),
   code: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   part: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  step: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   IndeksKami: z.lazy(() => IndeksKamiUpdateOneWithoutResultNestedInputSchema).optional(),
-  template: z.lazy(() => IndeksKamiTemplateUpdateOneWithoutResultNestedInputSchema).optional(),
+  template: z.lazy(() => IndeksKamiTemplateUpdateOneWithoutResultNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataUncheckedUpdateInputSchema: z.ZodType<Prisma.IndeksKamiDataUncheckedUpdateInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   type: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
-  value: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  value: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   file: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   filename: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   description: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   category: z.union([ z.number(),z.lazy(() => FloatFieldUpdateOperationsInputSchema) ]).optional(),
   code: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   part: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  step: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   indeksId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
@@ -3530,31 +3530,31 @@ export const IndeksKamiDataUncheckedUpdateInputSchema: z.ZodType<Prisma.IndeksKa
 export const IndeksKamiDataCreateManyInputSchema: z.ZodType<Prisma.IndeksKamiDataCreateManyInput> = z.object({
   id: z.string().uuid().optional(),
   type: z.string().optional(),
-  value: z.number().optional().nullable(),
+  value: z.number().int().optional().nullable(),
   file: z.string().optional().nullable(),
   filename: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   category: z.number(),
   code: z.string(),
   part: z.string().optional().nullable(),
-  step: z.number().optional().nullable(),
+  step: z.number().int().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   indeksId: z.string().optional().nullable(),
-  templateId: z.string().optional().nullable(),
+  templateId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiDataUpdateManyMutationInputSchema: z.ZodType<Prisma.IndeksKamiDataUpdateManyMutationInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   type: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
-  value: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  value: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   file: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   filename: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   description: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   category: z.union([ z.number(),z.lazy(() => FloatFieldUpdateOperationsInputSchema) ]).optional(),
   code: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   part: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  step: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
 }).strict();
@@ -3562,14 +3562,14 @@ export const IndeksKamiDataUpdateManyMutationInputSchema: z.ZodType<Prisma.Indek
 export const IndeksKamiDataUncheckedUpdateManyInputSchema: z.ZodType<Prisma.IndeksKamiDataUncheckedUpdateManyInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   type: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
-  value: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  value: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   file: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   filename: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   description: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   category: z.union([ z.number(),z.lazy(() => FloatFieldUpdateOperationsInputSchema) ]).optional(),
   code: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   part: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  step: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   indeksId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
@@ -3628,37 +3628,37 @@ export const DateTimeNullableFilterSchema: z.ZodType<Prisma.DateTimeNullableFilt
 
 export const RoleRelationFilterSchema: z.ZodType<Prisma.RoleRelationFilter> = z.object({
   is: z.lazy(() => RoleWhereInputSchema).optional().nullable(),
-  isNot: z.lazy(() => RoleWhereInputSchema).optional().nullable(),
+  isNot: z.lazy(() => RoleWhereInputSchema).optional().nullable()
 }).strict();
 
 export const UnitRelationFilterSchema: z.ZodType<Prisma.UnitRelationFilter> = z.object({
   is: z.lazy(() => UnitWhereInputSchema).optional().nullable(),
-  isNot: z.lazy(() => UnitWhereInputSchema).optional().nullable(),
+  isNot: z.lazy(() => UnitWhereInputSchema).optional().nullable()
 }).strict();
 
 export const IndeksKamiListRelationFilterSchema: z.ZodType<Prisma.IndeksKamiListRelationFilter> = z.object({
   every: z.lazy(() => IndeksKamiWhereInputSchema).optional(),
   some: z.lazy(() => IndeksKamiWhereInputSchema).optional(),
-  none: z.lazy(() => IndeksKamiWhereInputSchema).optional(),
+  none: z.lazy(() => IndeksKamiWhereInputSchema).optional()
 }).strict();
 
 export const DevicesRelationFilterSchema: z.ZodType<Prisma.DevicesRelationFilter> = z.object({
   is: z.lazy(() => DevicesWhereInputSchema).optional().nullable(),
-  isNot: z.lazy(() => DevicesWhereInputSchema).optional().nullable(),
+  isNot: z.lazy(() => DevicesWhereInputSchema).optional().nullable()
 }).strict();
 
 export const CsirtPostListRelationFilterSchema: z.ZodType<Prisma.CsirtPostListRelationFilter> = z.object({
   every: z.lazy(() => CsirtPostWhereInputSchema).optional(),
   some: z.lazy(() => CsirtPostWhereInputSchema).optional(),
-  none: z.lazy(() => CsirtPostWhereInputSchema).optional(),
+  none: z.lazy(() => CsirtPostWhereInputSchema).optional()
 }).strict();
 
 export const IndeksKamiOrderByRelationAggregateInputSchema: z.ZodType<Prisma.IndeksKamiOrderByRelationAggregateInput> = z.object({
-  _count: z.lazy(() => SortOrderSchema).optional(),
+  _count: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CsirtPostOrderByRelationAggregateInputSchema: z.ZodType<Prisma.CsirtPostOrderByRelationAggregateInput> = z.object({
-  _count: z.lazy(() => SortOrderSchema).optional(),
+  _count: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const UserCountOrderByAggregateInputSchema: z.ZodType<Prisma.UserCountOrderByAggregateInput> = z.object({
@@ -3672,7 +3672,7 @@ export const UserCountOrderByAggregateInputSchema: z.ZodType<Prisma.UserCountOrd
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   roleId: z.lazy(() => SortOrderSchema).optional(),
   unitId: z.lazy(() => SortOrderSchema).optional(),
-  devicesId: z.lazy(() => SortOrderSchema).optional(),
+  devicesId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const UserMaxOrderByAggregateInputSchema: z.ZodType<Prisma.UserMaxOrderByAggregateInput> = z.object({
@@ -3686,7 +3686,7 @@ export const UserMaxOrderByAggregateInputSchema: z.ZodType<Prisma.UserMaxOrderBy
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   roleId: z.lazy(() => SortOrderSchema).optional(),
   unitId: z.lazy(() => SortOrderSchema).optional(),
-  devicesId: z.lazy(() => SortOrderSchema).optional(),
+  devicesId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const UserMinOrderByAggregateInputSchema: z.ZodType<Prisma.UserMinOrderByAggregateInput> = z.object({
@@ -3700,7 +3700,7 @@ export const UserMinOrderByAggregateInputSchema: z.ZodType<Prisma.UserMinOrderBy
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   roleId: z.lazy(() => SortOrderSchema).optional(),
   unitId: z.lazy(() => SortOrderSchema).optional(),
-  devicesId: z.lazy(() => SortOrderSchema).optional(),
+  devicesId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const StringWithAggregatesFilterSchema: z.ZodType<Prisma.StringWithAggregatesFilter> = z.object({
@@ -3717,7 +3717,7 @@ export const StringWithAggregatesFilterSchema: z.ZodType<Prisma.StringWithAggreg
   not: z.union([ z.string(),z.lazy(() => NestedStringWithAggregatesFilterSchema) ]).optional(),
   _count: z.lazy(() => NestedIntFilterSchema).optional(),
   _min: z.lazy(() => NestedStringFilterSchema).optional(),
-  _max: z.lazy(() => NestedStringFilterSchema).optional(),
+  _max: z.lazy(() => NestedStringFilterSchema).optional()
 }).strict();
 
 export const StringNullableWithAggregatesFilterSchema: z.ZodType<Prisma.StringNullableWithAggregatesFilter> = z.object({
@@ -3734,7 +3734,7 @@ export const StringNullableWithAggregatesFilterSchema: z.ZodType<Prisma.StringNu
   not: z.union([ z.string(),z.lazy(() => NestedStringNullableWithAggregatesFilterSchema) ]).optional().nullable(),
   _count: z.lazy(() => NestedIntNullableFilterSchema).optional(),
   _min: z.lazy(() => NestedStringNullableFilterSchema).optional(),
-  _max: z.lazy(() => NestedStringNullableFilterSchema).optional(),
+  _max: z.lazy(() => NestedStringNullableFilterSchema).optional()
 }).strict();
 
 export const DateTimeWithAggregatesFilterSchema: z.ZodType<Prisma.DateTimeWithAggregatesFilter> = z.object({
@@ -3748,7 +3748,7 @@ export const DateTimeWithAggregatesFilterSchema: z.ZodType<Prisma.DateTimeWithAg
   not: z.union([ z.coerce.date(),z.lazy(() => NestedDateTimeWithAggregatesFilterSchema) ]).optional(),
   _count: z.lazy(() => NestedIntFilterSchema).optional(),
   _min: z.lazy(() => NestedDateTimeFilterSchema).optional(),
-  _max: z.lazy(() => NestedDateTimeFilterSchema).optional(),
+  _max: z.lazy(() => NestedDateTimeFilterSchema).optional()
 }).strict();
 
 export const DateTimeNullableWithAggregatesFilterSchema: z.ZodType<Prisma.DateTimeNullableWithAggregatesFilter> = z.object({
@@ -3762,7 +3762,7 @@ export const DateTimeNullableWithAggregatesFilterSchema: z.ZodType<Prisma.DateTi
   not: z.union([ z.coerce.date(),z.lazy(() => NestedDateTimeNullableWithAggregatesFilterSchema) ]).optional().nullable(),
   _count: z.lazy(() => NestedIntNullableFilterSchema).optional(),
   _min: z.lazy(() => NestedDateTimeNullableFilterSchema).optional(),
-  _max: z.lazy(() => NestedDateTimeNullableFilterSchema).optional(),
+  _max: z.lazy(() => NestedDateTimeNullableFilterSchema).optional()
 }).strict();
 
 export const JsonFilterSchema: z.ZodType<Prisma.JsonFilter> = z.object({
@@ -3784,11 +3784,11 @@ export const JsonFilterSchema: z.ZodType<Prisma.JsonFilter> = z.object({
 export const UserListRelationFilterSchema: z.ZodType<Prisma.UserListRelationFilter> = z.object({
   every: z.lazy(() => UserWhereInputSchema).optional(),
   some: z.lazy(() => UserWhereInputSchema).optional(),
-  none: z.lazy(() => UserWhereInputSchema).optional(),
+  none: z.lazy(() => UserWhereInputSchema).optional()
 }).strict();
 
 export const UserOrderByRelationAggregateInputSchema: z.ZodType<Prisma.UserOrderByRelationAggregateInput> = z.object({
-  _count: z.lazy(() => SortOrderSchema).optional(),
+  _count: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const RoleCountOrderByAggregateInputSchema: z.ZodType<Prisma.RoleCountOrderByAggregateInput> = z.object({
@@ -3797,7 +3797,7 @@ export const RoleCountOrderByAggregateInputSchema: z.ZodType<Prisma.RoleCountOrd
   description: z.lazy(() => SortOrderSchema).optional(),
   permissions: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const RoleMaxOrderByAggregateInputSchema: z.ZodType<Prisma.RoleMaxOrderByAggregateInput> = z.object({
@@ -3805,7 +3805,7 @@ export const RoleMaxOrderByAggregateInputSchema: z.ZodType<Prisma.RoleMaxOrderBy
   name: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const RoleMinOrderByAggregateInputSchema: z.ZodType<Prisma.RoleMinOrderByAggregateInput> = z.object({
@@ -3813,7 +3813,7 @@ export const RoleMinOrderByAggregateInputSchema: z.ZodType<Prisma.RoleMinOrderBy
   name: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const JsonWithAggregatesFilterSchema: z.ZodType<Prisma.JsonWithAggregatesFilter> = z.object({
@@ -3832,37 +3832,37 @@ export const JsonWithAggregatesFilterSchema: z.ZodType<Prisma.JsonWithAggregates
   not: z.union([ InputJsonValue,z.lazy(() => JsonNullValueFilterSchema) ]).optional(),
   _count: z.lazy(() => NestedIntFilterSchema).optional(),
   _min: z.lazy(() => NestedJsonFilterSchema).optional(),
-  _max: z.lazy(() => NestedJsonFilterSchema).optional(),
+  _max: z.lazy(() => NestedJsonFilterSchema).optional()
 }).strict();
 
 export const SiteListRelationFilterSchema: z.ZodType<Prisma.SiteListRelationFilter> = z.object({
   every: z.lazy(() => SiteWhereInputSchema).optional(),
   some: z.lazy(() => SiteWhereInputSchema).optional(),
-  none: z.lazy(() => SiteWhereInputSchema).optional(),
+  none: z.lazy(() => SiteWhereInputSchema).optional()
 }).strict();
 
 export const CertificateListRelationFilterSchema: z.ZodType<Prisma.CertificateListRelationFilter> = z.object({
   every: z.lazy(() => CertificateWhereInputSchema).optional(),
   some: z.lazy(() => CertificateWhereInputSchema).optional(),
-  none: z.lazy(() => CertificateWhereInputSchema).optional(),
+  none: z.lazy(() => CertificateWhereInputSchema).optional()
 }).strict();
 
 export const HelpdeskListRelationFilterSchema: z.ZodType<Prisma.HelpdeskListRelationFilter> = z.object({
   every: z.lazy(() => HelpdeskWhereInputSchema).optional(),
   some: z.lazy(() => HelpdeskWhereInputSchema).optional(),
-  none: z.lazy(() => HelpdeskWhereInputSchema).optional(),
+  none: z.lazy(() => HelpdeskWhereInputSchema).optional()
 }).strict();
 
 export const SiteOrderByRelationAggregateInputSchema: z.ZodType<Prisma.SiteOrderByRelationAggregateInput> = z.object({
-  _count: z.lazy(() => SortOrderSchema).optional(),
+  _count: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CertificateOrderByRelationAggregateInputSchema: z.ZodType<Prisma.CertificateOrderByRelationAggregateInput> = z.object({
-  _count: z.lazy(() => SortOrderSchema).optional(),
+  _count: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const HelpdeskOrderByRelationAggregateInputSchema: z.ZodType<Prisma.HelpdeskOrderByRelationAggregateInput> = z.object({
-  _count: z.lazy(() => SortOrderSchema).optional(),
+  _count: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const UnitCountOrderByAggregateInputSchema: z.ZodType<Prisma.UnitCountOrderByAggregateInput> = z.object({
@@ -3871,7 +3871,7 @@ export const UnitCountOrderByAggregateInputSchema: z.ZodType<Prisma.UnitCountOrd
   email: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const UnitMaxOrderByAggregateInputSchema: z.ZodType<Prisma.UnitMaxOrderByAggregateInput> = z.object({
@@ -3880,7 +3880,7 @@ export const UnitMaxOrderByAggregateInputSchema: z.ZodType<Prisma.UnitMaxOrderBy
   email: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const UnitMinOrderByAggregateInputSchema: z.ZodType<Prisma.UnitMinOrderByAggregateInput> = z.object({
@@ -3889,7 +3889,7 @@ export const UnitMinOrderByAggregateInputSchema: z.ZodType<Prisma.UnitMinOrderBy
   email: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const DevicesCountOrderByAggregateInputSchema: z.ZodType<Prisma.DevicesCountOrderByAggregateInput> = z.object({
@@ -3897,7 +3897,7 @@ export const DevicesCountOrderByAggregateInputSchema: z.ZodType<Prisma.DevicesCo
   name: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const DevicesMaxOrderByAggregateInputSchema: z.ZodType<Prisma.DevicesMaxOrderByAggregateInput> = z.object({
@@ -3905,7 +3905,7 @@ export const DevicesMaxOrderByAggregateInputSchema: z.ZodType<Prisma.DevicesMaxO
   name: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const DevicesMinOrderByAggregateInputSchema: z.ZodType<Prisma.DevicesMinOrderByAggregateInput> = z.object({
@@ -3913,17 +3913,17 @@ export const DevicesMinOrderByAggregateInputSchema: z.ZodType<Prisma.DevicesMinO
   name: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const SiteAuditListRelationFilterSchema: z.ZodType<Prisma.SiteAuditListRelationFilter> = z.object({
   every: z.lazy(() => SiteAuditWhereInputSchema).optional(),
   some: z.lazy(() => SiteAuditWhereInputSchema).optional(),
-  none: z.lazy(() => SiteAuditWhereInputSchema).optional(),
+  none: z.lazy(() => SiteAuditWhereInputSchema).optional()
 }).strict();
 
 export const SiteAuditOrderByRelationAggregateInputSchema: z.ZodType<Prisma.SiteAuditOrderByRelationAggregateInput> = z.object({
-  _count: z.lazy(() => SortOrderSchema).optional(),
+  _count: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const SiteCountOrderByAggregateInputSchema: z.ZodType<Prisma.SiteCountOrderByAggregateInput> = z.object({
@@ -3936,7 +3936,7 @@ export const SiteCountOrderByAggregateInputSchema: z.ZodType<Prisma.SiteCountOrd
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   scanAt: z.lazy(() => SortOrderSchema).optional(),
-  unitId: z.lazy(() => SortOrderSchema).optional(),
+  unitId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const SiteMaxOrderByAggregateInputSchema: z.ZodType<Prisma.SiteMaxOrderByAggregateInput> = z.object({
@@ -3949,7 +3949,7 @@ export const SiteMaxOrderByAggregateInputSchema: z.ZodType<Prisma.SiteMaxOrderBy
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   scanAt: z.lazy(() => SortOrderSchema).optional(),
-  unitId: z.lazy(() => SortOrderSchema).optional(),
+  unitId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const SiteMinOrderByAggregateInputSchema: z.ZodType<Prisma.SiteMinOrderByAggregateInput> = z.object({
@@ -3962,7 +3962,7 @@ export const SiteMinOrderByAggregateInputSchema: z.ZodType<Prisma.SiteMinOrderBy
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   scanAt: z.lazy(() => SortOrderSchema).optional(),
-  unitId: z.lazy(() => SortOrderSchema).optional(),
+  unitId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IntFilterSchema: z.ZodType<Prisma.IntFilter> = z.object({
@@ -3978,7 +3978,7 @@ export const IntFilterSchema: z.ZodType<Prisma.IntFilter> = z.object({
 
 export const SiteRelationFilterSchema: z.ZodType<Prisma.SiteRelationFilter> = z.object({
   is: z.lazy(() => SiteWhereInputSchema).optional(),
-  isNot: z.lazy(() => SiteWhereInputSchema).optional(),
+  isNot: z.lazy(() => SiteWhereInputSchema).optional()
 }).strict();
 
 export const SiteAuditCountOrderByAggregateInputSchema: z.ZodType<Prisma.SiteAuditCountOrderByAggregateInput> = z.object({
@@ -3989,12 +3989,12 @@ export const SiteAuditCountOrderByAggregateInputSchema: z.ZodType<Prisma.SiteAud
   status: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  siteId: z.lazy(() => SortOrderSchema).optional(),
+  siteId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const SiteAuditAvgOrderByAggregateInputSchema: z.ZodType<Prisma.SiteAuditAvgOrderByAggregateInput> = z.object({
   loadedTime: z.lazy(() => SortOrderSchema).optional(),
-  loadedSize: z.lazy(() => SortOrderSchema).optional(),
+  loadedSize: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const SiteAuditMaxOrderByAggregateInputSchema: z.ZodType<Prisma.SiteAuditMaxOrderByAggregateInput> = z.object({
@@ -4005,7 +4005,7 @@ export const SiteAuditMaxOrderByAggregateInputSchema: z.ZodType<Prisma.SiteAudit
   status: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  siteId: z.lazy(() => SortOrderSchema).optional(),
+  siteId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const SiteAuditMinOrderByAggregateInputSchema: z.ZodType<Prisma.SiteAuditMinOrderByAggregateInput> = z.object({
@@ -4016,12 +4016,12 @@ export const SiteAuditMinOrderByAggregateInputSchema: z.ZodType<Prisma.SiteAudit
   status: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  siteId: z.lazy(() => SortOrderSchema).optional(),
+  siteId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const SiteAuditSumOrderByAggregateInputSchema: z.ZodType<Prisma.SiteAuditSumOrderByAggregateInput> = z.object({
   loadedTime: z.lazy(() => SortOrderSchema).optional(),
-  loadedSize: z.lazy(() => SortOrderSchema).optional(),
+  loadedSize: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IntWithAggregatesFilterSchema: z.ZodType<Prisma.IntWithAggregatesFilter> = z.object({
@@ -4037,7 +4037,7 @@ export const IntWithAggregatesFilterSchema: z.ZodType<Prisma.IntWithAggregatesFi
   _avg: z.lazy(() => NestedFloatFilterSchema).optional(),
   _sum: z.lazy(() => NestedIntFilterSchema).optional(),
   _min: z.lazy(() => NestedIntFilterSchema).optional(),
-  _max: z.lazy(() => NestedIntFilterSchema).optional(),
+  _max: z.lazy(() => NestedIntFilterSchema).optional()
 }).strict();
 
 export const CertificateCountOrderByAggregateInputSchema: z.ZodType<Prisma.CertificateCountOrderByAggregateInput> = z.object({
@@ -4055,7 +4055,7 @@ export const CertificateCountOrderByAggregateInputSchema: z.ZodType<Prisma.Certi
   notAfterDate: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  unitId: z.lazy(() => SortOrderSchema).optional(),
+  unitId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CertificateMaxOrderByAggregateInputSchema: z.ZodType<Prisma.CertificateMaxOrderByAggregateInput> = z.object({
@@ -4073,7 +4073,7 @@ export const CertificateMaxOrderByAggregateInputSchema: z.ZodType<Prisma.Certifi
   notAfterDate: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  unitId: z.lazy(() => SortOrderSchema).optional(),
+  unitId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CertificateMinOrderByAggregateInputSchema: z.ZodType<Prisma.CertificateMinOrderByAggregateInput> = z.object({
@@ -4091,7 +4091,7 @@ export const CertificateMinOrderByAggregateInputSchema: z.ZodType<Prisma.Certifi
   notAfterDate: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
-  unitId: z.lazy(() => SortOrderSchema).optional(),
+  unitId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const FortigateCountOrderByAggregateInputSchema: z.ZodType<Prisma.FortigateCountOrderByAggregateInput> = z.object({
@@ -4101,7 +4101,7 @@ export const FortigateCountOrderByAggregateInputSchema: z.ZodType<Prisma.Fortiga
   path: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const FortigateMaxOrderByAggregateInputSchema: z.ZodType<Prisma.FortigateMaxOrderByAggregateInput> = z.object({
@@ -4111,7 +4111,7 @@ export const FortigateMaxOrderByAggregateInputSchema: z.ZodType<Prisma.Fortigate
   path: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const FortigateMinOrderByAggregateInputSchema: z.ZodType<Prisma.FortigateMinOrderByAggregateInput> = z.object({
@@ -4121,17 +4121,17 @@ export const FortigateMinOrderByAggregateInputSchema: z.ZodType<Prisma.Fortigate
   path: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CsirtCategoryRelationFilterSchema: z.ZodType<Prisma.CsirtCategoryRelationFilter> = z.object({
   is: z.lazy(() => CsirtCategoryWhereInputSchema).optional().nullable(),
-  isNot: z.lazy(() => CsirtCategoryWhereInputSchema).optional().nullable(),
+  isNot: z.lazy(() => CsirtCategoryWhereInputSchema).optional().nullable()
 }).strict();
 
 export const UserRelationFilterSchema: z.ZodType<Prisma.UserRelationFilter> = z.object({
   is: z.lazy(() => UserWhereInputSchema).optional().nullable(),
-  isNot: z.lazy(() => UserWhereInputSchema).optional().nullable(),
+  isNot: z.lazy(() => UserWhereInputSchema).optional().nullable()
 }).strict();
 
 export const CsirtPostCountOrderByAggregateInputSchema: z.ZodType<Prisma.CsirtPostCountOrderByAggregateInput> = z.object({
@@ -4144,7 +4144,7 @@ export const CsirtPostCountOrderByAggregateInputSchema: z.ZodType<Prisma.CsirtPo
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   categoryId: z.lazy(() => SortOrderSchema).optional(),
-  userId: z.lazy(() => SortOrderSchema).optional(),
+  userId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CsirtPostMaxOrderByAggregateInputSchema: z.ZodType<Prisma.CsirtPostMaxOrderByAggregateInput> = z.object({
@@ -4157,7 +4157,7 @@ export const CsirtPostMaxOrderByAggregateInputSchema: z.ZodType<Prisma.CsirtPost
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   categoryId: z.lazy(() => SortOrderSchema).optional(),
-  userId: z.lazy(() => SortOrderSchema).optional(),
+  userId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CsirtPostMinOrderByAggregateInputSchema: z.ZodType<Prisma.CsirtPostMinOrderByAggregateInput> = z.object({
@@ -4170,7 +4170,7 @@ export const CsirtPostMinOrderByAggregateInputSchema: z.ZodType<Prisma.CsirtPost
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   categoryId: z.lazy(() => SortOrderSchema).optional(),
-  userId: z.lazy(() => SortOrderSchema).optional(),
+  userId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CsirtCategoryCountOrderByAggregateInputSchema: z.ZodType<Prisma.CsirtCategoryCountOrderByAggregateInput> = z.object({
@@ -4178,7 +4178,7 @@ export const CsirtCategoryCountOrderByAggregateInputSchema: z.ZodType<Prisma.Csi
   name: z.lazy(() => SortOrderSchema).optional(),
   slug: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CsirtCategoryMaxOrderByAggregateInputSchema: z.ZodType<Prisma.CsirtCategoryMaxOrderByAggregateInput> = z.object({
@@ -4186,7 +4186,7 @@ export const CsirtCategoryMaxOrderByAggregateInputSchema: z.ZodType<Prisma.Csirt
   name: z.lazy(() => SortOrderSchema).optional(),
   slug: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const CsirtCategoryMinOrderByAggregateInputSchema: z.ZodType<Prisma.CsirtCategoryMinOrderByAggregateInput> = z.object({
@@ -4194,7 +4194,7 @@ export const CsirtCategoryMinOrderByAggregateInputSchema: z.ZodType<Prisma.Csirt
   name: z.lazy(() => SortOrderSchema).optional(),
   slug: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const JsonNullableFilterSchema: z.ZodType<Prisma.JsonNullableFilter> = z.object({
@@ -4215,7 +4215,7 @@ export const JsonNullableFilterSchema: z.ZodType<Prisma.JsonNullableFilter> = z.
 
 export const HelpdeskCategoryRelationFilterSchema: z.ZodType<Prisma.HelpdeskCategoryRelationFilter> = z.object({
   is: z.lazy(() => HelpdeskCategoryWhereInputSchema).optional().nullable(),
-  isNot: z.lazy(() => HelpdeskCategoryWhereInputSchema).optional().nullable(),
+  isNot: z.lazy(() => HelpdeskCategoryWhereInputSchema).optional().nullable()
 }).strict();
 
 export const HelpdeskCountOrderByAggregateInputSchema: z.ZodType<Prisma.HelpdeskCountOrderByAggregateInput> = z.object({
@@ -4230,7 +4230,7 @@ export const HelpdeskCountOrderByAggregateInputSchema: z.ZodType<Prisma.Helpdesk
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   categoryId: z.lazy(() => SortOrderSchema).optional(),
-  unitId: z.lazy(() => SortOrderSchema).optional(),
+  unitId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const HelpdeskMaxOrderByAggregateInputSchema: z.ZodType<Prisma.HelpdeskMaxOrderByAggregateInput> = z.object({
@@ -4244,7 +4244,7 @@ export const HelpdeskMaxOrderByAggregateInputSchema: z.ZodType<Prisma.HelpdeskMa
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   categoryId: z.lazy(() => SortOrderSchema).optional(),
-  unitId: z.lazy(() => SortOrderSchema).optional(),
+  unitId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const HelpdeskMinOrderByAggregateInputSchema: z.ZodType<Prisma.HelpdeskMinOrderByAggregateInput> = z.object({
@@ -4258,7 +4258,7 @@ export const HelpdeskMinOrderByAggregateInputSchema: z.ZodType<Prisma.HelpdeskMi
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   categoryId: z.lazy(() => SortOrderSchema).optional(),
-  unitId: z.lazy(() => SortOrderSchema).optional(),
+  unitId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const JsonNullableWithAggregatesFilterSchema: z.ZodType<Prisma.JsonNullableWithAggregatesFilter> = z.object({
@@ -4277,7 +4277,7 @@ export const JsonNullableWithAggregatesFilterSchema: z.ZodType<Prisma.JsonNullab
   not: z.union([ InputJsonValue,z.lazy(() => JsonNullValueFilterSchema) ]).optional(),
   _count: z.lazy(() => NestedIntNullableFilterSchema).optional(),
   _min: z.lazy(() => NestedJsonNullableFilterSchema).optional(),
-  _max: z.lazy(() => NestedJsonNullableFilterSchema).optional(),
+  _max: z.lazy(() => NestedJsonNullableFilterSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryCountOrderByAggregateInputSchema: z.ZodType<Prisma.HelpdeskCategoryCountOrderByAggregateInput> = z.object({
@@ -4285,7 +4285,7 @@ export const HelpdeskCategoryCountOrderByAggregateInputSchema: z.ZodType<Prisma.
   name: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryMaxOrderByAggregateInputSchema: z.ZodType<Prisma.HelpdeskCategoryMaxOrderByAggregateInput> = z.object({
@@ -4293,7 +4293,7 @@ export const HelpdeskCategoryMaxOrderByAggregateInputSchema: z.ZodType<Prisma.He
   name: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryMinOrderByAggregateInputSchema: z.ZodType<Prisma.HelpdeskCategoryMinOrderByAggregateInput> = z.object({
@@ -4301,22 +4301,22 @@ export const HelpdeskCategoryMinOrderByAggregateInputSchema: z.ZodType<Prisma.He
   name: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryRelationFilterSchema: z.ZodType<Prisma.IndeksKamiCategoryRelationFilter> = z.object({
   is: z.lazy(() => IndeksKamiCategoryWhereInputSchema).optional().nullable(),
-  isNot: z.lazy(() => IndeksKamiCategoryWhereInputSchema).optional().nullable(),
+  isNot: z.lazy(() => IndeksKamiCategoryWhereInputSchema).optional().nullable()
 }).strict();
 
 export const IndeksKamiDataListRelationFilterSchema: z.ZodType<Prisma.IndeksKamiDataListRelationFilter> = z.object({
   every: z.lazy(() => IndeksKamiDataWhereInputSchema).optional(),
   some: z.lazy(() => IndeksKamiDataWhereInputSchema).optional(),
-  none: z.lazy(() => IndeksKamiDataWhereInputSchema).optional(),
+  none: z.lazy(() => IndeksKamiDataWhereInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataOrderByRelationAggregateInputSchema: z.ZodType<Prisma.IndeksKamiDataOrderByRelationAggregateInput> = z.object({
-  _count: z.lazy(() => SortOrderSchema).optional(),
+  _count: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCountOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiCountOrderByAggregateInput> = z.object({
@@ -4330,7 +4330,7 @@ export const IndeksKamiCountOrderByAggregateInputSchema: z.ZodType<Prisma.Indeks
   categoryId: z.lazy(() => SortOrderSchema).optional(),
   unitId: z.lazy(() => SortOrderSchema).optional(),
   asesiId: z.lazy(() => SortOrderSchema).optional(),
-  asesorId: z.lazy(() => SortOrderSchema).optional(),
+  asesorId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiMaxOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiMaxOrderByAggregateInput> = z.object({
@@ -4342,7 +4342,7 @@ export const IndeksKamiMaxOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKa
   categoryId: z.lazy(() => SortOrderSchema).optional(),
   unitId: z.lazy(() => SortOrderSchema).optional(),
   asesiId: z.lazy(() => SortOrderSchema).optional(),
-  asesorId: z.lazy(() => SortOrderSchema).optional(),
+  asesorId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiMinOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiMinOrderByAggregateInput> = z.object({
@@ -4354,7 +4354,7 @@ export const IndeksKamiMinOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKa
   categoryId: z.lazy(() => SortOrderSchema).optional(),
   unitId: z.lazy(() => SortOrderSchema).optional(),
   asesiId: z.lazy(() => SortOrderSchema).optional(),
-  asesorId: z.lazy(() => SortOrderSchema).optional(),
+  asesorId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const FloatFilterSchema: z.ZodType<Prisma.FloatFilter> = z.object({
@@ -4377,11 +4377,11 @@ export const IndeksKamiCategoryCountOrderByAggregateInputSchema: z.ZodType<Prism
   title: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryAvgOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiCategoryAvgOrderByAggregateInput> = z.object({
-  code: z.lazy(() => SortOrderSchema).optional(),
+  code: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryMaxOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiCategoryMaxOrderByAggregateInput> = z.object({
@@ -4393,7 +4393,7 @@ export const IndeksKamiCategoryMaxOrderByAggregateInputSchema: z.ZodType<Prisma.
   title: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCategoryMinOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiCategoryMinOrderByAggregateInput> = z.object({
@@ -4405,11 +4405,11 @@ export const IndeksKamiCategoryMinOrderByAggregateInputSchema: z.ZodType<Prisma.
   title: z.lazy(() => SortOrderSchema).optional(),
   description: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCategorySumOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiCategorySumOrderByAggregateInput> = z.object({
-  code: z.lazy(() => SortOrderSchema).optional(),
+  code: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const FloatWithAggregatesFilterSchema: z.ZodType<Prisma.FloatWithAggregatesFilter> = z.object({
@@ -4425,7 +4425,7 @@ export const FloatWithAggregatesFilterSchema: z.ZodType<Prisma.FloatWithAggregat
   _avg: z.lazy(() => NestedFloatFilterSchema).optional(),
   _sum: z.lazy(() => NestedFloatFilterSchema).optional(),
   _min: z.lazy(() => NestedFloatFilterSchema).optional(),
-  _max: z.lazy(() => NestedFloatFilterSchema).optional(),
+  _max: z.lazy(() => NestedFloatFilterSchema).optional()
 }).strict();
 
 export const FloatNullableFilterSchema: z.ZodType<Prisma.FloatNullableFilter> = z.object({
@@ -4448,12 +4448,12 @@ export const IndeksKamiCriteriaCountOrderByAggregateInputSchema: z.ZodType<Prism
   require: z.lazy(() => SortOrderSchema).optional(),
   name: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCriteriaAvgOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaAvgOrderByAggregateInput> = z.object({
   code: z.lazy(() => SortOrderSchema).optional(),
-  category: z.lazy(() => SortOrderSchema).optional(),
+  category: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCriteriaMaxOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaMaxOrderByAggregateInput> = z.object({
@@ -4464,7 +4464,7 @@ export const IndeksKamiCriteriaMaxOrderByAggregateInputSchema: z.ZodType<Prisma.
   category: z.lazy(() => SortOrderSchema).optional(),
   name: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCriteriaMinOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaMinOrderByAggregateInput> = z.object({
@@ -4475,12 +4475,12 @@ export const IndeksKamiCriteriaMinOrderByAggregateInputSchema: z.ZodType<Prisma.
   category: z.lazy(() => SortOrderSchema).optional(),
   name: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiCriteriaSumOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiCriteriaSumOrderByAggregateInput> = z.object({
   code: z.lazy(() => SortOrderSchema).optional(),
-  category: z.lazy(() => SortOrderSchema).optional(),
+  category: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const FloatNullableWithAggregatesFilterSchema: z.ZodType<Prisma.FloatNullableWithAggregatesFilter> = z.object({
@@ -4496,7 +4496,7 @@ export const FloatNullableWithAggregatesFilterSchema: z.ZodType<Prisma.FloatNull
   _avg: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
   _sum: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
   _min: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
-  _max: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
+  _max: z.lazy(() => NestedFloatNullableFilterSchema).optional()
 }).strict();
 
 export const IntNullableFilterSchema: z.ZodType<Prisma.IntNullableFilter> = z.object({
@@ -4522,12 +4522,12 @@ export const IndeksKamiTemplateCountOrderByAggregateInputSchema: z.ZodType<Prism
   example: z.lazy(() => SortOrderSchema).optional(),
   options: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateAvgOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiTemplateAvgOrderByAggregateInput> = z.object({
   category: z.lazy(() => SortOrderSchema).optional(),
-  step: z.lazy(() => SortOrderSchema).optional(),
+  step: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateMaxOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiTemplateMaxOrderByAggregateInput> = z.object({
@@ -4541,7 +4541,7 @@ export const IndeksKamiTemplateMaxOrderByAggregateInputSchema: z.ZodType<Prisma.
   question: z.lazy(() => SortOrderSchema).optional(),
   example: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateMinOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiTemplateMinOrderByAggregateInput> = z.object({
@@ -4555,12 +4555,12 @@ export const IndeksKamiTemplateMinOrderByAggregateInputSchema: z.ZodType<Prisma.
   question: z.lazy(() => SortOrderSchema).optional(),
   example: z.lazy(() => SortOrderSchema).optional(),
   createdAt: z.lazy(() => SortOrderSchema).optional(),
-  updatedAt: z.lazy(() => SortOrderSchema).optional(),
+  updatedAt: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateSumOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiTemplateSumOrderByAggregateInput> = z.object({
   category: z.lazy(() => SortOrderSchema).optional(),
-  step: z.lazy(() => SortOrderSchema).optional(),
+  step: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IntNullableWithAggregatesFilterSchema: z.ZodType<Prisma.IntNullableWithAggregatesFilter> = z.object({
@@ -4576,17 +4576,17 @@ export const IntNullableWithAggregatesFilterSchema: z.ZodType<Prisma.IntNullable
   _avg: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
   _sum: z.lazy(() => NestedIntNullableFilterSchema).optional(),
   _min: z.lazy(() => NestedIntNullableFilterSchema).optional(),
-  _max: z.lazy(() => NestedIntNullableFilterSchema).optional(),
+  _max: z.lazy(() => NestedIntNullableFilterSchema).optional()
 }).strict();
 
 export const IndeksKamiRelationFilterSchema: z.ZodType<Prisma.IndeksKamiRelationFilter> = z.object({
   is: z.lazy(() => IndeksKamiWhereInputSchema).optional().nullable(),
-  isNot: z.lazy(() => IndeksKamiWhereInputSchema).optional().nullable(),
+  isNot: z.lazy(() => IndeksKamiWhereInputSchema).optional().nullable()
 }).strict();
 
 export const IndeksKamiTemplateRelationFilterSchema: z.ZodType<Prisma.IndeksKamiTemplateRelationFilter> = z.object({
   is: z.lazy(() => IndeksKamiTemplateWhereInputSchema).optional().nullable(),
-  isNot: z.lazy(() => IndeksKamiTemplateWhereInputSchema).optional().nullable(),
+  isNot: z.lazy(() => IndeksKamiTemplateWhereInputSchema).optional().nullable()
 }).strict();
 
 export const IndeksKamiDataCountOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiDataCountOrderByAggregateInput> = z.object({
@@ -4603,13 +4603,13 @@ export const IndeksKamiDataCountOrderByAggregateInputSchema: z.ZodType<Prisma.In
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   indeksId: z.lazy(() => SortOrderSchema).optional(),
-  templateId: z.lazy(() => SortOrderSchema).optional(),
+  templateId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiDataAvgOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiDataAvgOrderByAggregateInput> = z.object({
   value: z.lazy(() => SortOrderSchema).optional(),
   category: z.lazy(() => SortOrderSchema).optional(),
-  step: z.lazy(() => SortOrderSchema).optional(),
+  step: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiDataMaxOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiDataMaxOrderByAggregateInput> = z.object({
@@ -4626,7 +4626,7 @@ export const IndeksKamiDataMaxOrderByAggregateInputSchema: z.ZodType<Prisma.Inde
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   indeksId: z.lazy(() => SortOrderSchema).optional(),
-  templateId: z.lazy(() => SortOrderSchema).optional(),
+  templateId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiDataMinOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiDataMinOrderByAggregateInput> = z.object({
@@ -4643,25 +4643,25 @@ export const IndeksKamiDataMinOrderByAggregateInputSchema: z.ZodType<Prisma.Inde
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   indeksId: z.lazy(() => SortOrderSchema).optional(),
-  templateId: z.lazy(() => SortOrderSchema).optional(),
+  templateId: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const IndeksKamiDataSumOrderByAggregateInputSchema: z.ZodType<Prisma.IndeksKamiDataSumOrderByAggregateInput> = z.object({
   value: z.lazy(() => SortOrderSchema).optional(),
   category: z.lazy(() => SortOrderSchema).optional(),
-  step: z.lazy(() => SortOrderSchema).optional(),
+  step: z.lazy(() => SortOrderSchema).optional()
 }).strict();
 
 export const RoleCreateNestedOneWithoutUserInputSchema: z.ZodType<Prisma.RoleCreateNestedOneWithoutUserInput> = z.object({
   create: z.union([ z.lazy(() => RoleCreateWithoutUserInputSchema),z.lazy(() => RoleUncheckedCreateWithoutUserInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => RoleCreateOrConnectWithoutUserInputSchema).optional(),
-  connect: z.lazy(() => RoleWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => RoleWhereUniqueInputSchema).optional()
 }).strict();
 
 export const UnitCreateNestedOneWithoutUserInputSchema: z.ZodType<Prisma.UnitCreateNestedOneWithoutUserInput> = z.object({
   create: z.union([ z.lazy(() => UnitCreateWithoutUserInputSchema),z.lazy(() => UnitUncheckedCreateWithoutUserInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => UnitCreateOrConnectWithoutUserInputSchema).optional(),
-  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCreateNestedManyWithoutAsesiInputSchema: z.ZodType<Prisma.IndeksKamiCreateNestedManyWithoutAsesiInput> = z.object({
@@ -4681,7 +4681,7 @@ export const IndeksKamiCreateNestedManyWithoutAsesorInputSchema: z.ZodType<Prism
 export const DevicesCreateNestedOneWithoutUserInputSchema: z.ZodType<Prisma.DevicesCreateNestedOneWithoutUserInput> = z.object({
   create: z.union([ z.lazy(() => DevicesCreateWithoutUserInputSchema),z.lazy(() => DevicesUncheckedCreateWithoutUserInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => DevicesCreateOrConnectWithoutUserInputSchema).optional(),
-  connect: z.lazy(() => DevicesWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => DevicesWhereUniqueInputSchema).optional()
 }).strict();
 
 export const CsirtPostCreateNestedManyWithoutAuthorInputSchema: z.ZodType<Prisma.CsirtPostCreateNestedManyWithoutAuthorInput> = z.object({
@@ -4713,19 +4713,19 @@ export const CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema: z.ZodTy
 }).strict();
 
 export const StringFieldUpdateOperationsInputSchema: z.ZodType<Prisma.StringFieldUpdateOperationsInput> = z.object({
-  set: z.string().optional(),
+  set: z.string().optional()
 }).strict();
 
 export const NullableStringFieldUpdateOperationsInputSchema: z.ZodType<Prisma.NullableStringFieldUpdateOperationsInput> = z.object({
-  set: z.string().optional().nullable(),
+  set: z.string().optional().nullable()
 }).strict();
 
 export const DateTimeFieldUpdateOperationsInputSchema: z.ZodType<Prisma.DateTimeFieldUpdateOperationsInput> = z.object({
-  set: z.coerce.date().optional(),
+  set: z.coerce.date().optional()
 }).strict();
 
 export const NullableDateTimeFieldUpdateOperationsInputSchema: z.ZodType<Prisma.NullableDateTimeFieldUpdateOperationsInput> = z.object({
-  set: z.coerce.date().optional().nullable(),
+  set: z.coerce.date().optional().nullable()
 }).strict();
 
 export const RoleUpdateOneWithoutUserNestedInputSchema: z.ZodType<Prisma.RoleUpdateOneWithoutUserNestedInput> = z.object({
@@ -5146,7 +5146,7 @@ export const SiteAuditCreateNestedManyWithoutSiteInputSchema: z.ZodType<Prisma.S
 export const UnitCreateNestedOneWithoutSiteInputSchema: z.ZodType<Prisma.UnitCreateNestedOneWithoutSiteInput> = z.object({
   create: z.union([ z.lazy(() => UnitCreateWithoutSiteInputSchema),z.lazy(() => UnitUncheckedCreateWithoutSiteInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => UnitCreateOrConnectWithoutSiteInputSchema).optional(),
-  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional()
 }).strict();
 
 export const SiteAuditUncheckedCreateNestedManyWithoutSiteInputSchema: z.ZodType<Prisma.SiteAuditUncheckedCreateNestedManyWithoutSiteInput> = z.object({
@@ -5197,7 +5197,7 @@ export const SiteAuditUncheckedUpdateManyWithoutSiteNestedInputSchema: z.ZodType
 export const SiteCreateNestedOneWithoutSiteAuditInputSchema: z.ZodType<Prisma.SiteCreateNestedOneWithoutSiteAuditInput> = z.object({
   create: z.union([ z.lazy(() => SiteCreateWithoutSiteAuditInputSchema),z.lazy(() => SiteUncheckedCreateWithoutSiteAuditInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => SiteCreateOrConnectWithoutSiteAuditInputSchema).optional(),
-  connect: z.lazy(() => SiteWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => SiteWhereUniqueInputSchema).optional()
 }).strict();
 
 export const IntFieldUpdateOperationsInputSchema: z.ZodType<Prisma.IntFieldUpdateOperationsInput> = z.object({
@@ -5205,7 +5205,7 @@ export const IntFieldUpdateOperationsInputSchema: z.ZodType<Prisma.IntFieldUpdat
   increment: z.number().optional(),
   decrement: z.number().optional(),
   multiply: z.number().optional(),
-  divide: z.number().optional(),
+  divide: z.number().optional()
 }).strict();
 
 export const SiteUpdateOneRequiredWithoutSiteAuditNestedInputSchema: z.ZodType<Prisma.SiteUpdateOneRequiredWithoutSiteAuditNestedInput> = z.object({
@@ -5219,7 +5219,7 @@ export const SiteUpdateOneRequiredWithoutSiteAuditNestedInputSchema: z.ZodType<P
 export const UnitCreateNestedOneWithoutCertificateInputSchema: z.ZodType<Prisma.UnitCreateNestedOneWithoutCertificateInput> = z.object({
   create: z.union([ z.lazy(() => UnitCreateWithoutCertificateInputSchema),z.lazy(() => UnitUncheckedCreateWithoutCertificateInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => UnitCreateOrConnectWithoutCertificateInputSchema).optional(),
-  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional()
 }).strict();
 
 export const UnitUpdateOneWithoutCertificateNestedInputSchema: z.ZodType<Prisma.UnitUpdateOneWithoutCertificateNestedInput> = z.object({
@@ -5235,13 +5235,13 @@ export const UnitUpdateOneWithoutCertificateNestedInputSchema: z.ZodType<Prisma.
 export const CsirtCategoryCreateNestedOneWithoutCsirtInputSchema: z.ZodType<Prisma.CsirtCategoryCreateNestedOneWithoutCsirtInput> = z.object({
   create: z.union([ z.lazy(() => CsirtCategoryCreateWithoutCsirtInputSchema),z.lazy(() => CsirtCategoryUncheckedCreateWithoutCsirtInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => CsirtCategoryCreateOrConnectWithoutCsirtInputSchema).optional(),
-  connect: z.lazy(() => CsirtCategoryWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => CsirtCategoryWhereUniqueInputSchema).optional()
 }).strict();
 
 export const UserCreateNestedOneWithoutCsirtPostInputSchema: z.ZodType<Prisma.UserCreateNestedOneWithoutCsirtPostInput> = z.object({
   create: z.union([ z.lazy(() => UserCreateWithoutCsirtPostInputSchema),z.lazy(() => UserUncheckedCreateWithoutCsirtPostInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => UserCreateOrConnectWithoutCsirtPostInputSchema).optional(),
-  connect: z.lazy(() => UserWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => UserWhereUniqueInputSchema).optional()
 }).strict();
 
 export const CsirtCategoryUpdateOneWithoutCsirtNestedInputSchema: z.ZodType<Prisma.CsirtCategoryUpdateOneWithoutCsirtNestedInput> = z.object({
@@ -5309,13 +5309,13 @@ export const CsirtPostUncheckedUpdateManyWithoutCategoryNestedInputSchema: z.Zod
 export const HelpdeskCategoryCreateNestedOneWithoutHelpdeskInputSchema: z.ZodType<Prisma.HelpdeskCategoryCreateNestedOneWithoutHelpdeskInput> = z.object({
   create: z.union([ z.lazy(() => HelpdeskCategoryCreateWithoutHelpdeskInputSchema),z.lazy(() => HelpdeskCategoryUncheckedCreateWithoutHelpdeskInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => HelpdeskCategoryCreateOrConnectWithoutHelpdeskInputSchema).optional(),
-  connect: z.lazy(() => HelpdeskCategoryWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => HelpdeskCategoryWhereUniqueInputSchema).optional()
 }).strict();
 
 export const UnitCreateNestedOneWithoutHelpdeskInputSchema: z.ZodType<Prisma.UnitCreateNestedOneWithoutHelpdeskInput> = z.object({
   create: z.union([ z.lazy(() => UnitCreateWithoutHelpdeskInputSchema),z.lazy(() => UnitUncheckedCreateWithoutHelpdeskInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => UnitCreateOrConnectWithoutHelpdeskInputSchema).optional(),
-  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional()
 }).strict();
 
 export const HelpdeskCategoryUpdateOneWithoutHelpdeskNestedInputSchema: z.ZodType<Prisma.HelpdeskCategoryUpdateOneWithoutHelpdeskNestedInput> = z.object({
@@ -5381,25 +5381,25 @@ export const HelpdeskUncheckedUpdateManyWithoutCategoryNestedInputSchema: z.ZodT
 export const IndeksKamiCategoryCreateNestedOneWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiCategoryCreateNestedOneWithoutIndeksKamiInput> = z.object({
   create: z.union([ z.lazy(() => IndeksKamiCategoryCreateWithoutIndeksKamiInputSchema),z.lazy(() => IndeksKamiCategoryUncheckedCreateWithoutIndeksKamiInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => IndeksKamiCategoryCreateOrConnectWithoutIndeksKamiInputSchema).optional(),
-  connect: z.lazy(() => IndeksKamiCategoryWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => IndeksKamiCategoryWhereUniqueInputSchema).optional()
 }).strict();
 
 export const UnitCreateNestedOneWithoutAsesiInputSchema: z.ZodType<Prisma.UnitCreateNestedOneWithoutAsesiInput> = z.object({
   create: z.union([ z.lazy(() => UnitCreateWithoutAsesiInputSchema),z.lazy(() => UnitUncheckedCreateWithoutAsesiInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => UnitCreateOrConnectWithoutAsesiInputSchema).optional(),
-  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => UnitWhereUniqueInputSchema).optional()
 }).strict();
 
 export const UserCreateNestedOneWithoutAsesiInputSchema: z.ZodType<Prisma.UserCreateNestedOneWithoutAsesiInput> = z.object({
   create: z.union([ z.lazy(() => UserCreateWithoutAsesiInputSchema),z.lazy(() => UserUncheckedCreateWithoutAsesiInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => UserCreateOrConnectWithoutAsesiInputSchema).optional(),
-  connect: z.lazy(() => UserWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => UserWhereUniqueInputSchema).optional()
 }).strict();
 
 export const UserCreateNestedOneWithoutAsesorInputSchema: z.ZodType<Prisma.UserCreateNestedOneWithoutAsesorInput> = z.object({
   create: z.union([ z.lazy(() => UserCreateWithoutAsesorInputSchema),z.lazy(() => UserUncheckedCreateWithoutAsesorInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => UserCreateOrConnectWithoutAsesorInputSchema).optional(),
-  connect: z.lazy(() => UserWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => UserWhereUniqueInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiDataCreateNestedManyWithoutIndeksKamiInput> = z.object({
@@ -5503,7 +5503,7 @@ export const FloatFieldUpdateOperationsInputSchema: z.ZodType<Prisma.FloatFieldU
   increment: z.number().optional(),
   decrement: z.number().optional(),
   multiply: z.number().optional(),
-  divide: z.number().optional(),
+  divide: z.number().optional()
 }).strict();
 
 export const IndeksKamiUpdateManyWithoutCategoryNestedInputSchema: z.ZodType<Prisma.IndeksKamiUpdateManyWithoutCategoryNestedInput> = z.object({
@@ -5539,7 +5539,7 @@ export const NullableFloatFieldUpdateOperationsInputSchema: z.ZodType<Prisma.Nul
   increment: z.number().optional(),
   decrement: z.number().optional(),
   multiply: z.number().optional(),
-  divide: z.number().optional(),
+  divide: z.number().optional()
 }).strict();
 
 export const IndeksKamiDataCreateNestedManyWithoutTemplateInputSchema: z.ZodType<Prisma.IndeksKamiDataCreateNestedManyWithoutTemplateInput> = z.object({
@@ -5561,7 +5561,7 @@ export const NullableIntFieldUpdateOperationsInputSchema: z.ZodType<Prisma.Nulla
   increment: z.number().optional(),
   decrement: z.number().optional(),
   multiply: z.number().optional(),
-  divide: z.number().optional(),
+  divide: z.number().optional()
 }).strict();
 
 export const IndeksKamiDataUpdateManyWithoutTemplateNestedInputSchema: z.ZodType<Prisma.IndeksKamiDataUpdateManyWithoutTemplateNestedInput> = z.object({
@@ -5595,13 +5595,13 @@ export const IndeksKamiDataUncheckedUpdateManyWithoutTemplateNestedInputSchema: 
 export const IndeksKamiCreateNestedOneWithoutResultInputSchema: z.ZodType<Prisma.IndeksKamiCreateNestedOneWithoutResultInput> = z.object({
   create: z.union([ z.lazy(() => IndeksKamiCreateWithoutResultInputSchema),z.lazy(() => IndeksKamiUncheckedCreateWithoutResultInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => IndeksKamiCreateOrConnectWithoutResultInputSchema).optional(),
-  connect: z.lazy(() => IndeksKamiWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => IndeksKamiWhereUniqueInputSchema).optional()
 }).strict();
 
 export const IndeksKamiTemplateCreateNestedOneWithoutResultInputSchema: z.ZodType<Prisma.IndeksKamiTemplateCreateNestedOneWithoutResultInput> = z.object({
   create: z.union([ z.lazy(() => IndeksKamiTemplateCreateWithoutResultInputSchema),z.lazy(() => IndeksKamiTemplateUncheckedCreateWithoutResultInputSchema) ]).optional(),
   connectOrCreate: z.lazy(() => IndeksKamiTemplateCreateOrConnectWithoutResultInputSchema).optional(),
-  connect: z.lazy(() => IndeksKamiTemplateWhereUniqueInputSchema).optional(),
+  connect: z.lazy(() => IndeksKamiTemplateWhereUniqueInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUpdateOneWithoutResultNestedInputSchema: z.ZodType<Prisma.IndeksKamiUpdateOneWithoutResultNestedInput> = z.object({
@@ -5688,7 +5688,7 @@ export const NestedStringWithAggregatesFilterSchema: z.ZodType<Prisma.NestedStri
   not: z.union([ z.string(),z.lazy(() => NestedStringWithAggregatesFilterSchema) ]).optional(),
   _count: z.lazy(() => NestedIntFilterSchema).optional(),
   _min: z.lazy(() => NestedStringFilterSchema).optional(),
-  _max: z.lazy(() => NestedStringFilterSchema).optional(),
+  _max: z.lazy(() => NestedStringFilterSchema).optional()
 }).strict();
 
 export const NestedIntFilterSchema: z.ZodType<Prisma.NestedIntFilter> = z.object({
@@ -5716,7 +5716,7 @@ export const NestedStringNullableWithAggregatesFilterSchema: z.ZodType<Prisma.Ne
   not: z.union([ z.string(),z.lazy(() => NestedStringNullableWithAggregatesFilterSchema) ]).optional().nullable(),
   _count: z.lazy(() => NestedIntNullableFilterSchema).optional(),
   _min: z.lazy(() => NestedStringNullableFilterSchema).optional(),
-  _max: z.lazy(() => NestedStringNullableFilterSchema).optional(),
+  _max: z.lazy(() => NestedStringNullableFilterSchema).optional()
 }).strict();
 
 export const NestedIntNullableFilterSchema: z.ZodType<Prisma.NestedIntNullableFilter> = z.object({
@@ -5741,7 +5741,7 @@ export const NestedDateTimeWithAggregatesFilterSchema: z.ZodType<Prisma.NestedDa
   not: z.union([ z.coerce.date(),z.lazy(() => NestedDateTimeWithAggregatesFilterSchema) ]).optional(),
   _count: z.lazy(() => NestedIntFilterSchema).optional(),
   _min: z.lazy(() => NestedDateTimeFilterSchema).optional(),
-  _max: z.lazy(() => NestedDateTimeFilterSchema).optional(),
+  _max: z.lazy(() => NestedDateTimeFilterSchema).optional()
 }).strict();
 
 export const NestedDateTimeNullableWithAggregatesFilterSchema: z.ZodType<Prisma.NestedDateTimeNullableWithAggregatesFilter> = z.object({
@@ -5755,7 +5755,7 @@ export const NestedDateTimeNullableWithAggregatesFilterSchema: z.ZodType<Prisma.
   not: z.union([ z.coerce.date(),z.lazy(() => NestedDateTimeNullableWithAggregatesFilterSchema) ]).optional().nullable(),
   _count: z.lazy(() => NestedIntNullableFilterSchema).optional(),
   _min: z.lazy(() => NestedDateTimeNullableFilterSchema).optional(),
-  _max: z.lazy(() => NestedDateTimeNullableFilterSchema).optional(),
+  _max: z.lazy(() => NestedDateTimeNullableFilterSchema).optional()
 }).strict();
 
 export const NestedJsonFilterSchema: z.ZodType<Prisma.NestedJsonFilter> = z.object({
@@ -5787,7 +5787,7 @@ export const NestedIntWithAggregatesFilterSchema: z.ZodType<Prisma.NestedIntWith
   _avg: z.lazy(() => NestedFloatFilterSchema).optional(),
   _sum: z.lazy(() => NestedIntFilterSchema).optional(),
   _min: z.lazy(() => NestedIntFilterSchema).optional(),
-  _max: z.lazy(() => NestedIntFilterSchema).optional(),
+  _max: z.lazy(() => NestedIntFilterSchema).optional()
 }).strict();
 
 export const NestedFloatFilterSchema: z.ZodType<Prisma.NestedFloatFilter> = z.object({
@@ -5830,7 +5830,7 @@ export const NestedFloatWithAggregatesFilterSchema: z.ZodType<Prisma.NestedFloat
   _avg: z.lazy(() => NestedFloatFilterSchema).optional(),
   _sum: z.lazy(() => NestedFloatFilterSchema).optional(),
   _min: z.lazy(() => NestedFloatFilterSchema).optional(),
-  _max: z.lazy(() => NestedFloatFilterSchema).optional(),
+  _max: z.lazy(() => NestedFloatFilterSchema).optional()
 }).strict();
 
 export const NestedFloatNullableFilterSchema: z.ZodType<Prisma.NestedFloatNullableFilter> = z.object({
@@ -5857,7 +5857,7 @@ export const NestedFloatNullableWithAggregatesFilterSchema: z.ZodType<Prisma.Nes
   _avg: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
   _sum: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
   _min: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
-  _max: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
+  _max: z.lazy(() => NestedFloatNullableFilterSchema).optional()
 }).strict();
 
 export const NestedIntNullableWithAggregatesFilterSchema: z.ZodType<Prisma.NestedIntNullableWithAggregatesFilter> = z.object({
@@ -5873,7 +5873,7 @@ export const NestedIntNullableWithAggregatesFilterSchema: z.ZodType<Prisma.Neste
   _avg: z.lazy(() => NestedFloatNullableFilterSchema).optional(),
   _sum: z.lazy(() => NestedIntNullableFilterSchema).optional(),
   _min: z.lazy(() => NestedIntNullableFilterSchema).optional(),
-  _max: z.lazy(() => NestedIntNullableFilterSchema).optional(),
+  _max: z.lazy(() => NestedIntNullableFilterSchema).optional()
 }).strict();
 
 export const RoleCreateWithoutUserInputSchema: z.ZodType<Prisma.RoleCreateWithoutUserInput> = z.object({
@@ -5882,7 +5882,7 @@ export const RoleCreateWithoutUserInputSchema: z.ZodType<Prisma.RoleCreateWithou
   description: z.string().optional().nullable(),
   permissions: z.union([ z.lazy(() => JsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional().nullable(),
+  updatedAt: z.coerce.date().optional().nullable()
 }).strict();
 
 export const RoleUncheckedCreateWithoutUserInputSchema: z.ZodType<Prisma.RoleUncheckedCreateWithoutUserInput> = z.object({
@@ -5891,7 +5891,7 @@ export const RoleUncheckedCreateWithoutUserInputSchema: z.ZodType<Prisma.RoleUnc
   description: z.string().optional().nullable(),
   permissions: z.union([ z.lazy(() => JsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional().nullable(),
+  updatedAt: z.coerce.date().optional().nullable()
 }).strict();
 
 export const RoleCreateOrConnectWithoutUserInputSchema: z.ZodType<Prisma.RoleCreateOrConnectWithoutUserInput> = z.object({
@@ -5909,7 +5909,7 @@ export const UnitCreateWithoutUserInputSchema: z.ZodType<Prisma.UnitCreateWithou
   Site: z.lazy(() => SiteCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateCreateNestedManyWithoutUnitInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedCreateWithoutUserInputSchema: z.ZodType<Prisma.UnitUncheckedCreateWithoutUserInput> = z.object({
@@ -5922,7 +5922,7 @@ export const UnitUncheckedCreateWithoutUserInputSchema: z.ZodType<Prisma.UnitUnc
   Site: z.lazy(() => SiteUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitCreateOrConnectWithoutUserInputSchema: z.ZodType<Prisma.UnitCreateOrConnectWithoutUserInput> = z.object({
@@ -5941,7 +5941,7 @@ export const IndeksKamiCreateWithoutAsesiInputSchema: z.ZodType<Prisma.IndeksKam
   category: z.lazy(() => IndeksKamiCategoryCreateNestedOneWithoutIndeksKamiInputSchema).optional(),
   unit: z.lazy(() => UnitCreateNestedOneWithoutAsesiInputSchema).optional(),
   asesor: z.lazy(() => UserCreateNestedOneWithoutAsesorInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedCreateWithoutAsesiInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedCreateWithoutAsesiInput> = z.object({
@@ -5955,7 +5955,7 @@ export const IndeksKamiUncheckedCreateWithoutAsesiInputSchema: z.ZodType<Prisma.
   categoryId: z.string().optional().nullable(),
   unitId: z.string().optional().nullable(),
   asesorId: z.string().optional().nullable(),
-  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCreateOrConnectWithoutAsesiInputSchema: z.ZodType<Prisma.IndeksKamiCreateOrConnectWithoutAsesiInput> = z.object({
@@ -5965,7 +5965,7 @@ export const IndeksKamiCreateOrConnectWithoutAsesiInputSchema: z.ZodType<Prisma.
 
 export const IndeksKamiCreateManyAsesiInputEnvelopeSchema: z.ZodType<Prisma.IndeksKamiCreateManyAsesiInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => IndeksKamiCreateManyAsesiInputSchema),z.lazy(() => IndeksKamiCreateManyAsesiInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const IndeksKamiCreateWithoutAsesorInputSchema: z.ZodType<Prisma.IndeksKamiCreateWithoutAsesorInput> = z.object({
@@ -5979,7 +5979,7 @@ export const IndeksKamiCreateWithoutAsesorInputSchema: z.ZodType<Prisma.IndeksKa
   category: z.lazy(() => IndeksKamiCategoryCreateNestedOneWithoutIndeksKamiInputSchema).optional(),
   unit: z.lazy(() => UnitCreateNestedOneWithoutAsesiInputSchema).optional(),
   asesi: z.lazy(() => UserCreateNestedOneWithoutAsesiInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedCreateWithoutAsesorInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedCreateWithoutAsesorInput> = z.object({
@@ -5993,7 +5993,7 @@ export const IndeksKamiUncheckedCreateWithoutAsesorInputSchema: z.ZodType<Prisma
   categoryId: z.string().optional().nullable(),
   unitId: z.string().optional().nullable(),
   asesiId: z.string(),
-  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCreateOrConnectWithoutAsesorInputSchema: z.ZodType<Prisma.IndeksKamiCreateOrConnectWithoutAsesorInput> = z.object({
@@ -6003,7 +6003,7 @@ export const IndeksKamiCreateOrConnectWithoutAsesorInputSchema: z.ZodType<Prisma
 
 export const IndeksKamiCreateManyAsesorInputEnvelopeSchema: z.ZodType<Prisma.IndeksKamiCreateManyAsesorInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => IndeksKamiCreateManyAsesorInputSchema),z.lazy(() => IndeksKamiCreateManyAsesorInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const DevicesCreateWithoutUserInputSchema: z.ZodType<Prisma.DevicesCreateWithoutUserInput> = z.object({
@@ -6011,7 +6011,7 @@ export const DevicesCreateWithoutUserInputSchema: z.ZodType<Prisma.DevicesCreate
   name: z.string(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional().nullable(),
+  updatedAt: z.coerce.date().optional().nullable()
 }).strict();
 
 export const DevicesUncheckedCreateWithoutUserInputSchema: z.ZodType<Prisma.DevicesUncheckedCreateWithoutUserInput> = z.object({
@@ -6019,7 +6019,7 @@ export const DevicesUncheckedCreateWithoutUserInputSchema: z.ZodType<Prisma.Devi
   name: z.string(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional().nullable(),
+  updatedAt: z.coerce.date().optional().nullable()
 }).strict();
 
 export const DevicesCreateOrConnectWithoutUserInputSchema: z.ZodType<Prisma.DevicesCreateOrConnectWithoutUserInput> = z.object({
@@ -6036,7 +6036,7 @@ export const CsirtPostCreateWithoutAuthorInputSchema: z.ZodType<Prisma.CsirtPost
   type: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  category: z.lazy(() => CsirtCategoryCreateNestedOneWithoutCsirtInputSchema).optional(),
+  category: z.lazy(() => CsirtCategoryCreateNestedOneWithoutCsirtInputSchema).optional()
 }).strict();
 
 export const CsirtPostUncheckedCreateWithoutAuthorInputSchema: z.ZodType<Prisma.CsirtPostUncheckedCreateWithoutAuthorInput> = z.object({
@@ -6048,7 +6048,7 @@ export const CsirtPostUncheckedCreateWithoutAuthorInputSchema: z.ZodType<Prisma.
   type: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  categoryId: z.string().optional().nullable(),
+  categoryId: z.string().optional().nullable()
 }).strict();
 
 export const CsirtPostCreateOrConnectWithoutAuthorInputSchema: z.ZodType<Prisma.CsirtPostCreateOrConnectWithoutAuthorInput> = z.object({
@@ -6058,7 +6058,7 @@ export const CsirtPostCreateOrConnectWithoutAuthorInputSchema: z.ZodType<Prisma.
 
 export const CsirtPostCreateManyAuthorInputEnvelopeSchema: z.ZodType<Prisma.CsirtPostCreateManyAuthorInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => CsirtPostCreateManyAuthorInputSchema),z.lazy(() => CsirtPostCreateManyAuthorInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const RoleUpsertWithoutUserInputSchema: z.ZodType<Prisma.RoleUpsertWithoutUserInput> = z.object({
@@ -6099,7 +6099,7 @@ export const UnitUpdateWithoutUserInputSchema: z.ZodType<Prisma.UnitUpdateWithou
   Site: z.lazy(() => SiteUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUpdateManyWithoutUnitNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedUpdateWithoutUserInputSchema: z.ZodType<Prisma.UnitUncheckedUpdateWithoutUserInput> = z.object({
@@ -6112,7 +6112,7 @@ export const UnitUncheckedUpdateWithoutUserInputSchema: z.ZodType<Prisma.UnitUnc
   Site: z.lazy(() => SiteUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUpsertWithWhereUniqueWithoutAsesiInputSchema: z.ZodType<Prisma.IndeksKamiUpsertWithWhereUniqueWithoutAsesiInput> = z.object({
@@ -6230,7 +6230,7 @@ export const UserCreateWithoutRoleInputSchema: z.ZodType<Prisma.UserCreateWithou
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesiInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesorInputSchema).optional(),
   Devices: z.lazy(() => DevicesCreateNestedOneWithoutUserInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserUncheckedCreateWithoutRoleInputSchema: z.ZodType<Prisma.UserUncheckedCreateWithoutRoleInput> = z.object({
@@ -6246,7 +6246,7 @@ export const UserUncheckedCreateWithoutRoleInputSchema: z.ZodType<Prisma.UserUnc
   devicesId: z.string().optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesiInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesorInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserCreateOrConnectWithoutRoleInputSchema: z.ZodType<Prisma.UserCreateOrConnectWithoutRoleInput> = z.object({
@@ -6256,7 +6256,7 @@ export const UserCreateOrConnectWithoutRoleInputSchema: z.ZodType<Prisma.UserCre
 
 export const UserCreateManyRoleInputEnvelopeSchema: z.ZodType<Prisma.UserCreateManyRoleInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => UserCreateManyRoleInputSchema),z.lazy(() => UserCreateManyRoleInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const UserUpsertWithWhereUniqueWithoutRoleInputSchema: z.ZodType<Prisma.UserUpsertWithWhereUniqueWithoutRoleInput> = z.object({
@@ -6305,7 +6305,7 @@ export const UserCreateWithoutUnitInputSchema: z.ZodType<Prisma.UserCreateWithou
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesiInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesorInputSchema).optional(),
   Devices: z.lazy(() => DevicesCreateNestedOneWithoutUserInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.UserUncheckedCreateWithoutUnitInput> = z.object({
@@ -6321,7 +6321,7 @@ export const UserUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.UserUnc
   devicesId: z.string().optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesiInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesorInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.UserCreateOrConnectWithoutUnitInput> = z.object({
@@ -6331,7 +6331,7 @@ export const UserCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.UserCre
 
 export const UserCreateManyUnitInputEnvelopeSchema: z.ZodType<Prisma.UserCreateManyUnitInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => UserCreateManyUnitInputSchema),z.lazy(() => UserCreateManyUnitInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const SiteCreateWithoutUnitInputSchema: z.ZodType<Prisma.SiteCreateWithoutUnitInput> = z.object({
@@ -6344,7 +6344,7 @@ export const SiteCreateWithoutUnitInputSchema: z.ZodType<Prisma.SiteCreateWithou
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   scanAt: z.coerce.date().optional().nullable(),
-  siteAudit: z.lazy(() => SiteAuditCreateNestedManyWithoutSiteInputSchema).optional(),
+  siteAudit: z.lazy(() => SiteAuditCreateNestedManyWithoutSiteInputSchema).optional()
 }).strict();
 
 export const SiteUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.SiteUncheckedCreateWithoutUnitInput> = z.object({
@@ -6357,7 +6357,7 @@ export const SiteUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.SiteUnc
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   scanAt: z.coerce.date().optional().nullable(),
-  siteAudit: z.lazy(() => SiteAuditUncheckedCreateNestedManyWithoutSiteInputSchema).optional(),
+  siteAudit: z.lazy(() => SiteAuditUncheckedCreateNestedManyWithoutSiteInputSchema).optional()
 }).strict();
 
 export const SiteCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.SiteCreateOrConnectWithoutUnitInput> = z.object({
@@ -6367,7 +6367,7 @@ export const SiteCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.SiteCre
 
 export const SiteCreateManyUnitInputEnvelopeSchema: z.ZodType<Prisma.SiteCreateManyUnitInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => SiteCreateManyUnitInputSchema),z.lazy(() => SiteCreateManyUnitInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const CertificateCreateWithoutUnitInputSchema: z.ZodType<Prisma.CertificateCreateWithoutUnitInput> = z.object({
@@ -6384,7 +6384,7 @@ export const CertificateCreateWithoutUnitInputSchema: z.ZodType<Prisma.Certifica
   notBeforeDate: z.coerce.date().optional().nullable(),
   notAfterDate: z.coerce.date().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const CertificateUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.CertificateUncheckedCreateWithoutUnitInput> = z.object({
@@ -6401,7 +6401,7 @@ export const CertificateUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.
   notBeforeDate: z.coerce.date().optional().nullable(),
   notAfterDate: z.coerce.date().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const CertificateCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.CertificateCreateOrConnectWithoutUnitInput> = z.object({
@@ -6411,7 +6411,7 @@ export const CertificateCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.
 
 export const CertificateCreateManyUnitInputEnvelopeSchema: z.ZodType<Prisma.CertificateCreateManyUnitInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => CertificateCreateManyUnitInputSchema),z.lazy(() => CertificateCreateManyUnitInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const IndeksKamiCreateWithoutUnitInputSchema: z.ZodType<Prisma.IndeksKamiCreateWithoutUnitInput> = z.object({
@@ -6425,7 +6425,7 @@ export const IndeksKamiCreateWithoutUnitInputSchema: z.ZodType<Prisma.IndeksKami
   category: z.lazy(() => IndeksKamiCategoryCreateNestedOneWithoutIndeksKamiInputSchema).optional(),
   asesi: z.lazy(() => UserCreateNestedOneWithoutAsesiInputSchema).optional(),
   asesor: z.lazy(() => UserCreateNestedOneWithoutAsesorInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedCreateWithoutUnitInput> = z.object({
@@ -6439,7 +6439,7 @@ export const IndeksKamiUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.I
   categoryId: z.string().optional().nullable(),
   asesiId: z.string(),
   asesorId: z.string().optional().nullable(),
-  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.IndeksKamiCreateOrConnectWithoutUnitInput> = z.object({
@@ -6449,7 +6449,7 @@ export const IndeksKamiCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.I
 
 export const IndeksKamiCreateManyUnitInputEnvelopeSchema: z.ZodType<Prisma.IndeksKamiCreateManyUnitInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => IndeksKamiCreateManyUnitInputSchema),z.lazy(() => IndeksKamiCreateManyUnitInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const HelpdeskCreateWithoutUnitInputSchema: z.ZodType<Prisma.HelpdeskCreateWithoutUnitInput> = z.object({
@@ -6463,7 +6463,7 @@ export const HelpdeskCreateWithoutUnitInputSchema: z.ZodType<Prisma.HelpdeskCrea
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  category: z.lazy(() => HelpdeskCategoryCreateNestedOneWithoutHelpdeskInputSchema).optional(),
+  category: z.lazy(() => HelpdeskCategoryCreateNestedOneWithoutHelpdeskInputSchema).optional()
 }).strict();
 
 export const HelpdeskUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.HelpdeskUncheckedCreateWithoutUnitInput> = z.object({
@@ -6477,7 +6477,7 @@ export const HelpdeskUncheckedCreateWithoutUnitInputSchema: z.ZodType<Prisma.Hel
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  categoryId: z.string().optional().nullable(),
+  categoryId: z.string().optional().nullable()
 }).strict();
 
 export const HelpdeskCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.HelpdeskCreateOrConnectWithoutUnitInput> = z.object({
@@ -6487,7 +6487,7 @@ export const HelpdeskCreateOrConnectWithoutUnitInputSchema: z.ZodType<Prisma.Hel
 
 export const HelpdeskCreateManyUnitInputEnvelopeSchema: z.ZodType<Prisma.HelpdeskCreateManyUnitInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => HelpdeskCreateManyUnitInputSchema),z.lazy(() => HelpdeskCreateManyUnitInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const UserUpsertWithWhereUniqueWithoutUnitInputSchema: z.ZodType<Prisma.UserUpsertWithWhereUniqueWithoutUnitInput> = z.object({
@@ -6638,7 +6638,7 @@ export const UserCreateWithoutDevicesInputSchema: z.ZodType<Prisma.UserCreateWit
   unit: z.lazy(() => UnitCreateNestedOneWithoutUserInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesiInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesorInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserUncheckedCreateWithoutDevicesInputSchema: z.ZodType<Prisma.UserUncheckedCreateWithoutDevicesInput> = z.object({
@@ -6654,7 +6654,7 @@ export const UserUncheckedCreateWithoutDevicesInputSchema: z.ZodType<Prisma.User
   unitId: z.string().optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesiInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesorInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserCreateOrConnectWithoutDevicesInputSchema: z.ZodType<Prisma.UserCreateOrConnectWithoutDevicesInput> = z.object({
@@ -6664,7 +6664,7 @@ export const UserCreateOrConnectWithoutDevicesInputSchema: z.ZodType<Prisma.User
 
 export const UserCreateManyDevicesInputEnvelopeSchema: z.ZodType<Prisma.UserCreateManyDevicesInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => UserCreateManyDevicesInputSchema),z.lazy(() => UserCreateManyDevicesInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const UserUpsertWithWhereUniqueWithoutDevicesInputSchema: z.ZodType<Prisma.UserUpsertWithWhereUniqueWithoutDevicesInput> = z.object({
@@ -6690,7 +6690,7 @@ export const SiteAuditCreateWithoutSiteInputSchema: z.ZodType<Prisma.SiteAuditCr
   loadedSize: z.number().optional(),
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const SiteAuditUncheckedCreateWithoutSiteInputSchema: z.ZodType<Prisma.SiteAuditUncheckedCreateWithoutSiteInput> = z.object({
@@ -6700,7 +6700,7 @@ export const SiteAuditUncheckedCreateWithoutSiteInputSchema: z.ZodType<Prisma.Si
   loadedSize: z.number().optional(),
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const SiteAuditCreateOrConnectWithoutSiteInputSchema: z.ZodType<Prisma.SiteAuditCreateOrConnectWithoutSiteInput> = z.object({
@@ -6710,7 +6710,7 @@ export const SiteAuditCreateOrConnectWithoutSiteInputSchema: z.ZodType<Prisma.Si
 
 export const SiteAuditCreateManySiteInputEnvelopeSchema: z.ZodType<Prisma.SiteAuditCreateManySiteInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => SiteAuditCreateManySiteInputSchema),z.lazy(() => SiteAuditCreateManySiteInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const UnitCreateWithoutSiteInputSchema: z.ZodType<Prisma.UnitCreateWithoutSiteInput> = z.object({
@@ -6723,7 +6723,7 @@ export const UnitCreateWithoutSiteInputSchema: z.ZodType<Prisma.UnitCreateWithou
   User: z.lazy(() => UserCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateCreateNestedManyWithoutUnitInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedCreateWithoutSiteInputSchema: z.ZodType<Prisma.UnitUncheckedCreateWithoutSiteInput> = z.object({
@@ -6736,7 +6736,7 @@ export const UnitUncheckedCreateWithoutSiteInputSchema: z.ZodType<Prisma.UnitUnc
   User: z.lazy(() => UserUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitCreateOrConnectWithoutSiteInputSchema: z.ZodType<Prisma.UnitCreateOrConnectWithoutSiteInput> = z.object({
@@ -6789,7 +6789,7 @@ export const UnitUpdateWithoutSiteInputSchema: z.ZodType<Prisma.UnitUpdateWithou
   User: z.lazy(() => UserUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUpdateManyWithoutUnitNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedUpdateWithoutSiteInputSchema: z.ZodType<Prisma.UnitUncheckedUpdateWithoutSiteInput> = z.object({
@@ -6802,7 +6802,7 @@ export const UnitUncheckedUpdateWithoutSiteInputSchema: z.ZodType<Prisma.UnitUnc
   User: z.lazy(() => UserUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const SiteCreateWithoutSiteAuditInputSchema: z.ZodType<Prisma.SiteCreateWithoutSiteAuditInput> = z.object({
@@ -6815,7 +6815,7 @@ export const SiteCreateWithoutSiteAuditInputSchema: z.ZodType<Prisma.SiteCreateW
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   scanAt: z.coerce.date().optional().nullable(),
-  unit: z.lazy(() => UnitCreateNestedOneWithoutSiteInputSchema).optional(),
+  unit: z.lazy(() => UnitCreateNestedOneWithoutSiteInputSchema).optional()
 }).strict();
 
 export const SiteUncheckedCreateWithoutSiteAuditInputSchema: z.ZodType<Prisma.SiteUncheckedCreateWithoutSiteAuditInput> = z.object({
@@ -6828,7 +6828,7 @@ export const SiteUncheckedCreateWithoutSiteAuditInputSchema: z.ZodType<Prisma.Si
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   scanAt: z.coerce.date().optional().nullable(),
-  unitId: z.string().optional().nullable(),
+  unitId: z.string().optional().nullable()
 }).strict();
 
 export const SiteCreateOrConnectWithoutSiteAuditInputSchema: z.ZodType<Prisma.SiteCreateOrConnectWithoutSiteAuditInput> = z.object({
@@ -6851,7 +6851,7 @@ export const SiteUpdateWithoutSiteAuditInputSchema: z.ZodType<Prisma.SiteUpdateW
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   scanAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  unit: z.lazy(() => UnitUpdateOneWithoutSiteNestedInputSchema).optional(),
+  unit: z.lazy(() => UnitUpdateOneWithoutSiteNestedInputSchema).optional()
 }).strict();
 
 export const SiteUncheckedUpdateWithoutSiteAuditInputSchema: z.ZodType<Prisma.SiteUncheckedUpdateWithoutSiteAuditInput> = z.object({
@@ -6877,7 +6877,7 @@ export const UnitCreateWithoutCertificateInputSchema: z.ZodType<Prisma.UnitCreat
   User: z.lazy(() => UserCreateNestedManyWithoutUnitInputSchema).optional(),
   Site: z.lazy(() => SiteCreateNestedManyWithoutUnitInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedCreateWithoutCertificateInputSchema: z.ZodType<Prisma.UnitUncheckedCreateWithoutCertificateInput> = z.object({
@@ -6890,7 +6890,7 @@ export const UnitUncheckedCreateWithoutCertificateInputSchema: z.ZodType<Prisma.
   User: z.lazy(() => UserUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Site: z.lazy(() => SiteUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitCreateOrConnectWithoutCertificateInputSchema: z.ZodType<Prisma.UnitCreateOrConnectWithoutCertificateInput> = z.object({
@@ -6913,7 +6913,7 @@ export const UnitUpdateWithoutCertificateInputSchema: z.ZodType<Prisma.UnitUpdat
   User: z.lazy(() => UserUpdateManyWithoutUnitNestedInputSchema).optional(),
   Site: z.lazy(() => SiteUpdateManyWithoutUnitNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedUpdateWithoutCertificateInputSchema: z.ZodType<Prisma.UnitUncheckedUpdateWithoutCertificateInput> = z.object({
@@ -6926,7 +6926,7 @@ export const UnitUncheckedUpdateWithoutCertificateInputSchema: z.ZodType<Prisma.
   User: z.lazy(() => UserUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Site: z.lazy(() => SiteUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const CsirtCategoryCreateWithoutCsirtInputSchema: z.ZodType<Prisma.CsirtCategoryCreateWithoutCsirtInput> = z.object({
@@ -6934,7 +6934,7 @@ export const CsirtCategoryCreateWithoutCsirtInputSchema: z.ZodType<Prisma.CsirtC
   name: z.string(),
   slug: z.string(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const CsirtCategoryUncheckedCreateWithoutCsirtInputSchema: z.ZodType<Prisma.CsirtCategoryUncheckedCreateWithoutCsirtInput> = z.object({
@@ -6942,7 +6942,7 @@ export const CsirtCategoryUncheckedCreateWithoutCsirtInputSchema: z.ZodType<Pris
   name: z.string(),
   slug: z.string(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const CsirtCategoryCreateOrConnectWithoutCsirtInputSchema: z.ZodType<Prisma.CsirtCategoryCreateOrConnectWithoutCsirtInput> = z.object({
@@ -6963,7 +6963,7 @@ export const UserCreateWithoutCsirtPostInputSchema: z.ZodType<Prisma.UserCreateW
   unit: z.lazy(() => UnitCreateNestedOneWithoutUserInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesiInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesorInputSchema).optional(),
-  Devices: z.lazy(() => DevicesCreateNestedOneWithoutUserInputSchema).optional(),
+  Devices: z.lazy(() => DevicesCreateNestedOneWithoutUserInputSchema).optional()
 }).strict();
 
 export const UserUncheckedCreateWithoutCsirtPostInputSchema: z.ZodType<Prisma.UserUncheckedCreateWithoutCsirtPostInput> = z.object({
@@ -6979,7 +6979,7 @@ export const UserUncheckedCreateWithoutCsirtPostInputSchema: z.ZodType<Prisma.Us
   unitId: z.string().optional().nullable(),
   devicesId: z.string().optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesiInputSchema).optional(),
-  Asesor: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesorInputSchema).optional(),
+  Asesor: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesorInputSchema).optional()
 }).strict();
 
 export const UserCreateOrConnectWithoutCsirtPostInputSchema: z.ZodType<Prisma.UserCreateOrConnectWithoutCsirtPostInput> = z.object({
@@ -7026,7 +7026,7 @@ export const UserUpdateWithoutCsirtPostInputSchema: z.ZodType<Prisma.UserUpdateW
   unit: z.lazy(() => UnitUpdateOneWithoutUserNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUpdateManyWithoutAsesorNestedInputSchema).optional(),
-  Devices: z.lazy(() => DevicesUpdateOneWithoutUserNestedInputSchema).optional(),
+  Devices: z.lazy(() => DevicesUpdateOneWithoutUserNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateWithoutCsirtPostInputSchema: z.ZodType<Prisma.UserUncheckedUpdateWithoutCsirtPostInput> = z.object({
@@ -7042,7 +7042,7 @@ export const UserUncheckedUpdateWithoutCsirtPostInputSchema: z.ZodType<Prisma.Us
   unitId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   devicesId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesiNestedInputSchema).optional(),
-  Asesor: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesorNestedInputSchema).optional(),
+  Asesor: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesorNestedInputSchema).optional()
 }).strict();
 
 export const CsirtPostCreateWithoutCategoryInputSchema: z.ZodType<Prisma.CsirtPostCreateWithoutCategoryInput> = z.object({
@@ -7054,7 +7054,7 @@ export const CsirtPostCreateWithoutCategoryInputSchema: z.ZodType<Prisma.CsirtPo
   type: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  author: z.lazy(() => UserCreateNestedOneWithoutCsirtPostInputSchema).optional(),
+  author: z.lazy(() => UserCreateNestedOneWithoutCsirtPostInputSchema).optional()
 }).strict();
 
 export const CsirtPostUncheckedCreateWithoutCategoryInputSchema: z.ZodType<Prisma.CsirtPostUncheckedCreateWithoutCategoryInput> = z.object({
@@ -7066,7 +7066,7 @@ export const CsirtPostUncheckedCreateWithoutCategoryInputSchema: z.ZodType<Prism
   type: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  userId: z.string().optional().nullable(),
+  userId: z.string().optional().nullable()
 }).strict();
 
 export const CsirtPostCreateOrConnectWithoutCategoryInputSchema: z.ZodType<Prisma.CsirtPostCreateOrConnectWithoutCategoryInput> = z.object({
@@ -7076,7 +7076,7 @@ export const CsirtPostCreateOrConnectWithoutCategoryInputSchema: z.ZodType<Prism
 
 export const CsirtPostCreateManyCategoryInputEnvelopeSchema: z.ZodType<Prisma.CsirtPostCreateManyCategoryInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => CsirtPostCreateManyCategoryInputSchema),z.lazy(() => CsirtPostCreateManyCategoryInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const CsirtPostUpsertWithWhereUniqueWithoutCategoryInputSchema: z.ZodType<Prisma.CsirtPostUpsertWithWhereUniqueWithoutCategoryInput> = z.object({
@@ -7100,7 +7100,7 @@ export const HelpdeskCategoryCreateWithoutHelpdeskInputSchema: z.ZodType<Prisma.
   name: z.string(),
   description: z.string(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const HelpdeskCategoryUncheckedCreateWithoutHelpdeskInputSchema: z.ZodType<Prisma.HelpdeskCategoryUncheckedCreateWithoutHelpdeskInput> = z.object({
@@ -7108,7 +7108,7 @@ export const HelpdeskCategoryUncheckedCreateWithoutHelpdeskInputSchema: z.ZodTyp
   name: z.string(),
   description: z.string(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const HelpdeskCategoryCreateOrConnectWithoutHelpdeskInputSchema: z.ZodType<Prisma.HelpdeskCategoryCreateOrConnectWithoutHelpdeskInput> = z.object({
@@ -7126,7 +7126,7 @@ export const UnitCreateWithoutHelpdeskInputSchema: z.ZodType<Prisma.UnitCreateWi
   User: z.lazy(() => UserCreateNestedManyWithoutUnitInputSchema).optional(),
   Site: z.lazy(() => SiteCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateCreateNestedManyWithoutUnitInputSchema).optional(),
-  Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutUnitInputSchema).optional(),
+  Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedCreateWithoutHelpdeskInputSchema: z.ZodType<Prisma.UnitUncheckedCreateWithoutHelpdeskInput> = z.object({
@@ -7139,7 +7139,7 @@ export const UnitUncheckedCreateWithoutHelpdeskInputSchema: z.ZodType<Prisma.Uni
   User: z.lazy(() => UserUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Site: z.lazy(() => SiteUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
-  Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
+  Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitCreateOrConnectWithoutHelpdeskInputSchema: z.ZodType<Prisma.UnitCreateOrConnectWithoutHelpdeskInput> = z.object({
@@ -7183,7 +7183,7 @@ export const UnitUpdateWithoutHelpdeskInputSchema: z.ZodType<Prisma.UnitUpdateWi
   User: z.lazy(() => UserUpdateManyWithoutUnitNestedInputSchema).optional(),
   Site: z.lazy(() => SiteUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedUpdateWithoutHelpdeskInputSchema: z.ZodType<Prisma.UnitUncheckedUpdateWithoutHelpdeskInput> = z.object({
@@ -7196,7 +7196,7 @@ export const UnitUncheckedUpdateWithoutHelpdeskInputSchema: z.ZodType<Prisma.Uni
   User: z.lazy(() => UserUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Site: z.lazy(() => SiteUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const HelpdeskCreateWithoutCategoryInputSchema: z.ZodType<Prisma.HelpdeskCreateWithoutCategoryInput> = z.object({
@@ -7210,7 +7210,7 @@ export const HelpdeskCreateWithoutCategoryInputSchema: z.ZodType<Prisma.Helpdesk
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  unit: z.lazy(() => UnitCreateNestedOneWithoutHelpdeskInputSchema),
+  unit: z.lazy(() => UnitCreateNestedOneWithoutHelpdeskInputSchema)
 }).strict();
 
 export const HelpdeskUncheckedCreateWithoutCategoryInputSchema: z.ZodType<Prisma.HelpdeskUncheckedCreateWithoutCategoryInput> = z.object({
@@ -7224,7 +7224,7 @@ export const HelpdeskUncheckedCreateWithoutCategoryInputSchema: z.ZodType<Prisma
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  unitId: z.string(),
+  unitId: z.string()
 }).strict();
 
 export const HelpdeskCreateOrConnectWithoutCategoryInputSchema: z.ZodType<Prisma.HelpdeskCreateOrConnectWithoutCategoryInput> = z.object({
@@ -7234,7 +7234,7 @@ export const HelpdeskCreateOrConnectWithoutCategoryInputSchema: z.ZodType<Prisma
 
 export const HelpdeskCreateManyCategoryInputEnvelopeSchema: z.ZodType<Prisma.HelpdeskCreateManyCategoryInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => HelpdeskCreateManyCategoryInputSchema),z.lazy(() => HelpdeskCreateManyCategoryInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const HelpdeskUpsertWithWhereUniqueWithoutCategoryInputSchema: z.ZodType<Prisma.HelpdeskUpsertWithWhereUniqueWithoutCategoryInput> = z.object({
@@ -7262,7 +7262,7 @@ export const IndeksKamiCategoryCreateWithoutIndeksKamiInputSchema: z.ZodType<Pri
   title: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiCategoryUncheckedCreateWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiCategoryUncheckedCreateWithoutIndeksKamiInput> = z.object({
@@ -7274,7 +7274,7 @@ export const IndeksKamiCategoryUncheckedCreateWithoutIndeksKamiInputSchema: z.Zo
   title: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiCategoryCreateOrConnectWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiCategoryCreateOrConnectWithoutIndeksKamiInput> = z.object({
@@ -7292,7 +7292,7 @@ export const UnitCreateWithoutAsesiInputSchema: z.ZodType<Prisma.UnitCreateWitho
   User: z.lazy(() => UserCreateNestedManyWithoutUnitInputSchema).optional(),
   Site: z.lazy(() => SiteCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedCreateWithoutAsesiInputSchema: z.ZodType<Prisma.UnitUncheckedCreateWithoutAsesiInput> = z.object({
@@ -7305,7 +7305,7 @@ export const UnitUncheckedCreateWithoutAsesiInputSchema: z.ZodType<Prisma.UnitUn
   User: z.lazy(() => UserUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Site: z.lazy(() => SiteUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedCreateNestedManyWithoutUnitInputSchema).optional()
 }).strict();
 
 export const UnitCreateOrConnectWithoutAsesiInputSchema: z.ZodType<Prisma.UnitCreateOrConnectWithoutAsesiInput> = z.object({
@@ -7326,7 +7326,7 @@ export const UserCreateWithoutAsesiInputSchema: z.ZodType<Prisma.UserCreateWitho
   unit: z.lazy(() => UnitCreateNestedOneWithoutUserInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesorInputSchema).optional(),
   Devices: z.lazy(() => DevicesCreateNestedOneWithoutUserInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserUncheckedCreateWithoutAsesiInputSchema: z.ZodType<Prisma.UserUncheckedCreateWithoutAsesiInput> = z.object({
@@ -7342,7 +7342,7 @@ export const UserUncheckedCreateWithoutAsesiInputSchema: z.ZodType<Prisma.UserUn
   unitId: z.string().optional().nullable(),
   devicesId: z.string().optional().nullable(),
   Asesor: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesorInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserCreateOrConnectWithoutAsesiInputSchema: z.ZodType<Prisma.UserCreateOrConnectWithoutAsesiInput> = z.object({
@@ -7363,7 +7363,7 @@ export const UserCreateWithoutAsesorInputSchema: z.ZodType<Prisma.UserCreateWith
   unit: z.lazy(() => UnitCreateNestedOneWithoutUserInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiCreateNestedManyWithoutAsesiInputSchema).optional(),
   Devices: z.lazy(() => DevicesCreateNestedOneWithoutUserInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserUncheckedCreateWithoutAsesorInputSchema: z.ZodType<Prisma.UserUncheckedCreateWithoutAsesorInput> = z.object({
@@ -7379,7 +7379,7 @@ export const UserUncheckedCreateWithoutAsesorInputSchema: z.ZodType<Prisma.UserU
   unitId: z.string().optional().nullable(),
   devicesId: z.string().optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedCreateNestedManyWithoutAsesiInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedCreateNestedManyWithoutAuthorInputSchema).optional()
 }).strict();
 
 export const UserCreateOrConnectWithoutAsesorInputSchema: z.ZodType<Prisma.UserCreateOrConnectWithoutAsesorInput> = z.object({
@@ -7400,7 +7400,7 @@ export const IndeksKamiDataCreateWithoutIndeksKamiInputSchema: z.ZodType<Prisma.
   step: z.number().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  template: z.lazy(() => IndeksKamiTemplateCreateNestedOneWithoutResultInputSchema).optional(),
+  template: z.lazy(() => IndeksKamiTemplateCreateNestedOneWithoutResultInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataUncheckedCreateWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiDataUncheckedCreateWithoutIndeksKamiInput> = z.object({
@@ -7416,7 +7416,7 @@ export const IndeksKamiDataUncheckedCreateWithoutIndeksKamiInputSchema: z.ZodTyp
   step: z.number().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  templateId: z.string().optional().nullable(),
+  templateId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiDataCreateOrConnectWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiDataCreateOrConnectWithoutIndeksKamiInput> = z.object({
@@ -7426,7 +7426,7 @@ export const IndeksKamiDataCreateOrConnectWithoutIndeksKamiInputSchema: z.ZodTyp
 
 export const IndeksKamiDataCreateManyIndeksKamiInputEnvelopeSchema: z.ZodType<Prisma.IndeksKamiDataCreateManyIndeksKamiInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => IndeksKamiDataCreateManyIndeksKamiInputSchema),z.lazy(() => IndeksKamiDataCreateManyIndeksKamiInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const IndeksKamiCategoryUpsertWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiCategoryUpsertWithoutIndeksKamiInput> = z.object({
@@ -7473,7 +7473,7 @@ export const UnitUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.UnitUpdateWitho
   User: z.lazy(() => UserUpdateManyWithoutUnitNestedInputSchema).optional(),
   Site: z.lazy(() => SiteUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const UnitUncheckedUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.UnitUncheckedUpdateWithoutAsesiInput> = z.object({
@@ -7486,7 +7486,7 @@ export const UnitUncheckedUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.UnitUn
   User: z.lazy(() => UserUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Site: z.lazy(() => SiteUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
   Certificate: z.lazy(() => CertificateUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
-  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional(),
+  Helpdesk: z.lazy(() => HelpdeskUncheckedUpdateManyWithoutUnitNestedInputSchema).optional()
 }).strict();
 
 export const UserUpsertWithoutAsesiInputSchema: z.ZodType<Prisma.UserUpsertWithoutAsesiInput> = z.object({
@@ -7507,7 +7507,7 @@ export const UserUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.UserUpdateWitho
   unit: z.lazy(() => UnitUpdateOneWithoutUserNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUpdateManyWithoutAsesorNestedInputSchema).optional(),
   Devices: z.lazy(() => DevicesUpdateOneWithoutUserNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.UserUncheckedUpdateWithoutAsesiInput> = z.object({
@@ -7523,7 +7523,7 @@ export const UserUncheckedUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.UserUn
   unitId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   devicesId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   Asesor: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesorNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const UserUpsertWithoutAsesorInputSchema: z.ZodType<Prisma.UserUpsertWithoutAsesorInput> = z.object({
@@ -7544,7 +7544,7 @@ export const UserUpdateWithoutAsesorInputSchema: z.ZodType<Prisma.UserUpdateWith
   unit: z.lazy(() => UnitUpdateOneWithoutUserNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Devices: z.lazy(() => DevicesUpdateOneWithoutUserNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateWithoutAsesorInputSchema: z.ZodType<Prisma.UserUncheckedUpdateWithoutAsesorInput> = z.object({
@@ -7560,7 +7560,7 @@ export const UserUncheckedUpdateWithoutAsesorInputSchema: z.ZodType<Prisma.UserU
   unitId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   devicesId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesiNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataUpsertWithWhereUniqueWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiDataUpsertWithWhereUniqueWithoutIndeksKamiInput> = z.object({
@@ -7610,7 +7610,7 @@ export const IndeksKamiCreateWithoutCategoryInputSchema: z.ZodType<Prisma.Indeks
   unit: z.lazy(() => UnitCreateNestedOneWithoutAsesiInputSchema).optional(),
   asesi: z.lazy(() => UserCreateNestedOneWithoutAsesiInputSchema).optional(),
   asesor: z.lazy(() => UserCreateNestedOneWithoutAsesorInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedCreateWithoutCategoryInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedCreateWithoutCategoryInput> = z.object({
@@ -7624,7 +7624,7 @@ export const IndeksKamiUncheckedCreateWithoutCategoryInputSchema: z.ZodType<Pris
   unitId: z.string().optional().nullable(),
   asesiId: z.string(),
   asesorId: z.string().optional().nullable(),
-  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedCreateNestedManyWithoutIndeksKamiInputSchema).optional()
 }).strict();
 
 export const IndeksKamiCreateOrConnectWithoutCategoryInputSchema: z.ZodType<Prisma.IndeksKamiCreateOrConnectWithoutCategoryInput> = z.object({
@@ -7634,7 +7634,7 @@ export const IndeksKamiCreateOrConnectWithoutCategoryInputSchema: z.ZodType<Pris
 
 export const IndeksKamiCreateManyCategoryInputEnvelopeSchema: z.ZodType<Prisma.IndeksKamiCreateManyCategoryInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => IndeksKamiCreateManyCategoryInputSchema),z.lazy(() => IndeksKamiCreateManyCategoryInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const IndeksKamiUpsertWithWhereUniqueWithoutCategoryInputSchema: z.ZodType<Prisma.IndeksKamiUpsertWithWhereUniqueWithoutCategoryInput> = z.object({
@@ -7666,7 +7666,7 @@ export const IndeksKamiDataCreateWithoutTemplateInputSchema: z.ZodType<Prisma.In
   step: z.number().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  IndeksKami: z.lazy(() => IndeksKamiCreateNestedOneWithoutResultInputSchema).optional(),
+  IndeksKami: z.lazy(() => IndeksKamiCreateNestedOneWithoutResultInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataUncheckedCreateWithoutTemplateInputSchema: z.ZodType<Prisma.IndeksKamiDataUncheckedCreateWithoutTemplateInput> = z.object({
@@ -7682,7 +7682,7 @@ export const IndeksKamiDataUncheckedCreateWithoutTemplateInputSchema: z.ZodType<
   step: z.number().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  indeksId: z.string().optional().nullable(),
+  indeksId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiDataCreateOrConnectWithoutTemplateInputSchema: z.ZodType<Prisma.IndeksKamiDataCreateOrConnectWithoutTemplateInput> = z.object({
@@ -7692,7 +7692,7 @@ export const IndeksKamiDataCreateOrConnectWithoutTemplateInputSchema: z.ZodType<
 
 export const IndeksKamiDataCreateManyTemplateInputEnvelopeSchema: z.ZodType<Prisma.IndeksKamiDataCreateManyTemplateInputEnvelope> = z.object({
   data: z.union([ z.lazy(() => IndeksKamiDataCreateManyTemplateInputSchema),z.lazy(() => IndeksKamiDataCreateManyTemplateInputSchema).array() ]),
-  skipDuplicates: z.boolean().optional(),
+  skipDuplicates: z.boolean().optional()
 }).strict();
 
 export const IndeksKamiDataUpsertWithWhereUniqueWithoutTemplateInputSchema: z.ZodType<Prisma.IndeksKamiDataUpsertWithWhereUniqueWithoutTemplateInput> = z.object({
@@ -7722,7 +7722,7 @@ export const IndeksKamiCreateWithoutResultInputSchema: z.ZodType<Prisma.IndeksKa
   category: z.lazy(() => IndeksKamiCategoryCreateNestedOneWithoutIndeksKamiInputSchema).optional(),
   unit: z.lazy(() => UnitCreateNestedOneWithoutAsesiInputSchema).optional(),
   asesi: z.lazy(() => UserCreateNestedOneWithoutAsesiInputSchema).optional(),
-  asesor: z.lazy(() => UserCreateNestedOneWithoutAsesorInputSchema).optional(),
+  asesor: z.lazy(() => UserCreateNestedOneWithoutAsesorInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedCreateWithoutResultInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedCreateWithoutResultInput> = z.object({
@@ -7736,7 +7736,7 @@ export const IndeksKamiUncheckedCreateWithoutResultInputSchema: z.ZodType<Prisma
   categoryId: z.string().optional().nullable(),
   unitId: z.string().optional().nullable(),
   asesiId: z.string(),
-  asesorId: z.string().optional().nullable(),
+  asesorId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiCreateOrConnectWithoutResultInputSchema: z.ZodType<Prisma.IndeksKamiCreateOrConnectWithoutResultInput> = z.object({
@@ -7756,7 +7756,7 @@ export const IndeksKamiTemplateCreateWithoutResultInputSchema: z.ZodType<Prisma.
   example: z.string().optional().nullable(),
   options: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiTemplateUncheckedCreateWithoutResultInputSchema: z.ZodType<Prisma.IndeksKamiTemplateUncheckedCreateWithoutResultInput> = z.object({
@@ -7771,7 +7771,7 @@ export const IndeksKamiTemplateUncheckedCreateWithoutResultInputSchema: z.ZodTyp
   example: z.string().optional().nullable(),
   options: z.union([ z.lazy(() => NullableJsonNullValueInputSchema),InputJsonValue ]).optional(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiTemplateCreateOrConnectWithoutResultInputSchema: z.ZodType<Prisma.IndeksKamiTemplateCreateOrConnectWithoutResultInput> = z.object({
@@ -7795,7 +7795,7 @@ export const IndeksKamiUpdateWithoutResultInputSchema: z.ZodType<Prisma.IndeksKa
   category: z.lazy(() => IndeksKamiCategoryUpdateOneWithoutIndeksKamiNestedInputSchema).optional(),
   unit: z.lazy(() => UnitUpdateOneWithoutAsesiNestedInputSchema).optional(),
   asesi: z.lazy(() => UserUpdateOneWithoutAsesiNestedInputSchema).optional(),
-  asesor: z.lazy(() => UserUpdateOneWithoutAsesorNestedInputSchema).optional(),
+  asesor: z.lazy(() => UserUpdateOneWithoutAsesorNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedUpdateWithoutResultInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedUpdateWithoutResultInput> = z.object({
@@ -7857,7 +7857,7 @@ export const IndeksKamiCreateManyAsesiInputSchema: z.ZodType<Prisma.IndeksKamiCr
   updatedAt: z.coerce.date().optional(),
   categoryId: z.string().optional().nullable(),
   unitId: z.string().optional().nullable(),
-  asesorId: z.string().optional().nullable(),
+  asesorId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiCreateManyAsesorInputSchema: z.ZodType<Prisma.IndeksKamiCreateManyAsesorInput> = z.object({
@@ -7870,7 +7870,7 @@ export const IndeksKamiCreateManyAsesorInputSchema: z.ZodType<Prisma.IndeksKamiC
   updatedAt: z.coerce.date().optional(),
   categoryId: z.string().optional().nullable(),
   unitId: z.string().optional().nullable(),
-  asesiId: z.string(),
+  asesiId: z.string()
 }).strict();
 
 export const CsirtPostCreateManyAuthorInputSchema: z.ZodType<Prisma.CsirtPostCreateManyAuthorInput> = z.object({
@@ -7882,7 +7882,7 @@ export const CsirtPostCreateManyAuthorInputSchema: z.ZodType<Prisma.CsirtPostCre
   type: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  categoryId: z.string().optional().nullable(),
+  categoryId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.IndeksKamiUpdateWithoutAsesiInput> = z.object({
@@ -7896,7 +7896,7 @@ export const IndeksKamiUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.IndeksKam
   category: z.lazy(() => IndeksKamiCategoryUpdateOneWithoutIndeksKamiNestedInputSchema).optional(),
   unit: z.lazy(() => UnitUpdateOneWithoutAsesiNestedInputSchema).optional(),
   asesor: z.lazy(() => UserUpdateOneWithoutAsesorNestedInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedUpdateWithoutAsesiInput> = z.object({
@@ -7910,7 +7910,7 @@ export const IndeksKamiUncheckedUpdateWithoutAsesiInputSchema: z.ZodType<Prisma.
   categoryId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   unitId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   asesorId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedUpdateManyWithoutAsesiInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedUpdateManyWithoutAsesiInput> = z.object({
@@ -7937,7 +7937,7 @@ export const IndeksKamiUpdateWithoutAsesorInputSchema: z.ZodType<Prisma.IndeksKa
   category: z.lazy(() => IndeksKamiCategoryUpdateOneWithoutIndeksKamiNestedInputSchema).optional(),
   unit: z.lazy(() => UnitUpdateOneWithoutAsesiNestedInputSchema).optional(),
   asesi: z.lazy(() => UserUpdateOneWithoutAsesiNestedInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedUpdateWithoutAsesorInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedUpdateWithoutAsesorInput> = z.object({
@@ -7951,7 +7951,7 @@ export const IndeksKamiUncheckedUpdateWithoutAsesorInputSchema: z.ZodType<Prisma
   categoryId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   unitId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   asesiId: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
-  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedUpdateManyWithoutAsesorInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedUpdateManyWithoutAsesorInput> = z.object({
@@ -7976,7 +7976,7 @@ export const CsirtPostUpdateWithoutAuthorInputSchema: z.ZodType<Prisma.CsirtPost
   type: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  category: z.lazy(() => CsirtCategoryUpdateOneWithoutCsirtNestedInputSchema).optional(),
+  category: z.lazy(() => CsirtCategoryUpdateOneWithoutCsirtNestedInputSchema).optional()
 }).strict();
 
 export const CsirtPostUncheckedUpdateWithoutAuthorInputSchema: z.ZodType<Prisma.CsirtPostUncheckedUpdateWithoutAuthorInput> = z.object({
@@ -8013,7 +8013,7 @@ export const UserCreateManyRoleInputSchema: z.ZodType<Prisma.UserCreateManyRoleI
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional().nullable(),
   unitId: z.string().optional().nullable(),
-  devicesId: z.string().optional().nullable(),
+  devicesId: z.string().optional().nullable()
 }).strict();
 
 export const UserUpdateWithoutRoleInputSchema: z.ZodType<Prisma.UserUpdateWithoutRoleInput> = z.object({
@@ -8029,7 +8029,7 @@ export const UserUpdateWithoutRoleInputSchema: z.ZodType<Prisma.UserUpdateWithou
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUpdateManyWithoutAsesorNestedInputSchema).optional(),
   Devices: z.lazy(() => DevicesUpdateOneWithoutUserNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateWithoutRoleInputSchema: z.ZodType<Prisma.UserUncheckedUpdateWithoutRoleInput> = z.object({
@@ -8045,7 +8045,7 @@ export const UserUncheckedUpdateWithoutRoleInputSchema: z.ZodType<Prisma.UserUnc
   devicesId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesorNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateManyWithoutUserInputSchema: z.ZodType<Prisma.UserUncheckedUpdateManyWithoutUserInput> = z.object({
@@ -8071,7 +8071,7 @@ export const UserCreateManyUnitInputSchema: z.ZodType<Prisma.UserCreateManyUnitI
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional().nullable(),
   roleId: z.string().optional().nullable(),
-  devicesId: z.string().optional().nullable(),
+  devicesId: z.string().optional().nullable()
 }).strict();
 
 export const SiteCreateManyUnitInputSchema: z.ZodType<Prisma.SiteCreateManyUnitInput> = z.object({
@@ -8083,7 +8083,7 @@ export const SiteCreateManyUnitInputSchema: z.ZodType<Prisma.SiteCreateManyUnitI
   status: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  scanAt: z.coerce.date().optional().nullable(),
+  scanAt: z.coerce.date().optional().nullable()
 }).strict();
 
 export const CertificateCreateManyUnitInputSchema: z.ZodType<Prisma.CertificateCreateManyUnitInput> = z.object({
@@ -8100,7 +8100,7 @@ export const CertificateCreateManyUnitInputSchema: z.ZodType<Prisma.CertificateC
   notBeforeDate: z.coerce.date().optional().nullable(),
   notAfterDate: z.coerce.date().optional().nullable(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const IndeksKamiCreateManyUnitInputSchema: z.ZodType<Prisma.IndeksKamiCreateManyUnitInput> = z.object({
@@ -8113,7 +8113,7 @@ export const IndeksKamiCreateManyUnitInputSchema: z.ZodType<Prisma.IndeksKamiCre
   updatedAt: z.coerce.date().optional(),
   categoryId: z.string().optional().nullable(),
   asesiId: z.string(),
-  asesorId: z.string().optional().nullable(),
+  asesorId: z.string().optional().nullable()
 }).strict();
 
 export const HelpdeskCreateManyUnitInputSchema: z.ZodType<Prisma.HelpdeskCreateManyUnitInput> = z.object({
@@ -8127,7 +8127,7 @@ export const HelpdeskCreateManyUnitInputSchema: z.ZodType<Prisma.HelpdeskCreateM
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  categoryId: z.string().optional().nullable(),
+  categoryId: z.string().optional().nullable()
 }).strict();
 
 export const UserUpdateWithoutUnitInputSchema: z.ZodType<Prisma.UserUpdateWithoutUnitInput> = z.object({
@@ -8143,7 +8143,7 @@ export const UserUpdateWithoutUnitInputSchema: z.ZodType<Prisma.UserUpdateWithou
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUpdateManyWithoutAsesorNestedInputSchema).optional(),
   Devices: z.lazy(() => DevicesUpdateOneWithoutUserNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateWithoutUnitInputSchema: z.ZodType<Prisma.UserUncheckedUpdateWithoutUnitInput> = z.object({
@@ -8159,7 +8159,7 @@ export const UserUncheckedUpdateWithoutUnitInputSchema: z.ZodType<Prisma.UserUnc
   devicesId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesorNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const SiteUpdateWithoutUnitInputSchema: z.ZodType<Prisma.SiteUpdateWithoutUnitInput> = z.object({
@@ -8172,7 +8172,7 @@ export const SiteUpdateWithoutUnitInputSchema: z.ZodType<Prisma.SiteUpdateWithou
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   scanAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  siteAudit: z.lazy(() => SiteAuditUpdateManyWithoutSiteNestedInputSchema).optional(),
+  siteAudit: z.lazy(() => SiteAuditUpdateManyWithoutSiteNestedInputSchema).optional()
 }).strict();
 
 export const SiteUncheckedUpdateWithoutUnitInputSchema: z.ZodType<Prisma.SiteUncheckedUpdateWithoutUnitInput> = z.object({
@@ -8185,7 +8185,7 @@ export const SiteUncheckedUpdateWithoutUnitInputSchema: z.ZodType<Prisma.SiteUnc
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   scanAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  siteAudit: z.lazy(() => SiteAuditUncheckedUpdateManyWithoutSiteNestedInputSchema).optional(),
+  siteAudit: z.lazy(() => SiteAuditUncheckedUpdateManyWithoutSiteNestedInputSchema).optional()
 }).strict();
 
 export const SiteUncheckedUpdateManyWithoutSiteInputSchema: z.ZodType<Prisma.SiteUncheckedUpdateManyWithoutSiteInput> = z.object({
@@ -8262,7 +8262,7 @@ export const IndeksKamiUpdateWithoutUnitInputSchema: z.ZodType<Prisma.IndeksKami
   category: z.lazy(() => IndeksKamiCategoryUpdateOneWithoutIndeksKamiNestedInputSchema).optional(),
   asesi: z.lazy(() => UserUpdateOneWithoutAsesiNestedInputSchema).optional(),
   asesor: z.lazy(() => UserUpdateOneWithoutAsesorNestedInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedUpdateWithoutUnitInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedUpdateWithoutUnitInput> = z.object({
@@ -8276,7 +8276,7 @@ export const IndeksKamiUncheckedUpdateWithoutUnitInputSchema: z.ZodType<Prisma.I
   categoryId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   asesiId: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   asesorId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const HelpdeskUpdateWithoutUnitInputSchema: z.ZodType<Prisma.HelpdeskUpdateWithoutUnitInput> = z.object({
@@ -8290,7 +8290,7 @@ export const HelpdeskUpdateWithoutUnitInputSchema: z.ZodType<Prisma.HelpdeskUpda
   status: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  category: z.lazy(() => HelpdeskCategoryUpdateOneWithoutHelpdeskNestedInputSchema).optional(),
+  category: z.lazy(() => HelpdeskCategoryUpdateOneWithoutHelpdeskNestedInputSchema).optional()
 }).strict();
 
 export const HelpdeskUncheckedUpdateWithoutUnitInputSchema: z.ZodType<Prisma.HelpdeskUncheckedUpdateWithoutUnitInput> = z.object({
@@ -8331,7 +8331,7 @@ export const UserCreateManyDevicesInputSchema: z.ZodType<Prisma.UserCreateManyDe
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional().nullable(),
   roleId: z.string().optional().nullable(),
-  unitId: z.string().optional().nullable(),
+  unitId: z.string().optional().nullable()
 }).strict();
 
 export const UserUpdateWithoutDevicesInputSchema: z.ZodType<Prisma.UserUpdateWithoutDevicesInput> = z.object({
@@ -8347,7 +8347,7 @@ export const UserUpdateWithoutDevicesInputSchema: z.ZodType<Prisma.UserUpdateWit
   unit: z.lazy(() => UnitUpdateOneWithoutUserNestedInputSchema).optional(),
   Asesi: z.lazy(() => IndeksKamiUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUpdateManyWithoutAsesorNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateWithoutDevicesInputSchema: z.ZodType<Prisma.UserUncheckedUpdateWithoutDevicesInput> = z.object({
@@ -8363,17 +8363,17 @@ export const UserUncheckedUpdateWithoutDevicesInputSchema: z.ZodType<Prisma.User
   unitId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   Asesi: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesiNestedInputSchema).optional(),
   Asesor: z.lazy(() => IndeksKamiUncheckedUpdateManyWithoutAsesorNestedInputSchema).optional(),
-  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional(),
+  CsirtPost: z.lazy(() => CsirtPostUncheckedUpdateManyWithoutAuthorNestedInputSchema).optional()
 }).strict();
 
 export const SiteAuditCreateManySiteInputSchema: z.ZodType<Prisma.SiteAuditCreateManySiteInput> = z.object({
   id: z.string().uuid().optional(),
   screenshot: z.string().optional().nullable(),
-  loadedTime: z.number().optional(),
-  loadedSize: z.number().optional(),
+  loadedTime: z.number().int().optional(),
+  loadedSize: z.number().int().optional(),
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
-  updatedAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
 }).strict();
 
 export const SiteAuditUpdateWithoutSiteInputSchema: z.ZodType<Prisma.SiteAuditUpdateWithoutSiteInput> = z.object({
@@ -8399,8 +8399,8 @@ export const SiteAuditUncheckedUpdateWithoutSiteInputSchema: z.ZodType<Prisma.Si
 export const SiteAuditUncheckedUpdateManyWithoutSiteAuditInputSchema: z.ZodType<Prisma.SiteAuditUncheckedUpdateManyWithoutSiteAuditInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   screenshot: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  loadedTime: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
-  loadedSize: z.union([ z.number(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedTime: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
+  loadedSize: z.union([ z.number().int(),z.lazy(() => IntFieldUpdateOperationsInputSchema) ]).optional(),
   status: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
@@ -8415,7 +8415,7 @@ export const CsirtPostCreateManyCategoryInputSchema: z.ZodType<Prisma.CsirtPostC
   type: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  userId: z.string().optional().nullable(),
+  userId: z.string().optional().nullable()
 }).strict();
 
 export const CsirtPostUpdateWithoutCategoryInputSchema: z.ZodType<Prisma.CsirtPostUpdateWithoutCategoryInput> = z.object({
@@ -8427,7 +8427,7 @@ export const CsirtPostUpdateWithoutCategoryInputSchema: z.ZodType<Prisma.CsirtPo
   type: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  author: z.lazy(() => UserUpdateOneWithoutCsirtPostNestedInputSchema).optional(),
+  author: z.lazy(() => UserUpdateOneWithoutCsirtPostNestedInputSchema).optional()
 }).strict();
 
 export const CsirtPostUncheckedUpdateWithoutCategoryInputSchema: z.ZodType<Prisma.CsirtPostUncheckedUpdateWithoutCategoryInput> = z.object({
@@ -8465,7 +8465,7 @@ export const HelpdeskCreateManyCategoryInputSchema: z.ZodType<Prisma.HelpdeskCre
   status: z.string().optional(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  unitId: z.string(),
+  unitId: z.string()
 }).strict();
 
 export const HelpdeskUpdateWithoutCategoryInputSchema: z.ZodType<Prisma.HelpdeskUpdateWithoutCategoryInput> = z.object({
@@ -8479,7 +8479,7 @@ export const HelpdeskUpdateWithoutCategoryInputSchema: z.ZodType<Prisma.Helpdesk
   status: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  unit: z.lazy(() => UnitUpdateOneRequiredWithoutHelpdeskNestedInputSchema).optional(),
+  unit: z.lazy(() => UnitUpdateOneRequiredWithoutHelpdeskNestedInputSchema).optional()
 }).strict();
 
 export const HelpdeskUncheckedUpdateWithoutCategoryInputSchema: z.ZodType<Prisma.HelpdeskUncheckedUpdateWithoutCategoryInput> = z.object({
@@ -8499,17 +8499,17 @@ export const HelpdeskUncheckedUpdateWithoutCategoryInputSchema: z.ZodType<Prisma
 export const IndeksKamiDataCreateManyIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiDataCreateManyIndeksKamiInput> = z.object({
   id: z.string().uuid().optional(),
   type: z.string().optional(),
-  value: z.number().optional().nullable(),
+  value: z.number().int().optional().nullable(),
   file: z.string().optional().nullable(),
   filename: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   category: z.number(),
   code: z.string(),
   part: z.string().optional().nullable(),
-  step: z.number().optional().nullable(),
+  step: z.number().int().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  templateId: z.string().optional().nullable(),
+  templateId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiDataUpdateWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiDataUpdateWithoutIndeksKamiInput> = z.object({
@@ -8525,7 +8525,7 @@ export const IndeksKamiDataUpdateWithoutIndeksKamiInputSchema: z.ZodType<Prisma.
   step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  template: z.lazy(() => IndeksKamiTemplateUpdateOneWithoutResultNestedInputSchema).optional(),
+  template: z.lazy(() => IndeksKamiTemplateUpdateOneWithoutResultNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataUncheckedUpdateWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiDataUncheckedUpdateWithoutIndeksKamiInput> = z.object({
@@ -8547,14 +8547,14 @@ export const IndeksKamiDataUncheckedUpdateWithoutIndeksKamiInputSchema: z.ZodTyp
 export const IndeksKamiDataUncheckedUpdateManyWithoutResultInputSchema: z.ZodType<Prisma.IndeksKamiDataUncheckedUpdateManyWithoutResultInput> = z.object({
   id: z.union([ z.string().uuid(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   type: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
-  value: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  value: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   file: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   filename: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   description: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   category: z.union([ z.number(),z.lazy(() => FloatFieldUpdateOperationsInputSchema) ]).optional(),
   code: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   part: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
+  step: z.union([ z.number().int(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   templateId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
@@ -8570,7 +8570,7 @@ export const IndeksKamiCreateManyCategoryInputSchema: z.ZodType<Prisma.IndeksKam
   updatedAt: z.coerce.date().optional(),
   unitId: z.string().optional().nullable(),
   asesiId: z.string(),
-  asesorId: z.string().optional().nullable(),
+  asesorId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiUpdateWithoutCategoryInputSchema: z.ZodType<Prisma.IndeksKamiUpdateWithoutCategoryInput> = z.object({
@@ -8584,7 +8584,7 @@ export const IndeksKamiUpdateWithoutCategoryInputSchema: z.ZodType<Prisma.Indeks
   unit: z.lazy(() => UnitUpdateOneWithoutAsesiNestedInputSchema).optional(),
   asesi: z.lazy(() => UserUpdateOneWithoutAsesiNestedInputSchema).optional(),
   asesor: z.lazy(() => UserUpdateOneWithoutAsesorNestedInputSchema).optional(),
-  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedUpdateWithoutCategoryInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedUpdateWithoutCategoryInput> = z.object({
@@ -8598,7 +8598,7 @@ export const IndeksKamiUncheckedUpdateWithoutCategoryInputSchema: z.ZodType<Pris
   unitId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   asesiId: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   asesorId: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
-  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional(),
+  result: z.lazy(() => IndeksKamiDataUncheckedUpdateManyWithoutIndeksKamiNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiUncheckedUpdateManyWithoutIndeksKamiInputSchema: z.ZodType<Prisma.IndeksKamiUncheckedUpdateManyWithoutIndeksKamiInput> = z.object({
@@ -8617,17 +8617,17 @@ export const IndeksKamiUncheckedUpdateManyWithoutIndeksKamiInputSchema: z.ZodTyp
 export const IndeksKamiDataCreateManyTemplateInputSchema: z.ZodType<Prisma.IndeksKamiDataCreateManyTemplateInput> = z.object({
   id: z.string().uuid().optional(),
   type: z.string().optional(),
-  value: z.number().optional().nullable(),
+  value: z.number().int().optional().nullable(),
   file: z.string().optional().nullable(),
   filename: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   category: z.number(),
   code: z.string(),
   part: z.string().optional().nullable(),
-  step: z.number().optional().nullable(),
+  step: z.number().int().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  indeksId: z.string().optional().nullable(),
+  indeksId: z.string().optional().nullable()
 }).strict();
 
 export const IndeksKamiDataUpdateWithoutTemplateInputSchema: z.ZodType<Prisma.IndeksKamiDataUpdateWithoutTemplateInput> = z.object({
@@ -8643,7 +8643,7 @@ export const IndeksKamiDataUpdateWithoutTemplateInputSchema: z.ZodType<Prisma.In
   step: z.union([ z.number(),z.lazy(() => NullableIntFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  IndeksKami: z.lazy(() => IndeksKamiUpdateOneWithoutResultNestedInputSchema).optional(),
+  IndeksKami: z.lazy(() => IndeksKamiUpdateOneWithoutResultNestedInputSchema).optional()
 }).strict();
 
 export const IndeksKamiDataUncheckedUpdateWithoutTemplateInputSchema: z.ZodType<Prisma.IndeksKamiDataUncheckedUpdateWithoutTemplateInput> = z.object({

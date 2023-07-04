@@ -2,15 +2,16 @@ import type { Actions, PageServerLoad } from "./$types";
 import { UserCreateInputSchema } from "$prisma/generated/zod";
 import { fail } from "@sveltejs/kit";
 import { db, getQuery } from "$lib/db";
-import { parseFormData } from "$lib/utils";
+import { getMessage, parseFormData } from "$lib/utils";
 
 export const _order = 9.1;
 export const _reserved = true;
 
 export const load: PageServerLoad = async ({ url }) => {
   const { query, filter, include } = getQuery(url);
+  const roles = await db.role.findMany();
   try {
-    const [table, meta] = await db.user.paginate({
+    const [result, meta] = await db.user.paginate({
       ...filter,
       include: {
         role: true,
@@ -19,16 +20,20 @@ export const load: PageServerLoad = async ({ url }) => {
     }, query)
 
     return {
-      table,
+      result,
       meta,
       options: {
+        roles
         // schema,
       }
     }
   } catch (error) {
     return {
       table: [],
-      meta: query
+      meta: query,
+      options:{
+        roles
+      }
     }
   }
 }
@@ -41,20 +46,19 @@ export const actions: Actions = {
 
       const result = await db.user.upsert({
         where: {
-          // id: data.id || crypto.randomUUID(),
-          email: data.email,
+          id: data.id
         },
         create: data,
         update: data,
       })
       return {
+        action: 'save',
         data: result
       }
     } catch (error: any) {
-      console.log(error)
-      const message = error.issues ? JSON.parse(error.message) : error.message
+      // console.log(error)
       return fail(400, {
-        error: message
+        error: getMessage(error)
       })
     }
   },
@@ -71,6 +75,7 @@ export const actions: Actions = {
     })
 
     return {
+      action: 'delete',
       id: result
     }
   }

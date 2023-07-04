@@ -1,12 +1,19 @@
 <script lang="ts">
   import type { ActionData, PageData } from "./$types";
   import { enhance } from "$app/forms";
-  import { fnBreadcrumb, fnModal, fnAutofocus } from "$lib/utils";
+  import {
+    fnBreadcrumb,
+    fnModal,
+    fnAutofocus,
+    fnToggleColumn,
+    fnSelect,
+    fnSearchParams,
+  } from "$lib/utils";
   import { t, loading, toast } from "$lib/common";
 
   export let data: PageData;
   export let form: ActionData;
-  
+
   $: if (form) {
     $toast = [...$toast, form];
     form = null;
@@ -14,38 +21,33 @@
 
   $: page = data.page;
   $: options = data.options;
-  $: table = data.table;
+  $: result = data.result;
   $: meta = data.meta;
 
-  let column = ["name", "head", "actions"];
+  let columns = [{}];
   let modal: any = false;
   let modalDel: any = false;
   let selections: any[] = [];
+
+  function initColumn(event: InputEvent) {
+    // console.log(e)
+    const detail = event.detail as any;
+    columns = detail?.columns;
+  }
 </script>
 
 <div flex flex-col gap-3>
   <!-- Header -->
   <div flex flex-wrap items-center gap-3>
     <div breadcrumb use:fnBreadcrumb={[page.uri, data.lang.id]} />
-    <button btn="~ outline" border-transparent p-1>
+    <button btn="~ outline" border-transparent p-1 mr-auto>
       <i i-bx-cog />
     </button>
-    <form mr-auto>
-      <button
-        name="filter"
-        value={meta.filter}
-        btn="~ outline"
-        border-transparent
-        p-1
-        mr-auto
-      >
-        <i i-bx-refresh class={$loading ? "animate-spin" : ""} />
-      </button>
-    </form>
     <button
       btn
       on:click={() =>
         (modal = {
+          id: crypto.randomUUID(),
           name: "",
           email: "",
           role: {
@@ -66,12 +68,12 @@
       <p>
         {$t`page.description`}
       </p>
+      {JSON.stringify({ meta, form }, null, 2)}
     </div>
   </div>
 
   <!-- Filterbox -->
-  <form>
-    {JSON.stringify({ meta, form })}
+  <form use:fnSearchParams={{ meta, exclude: ["filter"] }}>
     <div flex relative>
       <div flex absolute z-10 p-2>
         <i i-bx-search w-5 />
@@ -83,13 +85,13 @@
         pl-8
         value={meta.filter}
         name="filter"
-        placeholder={$t(`form.filter`, {
-          field: Object.keys(table[0] || {})[1],
-          value: "app",
-        })}
+        placeholder={$t(`form.filter`, columns[0])}
         autocomplete="off"
         autofocus
       />
+      <button btn="~ outline" absolute right-1 border-transparent mt-.5 p-1>
+        <i i-bx-refresh class={$loading ? "animate-spin" : ""} />
+      </button>
     </div>
   </form>
 
@@ -110,49 +112,69 @@
     </div>
   {/if}
 
+  <div form-control use:fnSelect={options.roles}>
+    {$t`field.role`}
+    <div filter relative>
+      <input input placeholder={$t`field.role`} />
+    </div>
+    <input
+      input
+      type="hidden"
+      name="role.connect.name"
+      bind:value={modal.name}
+      placeholder="Selected"
+    />
+    <ul menu w-full bg-base rounded-box shadow p-1>
+      <li>
+        <button type="button" bg-transparent value="(name)"> (name) </button>
+      </li>
+    </ul>
+  </div>
+  <!-- {JSON.stringify(columns)} -->
+
   <div bg-base p-2 rounded-box z-10>
     <!-- Main Table -->
     <div overflow-x-auto min-h-50vh>
       <table table w-full class={$loading ? "opacity-50" : ""}>
         <thead>
           <tr children-bg-base-a>
-            <th sticky left-0 rounded-tl-xl w-1>
+            <th sticky left-0 rounded-tl-xl w-1 aria-label="Checkbox">
               <input
                 type="checkbox"
                 checkbox
-                checked={selections.length == table.length}
+                checked={selections.length == result.length}
                 on:click={() =>
-                  selections.length == table.length
+                  selections.length == result.length
                     ? (selections = [])
-                    : (selections = table)}
+                    : (selections = result)}
               />
             </th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th rounded-tr-xl w-1 sticky right-0 class="!z-20">
-              <div dropdown="~ end">
+            <th data-key="name">{$t`field.name`}</th>
+            <th data-key="email">{$t`field.email`}</th>
+            <th data-key="roleId">{$t`field.role`}</th>
+            <th data-key="createdAt" hidden>{$t`field.createdAt`}</th>
+            <th
+              rounded-tr-xl
+              w-1
+              sticky
+              right-0
+              class="!z-20"
+              aria-label="Action"
+            >
+              <div dropdown="~ end" use:fnToggleColumn on:init={initColumn}>
                 <button btn="~ outline" border-0>
                   <i i-bx-dots-horizontal />
                 </button>
                 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-                <ul tabindex="0" menu w-48 bg-base rounded-box shadow>
-                  <li menu-title>{$t`form.toggle.label`}</li>
-                  {#each column as key}
-                    <li>
-                      <label>
-                        <input type="checkbox" checkbox mr-2 />
-                        {key}
-                      </label>
-                    </li>
-                  {/each}
+                <ul tabindex="0" menu w-60 bg-base rounded-box shadow>
+                  <li menu-title>{$t`form.toggle.title`}</li>
                 </ul>
               </div>
             </th>
           </tr>
         </thead>
         <tbody>
-          {#if table.length == 0}
+          {#if result.length == 0}
             <tr>
               <th colspan="10">
                 {$t`form.page.empty`}
@@ -162,7 +184,7 @@
               </th>
             </tr>
           {/if}
-          {#each table as row}
+          {#each result as row}
             <tr children-bg-base>
               <th sticky left-0>
                 <input
@@ -177,6 +199,7 @@
               </td>
               <td>{row.email}</td>
               <td>{row.role?.name}</td>
+              <td hidden>{row.createdAt}</td>
               <th sticky right-0>
                 <button
                   btn="~ secondary"
@@ -192,11 +215,9 @@
     </div>
 
     <!-- Paginator -->
-    {#if table.length > 0}
+    {#if result.length > 0}
       <form flex flex-wrap justify-center sm:justify-between gap-5 mt-5>
-        <input type="hidden" name="filter" value={meta.filter} />
-        <input type="hidden" name="expand" value={meta.expand} />
-        <div flex items-center gap-3>
+        <div flex gap-3 items-center>
           <div dropdown="~ top">
             <button type="button" btn="~ outline" border-base-content:20>
               {$t(`form.page.rows`, meta)}
@@ -215,7 +236,7 @@
             </ul>
           </div>
         </div>
-        <div>
+        <div use:fnSearchParams={{ meta, exclude: ["limit", "page"] }}>
           <div group-x>
             <button
               btn
@@ -254,6 +275,7 @@
         on:reset={() => (modal = false)}
       >
         <!-- {JSON.stringify(modal)} -->
+        <input type="hidden" name="id" value={modal.id} />
         <div grid md:grid-cols-2 gap-5>
           <div form-control>
             {$t`field.name`}
@@ -274,17 +296,28 @@
               bind:value={modal.email}
             />
           </div>
-          <div form-control>
+          <div form-control use:fnSelect={options.roles}>
             {$t`field.role`}
+            <div filter relative>
+              <input input placeholder={$t`field.role`} />
+            </div>
             <input
               input
+              type="hidden"
               name="role.connect.name"
-              placeholder={$t`field.role`}
               bind:value={modal.role.name}
+              placeholder="Selected"
             />
+            <ul menu w-full bg-base rounded-box shadow p-1>
+              <li>
+                <button type="button" bg-transparent value="(name)"
+                  >(name)</button
+                >
+              </li>
+            </ul>
           </div>
         </div>
-        <div>
+        <div mt-36>
           <button btn="~ primary" mt-3 disabled={$loading}>
             <i i-bx-save />
             {$t`form.save.button`}
@@ -305,7 +338,11 @@
         method="post"
         action="?/del"
         use:enhance
-        on:reset={() => (modalDel = false)}
+        on:submit={() => ($loading = true)}
+        on:reset={() => {
+          modalDel = false;
+          selections = [];
+        }}
       >
         <p>{$t`form.delete.confirm`}</p>
         {#each modalDel as sel}

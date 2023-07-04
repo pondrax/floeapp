@@ -16,5 +16,8 @@ export default {
     role: {
       default: 'Role'
     },
+    createdAt:{
+      default: 'Created At'
+    }
   }
 }

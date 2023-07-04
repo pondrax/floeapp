@@ -2,7 +2,7 @@ export default {
 	id: 'en',
 	form: {
 		filter:{
-			default: 'Search filter, ex: {field} = "{value}"'
+			default: 'Search filter, ex: {key} = "{value}"'
 		},
 		add: {
 			button: 'Add',
@@ -23,12 +23,18 @@ export default {
 			title: 'Save Data',
 			success: 'Data saved successfully'
 		},
+		loading:{
+			default: 'Loading ...'
+		},
 		selected: {
 			default: 'Selected {length}'
 		},
+		toggle:{
+			title: 'Toggle column'
+		},
 		page: {
 			empty: 'No record found',
-			rows: 'Page {page} of {pageCount}'
+			rows: 'Page {page} of {pageCount} — {total} rows'
 		}
 	}
 };
